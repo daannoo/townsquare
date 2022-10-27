@@ -67,6 +67,16 @@
         Night phase
         <font-awesome-icon :icon="['fas', 'cloud-moon']" />
       </span>
+      <span v-if="grimoire.isRinging">
+        <audio
+          :autoplay="!grimoire.isMuted"
+          src="../assets/sounds/countdown.mp3"
+          :muted="grimoire.isMuted"
+        ></audio>
+        <font-awesome-icon :icon="['fas', 'music']" />
+        <font-awesome-icon :icon="['fas', 'bell']" />
+        <font-awesome-icon :icon="['fas', 'music']" />
+      </span>
     </li>
   </ul>
 </template>

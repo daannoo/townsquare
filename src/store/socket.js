@@ -176,6 +176,13 @@ class LiveSession {
         if (!this._isSpectator) return;
         this._store.commit("toggleNight", params);
         break;
+      case "isRinging":
+        if (!this._isSpectator) return;
+        this._store.commit("toggleRinging", params);
+        // if (params){
+        //   setTimeout(this._store.commit, 4000, "toggleRinging", false);
+        // }
+        break;
       case "isVoteHistoryAllowed":
         if (!this._isSpectator) return;
         this._store.commit("session/setVoteHistoryAllowed", params);
@@ -277,6 +284,7 @@ class LiveSession {
       this._sendDirect(playerId, "gs", {
         gamestate: this._gamestate,
         isNight: grimoire.isNight,
+        isRinging: grimoire.isRinging,
         isVoteHistoryAllowed: session.isVoteHistoryAllowed,
         nomination: session.nomination,
         votingSpeed: session.votingSpeed,
@@ -301,6 +309,7 @@ class LiveSession {
       isLightweight,
       isNight,
       isVoteHistoryAllowed,
+      isRinging,
       nomination,
       votingSpeed,
       votes,
@@ -352,6 +361,7 @@ class LiveSession {
       }
     });
     if (!isLightweight) {
+      this._store.commit("toggleRinging", !!isRinging);
       this._store.commit("toggleNight", !!isNight);
       this._store.commit("session/setVoteHistoryAllowed", isVoteHistoryAllowed);
       this._store.commit("session/nomination", {
@@ -704,6 +714,14 @@ class LiveSession {
   }
 
   /**
+   * Send the isRinging status. ST only
+   */
+  setIsRinging() {
+    if (this._isSpectator) return;
+    this._send("isRinging", this._store.state.grimoire.isRinging);
+  }
+
+  /**
    * Send the isVoteHistoryAllowed state. ST only
    */
   setVoteHistoryAllowed() {
@@ -883,6 +901,9 @@ export default store => {
         break;
       case "toggleNight":
         session.setIsNight();
+        break;
+      case "toggleRinging":
+        session.setIsRinging();
         break;
       case "setEdition":
         session.sendEdition();

@@ -11,7 +11,8 @@
       "background": "Image de fond",
       "customImages": "Images Importées",
       "animations": "Effets réduits",
-      "mute": "Silencieux"
+      "mute": "Silencieux",
+      "ringBell": "Sonner Clocher"
     },
     "session":{
       "title":{

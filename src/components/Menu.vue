@@ -58,6 +58,10 @@
             <template v-if="grimoire.isNight">{{ locale.menu.grimoire.daySwitch }}</template>
             <em>[S]</em>
           </li>
+          <li @click="toggleRinging" v-if="!session.isSpectator">
+            <template>{{ locale.menu.grimoire.ringBell }}</template>
+            <em>[B]</em>
+          </li>
           <li @click="toggleNightOrder" v-if="players.length">
             {{ locale.menu.grimoire.order }}
             <em>
@@ -343,6 +347,10 @@ export default {
       if (this.grimoire.isNight) {
         this.$store.commit("session/setMarkedPlayer", -1);
       }
+    },
+    toggleRinging() {
+      this.$store.commit("toggleRinging", true);
+      setTimeout(this.$store.commit, 4000, "toggleRinging", false);
     },
     ...mapMutations([
       "toggleGrimoire",

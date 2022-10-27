@@ -11,7 +11,8 @@
       "background": "Background image",
       "customImages": "Show Custom Images",
       "animations": "Disable Animations",
-      "mute": "Mute Sounds"
+      "mute": "Mute Sounds",
+      "ringBell": "Ring Bell"
     },
     "session":{
       "title":{
