@@ -17,7 +17,9 @@
       <em v-if="nominee.role.team !== 'traveler'">
         ({{ locale.vote.majorityIs }} {{ Math.ceil(alive / 2) }})
       </em>
-      <em v-else>({{ locale.vote.majorityIs }} {{ Math.ceil(players.length / 2) }})</em>
+      <em v-else>
+        ({{ locale.vote.majorityIs }} {{ Math.ceil(players.length / 2) }})
+      </em>
 
       <template v-if="!session.isSpectator">
         <div v-if="!session.isVoteInProgress && session.lockedVote < 1">
@@ -94,6 +96,11 @@
       <div v-else-if="!player">
         {{ locale.vote.seatToVote }}
       </div>
+      <Countdown
+        v-if="grimoire.timer.duration"
+        :timerName="grimoire.timer.name"
+        :timerDuration="grimoire.timer.duration"
+      />
     </div>
     <transition name="blur">
       <div
@@ -116,8 +123,12 @@
 
 <script>
 import { mapGetters, mapState } from "vuex";
+import Countdown from "./Countdown";
 
 export default {
+  components: {
+    Countdown
+  },
   computed: {
     ...mapState("players", ["players"]),
     ...mapState(["session", "grimoire", "locale"]),

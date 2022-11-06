@@ -111,7 +111,11 @@ export default new Vuex.Store({
       isMuted: false,
       isImageOptIn: false,
       zoom: 0,
-      background: ""
+      background: "",
+      timer: {
+        name: "",
+        duration: 0
+      }
     },
     modals: {
       edition: false,
@@ -179,6 +183,9 @@ export default new Vuex.Store({
     toggleRinging: toggle("isRinging"),
     toggleGrimoire: toggle("isPublic"),
     toggleImageOptIn: toggle("isImageOptIn"),
+    setTimer(state, timer) {
+      state.grimoire.timer = timer;
+    },
     toggleModal({ modals }, name) {
       if (name) {
         modals[name] = !modals[name];

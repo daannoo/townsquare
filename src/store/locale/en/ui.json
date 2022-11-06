@@ -91,10 +91,12 @@
   "townsquare":{
     "others": "Other characters",
     "bluffs": "Demon bluffs",
-    "fabled": "Fabled"
+    "fabled": "Fabled",
+    "storytellerTools": "Storytelling"
   },
   "towninfo":{
-    "addPlayers":"Please add more players!"
+    "addPlayers":"Please add more players!",
+    "nightPhase":"Night Phase"
   },
   "player":{
     "handUp": "Hand UP",

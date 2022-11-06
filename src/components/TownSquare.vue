@@ -46,6 +46,52 @@
       </ul>
     </div>
 
+    <div
+      class="storytelling"
+      v-if="!session.isSpectator"
+      ref="storytelling"
+      :class="{ closed: !isTimeControlsOpen }"
+    >
+      <h3>
+        <span>{{ locale.townsquare.storytellerTools }}</span>
+        <font-awesome-icon
+          icon="times-circle"
+          @click.stop="toggleTimeControls"
+        />
+        <font-awesome-icon
+          icon="plus-circle"
+          @click.stop="toggleTimeControls"
+        />
+      </h3>
+      <div class="button-group">
+        <div @click="setTimer()" class="button">🕑 {{ timerDuration }} min</div>
+        <div @click="renameTimer()" class="button">🗏 {{ timerName }}</div>
+        <div
+          class="button demon"
+          @click="stopTimer()"
+          :class="{ disabled: !timerOn }"
+        >
+          ■
+        </div>
+        <div
+          class="button townfolk"
+          @click="startTimer()"
+          :class="{ disabled: timerOn }"
+        >
+          ⏵
+        </div>
+      </div>
+      <div class="button-group">
+        <div @click="toggleNight()" class="button" :class="{disabled: grimoire.isNight}">☀</div>
+        <div @click="toggleNight()" class="button" :class="{disabled: !grimoire.isNight}">☽</div>
+      </div>
+      <div class="button-group">
+        <div @click="toggleRinging()" class="button">
+          <font-awesome-icon :icon="['fas', 'bell']" />
+        </div>
+      </div>
+    </div>
+
     <div class="fabled" :class="{ closed: !isFabledOpen }" v-if="fabled.length">
       <h3>
         <span>{{ locale.townsquare.fabled }}</span>
@@ -113,7 +159,12 @@ export default {
       move: -1,
       nominate: -1,
       isBluffsOpen: true,
-      isFabledOpen: true
+      isFabledOpen: true,
+      isTimeControlsOpen: false,
+      timerName: "Timer",
+      timerDuration: 1,
+      timerOn: false,
+      timerEnder: false
     };
   },
   methods: {
@@ -123,9 +174,22 @@ export default {
     toggleFabled() {
       this.isFabledOpen = !this.isFabledOpen;
     },
+    toggleTimeControls() {
+      this.isTimeControlsOpen = !this.isTimeControlsOpen;
+    },
     removeFabled(index) {
       if (this.session.isSpectator) return;
       this.$store.commit("players/setFabled", { index });
+    },
+    toggleNight() {
+      this.$store.commit("toggleNight");
+      if (this.grimoire.isNight) {
+        this.$store.commit("session/setMarkedPlayer", -1);
+      }
+    },
+    toggleRinging() {
+      this.$store.commit("toggleRinging", true);
+      setTimeout(this.$store.commit, 4000, "toggleRinging", false);
     },
     handleTrigger(playerIndex, [method, params]) {
       if (typeof this[method] === "function") {
@@ -251,6 +315,33 @@ export default {
       this.move = -1;
       this.swap = -1;
       this.nominate = -1;
+    },
+    renameTimer() {
+      let newName = prompt("Timer Name", "");
+      if (newName === "") {
+        return;
+      }
+      this.timerName = newName.trim();
+    },
+    setTimer() {
+      let newDuration = prompt("Timer Duration in minutes");
+      if (isNaN(newDuration)) {
+        return alert("Incorrect number");
+      }
+      if (newDuration > 0) {
+        this.timerDuration = newDuration;
+      }
+    },
+    startTimer() {
+      let timer = { name: this.timerName, duration: this.timerDuration * 60 };
+      this.$store.commit("setTimer", timer);
+      this.timerOn = true;
+      this.timerEnder = setTimeout(this.stopTimer, timer.duration * 1000);
+    },
+    stopTimer() {
+      this.$store.commit("setTimer", {});
+      this.timerOn = false;
+      clearTimeout(this.timerEnder);
     }
   }
 };
@@ -396,15 +487,22 @@ export default {
 
 /***** Demon bluffs / Fabled *******/
 #townsquare > .bluffs,
-#townsquare > .fabled {
+#townsquare > .fabled,
+#townsquare > .storytelling {
   position: absolute;
+  left: 10px;
   &.bluffs {
     bottom: 10px;
   }
   &.fabled {
     top: 10px;
   }
-  left: 10px;
+  &.storytelling{
+    bottom: 20vmin;
+    left: auto;
+    right: 10px;
+    width: min-content;
+  }
   background: rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   border: 3px solid black;
@@ -412,7 +510,7 @@ export default {
   transform-origin: bottom left;
   transform: scale(1);
   opacity: 1;
-  transition: all 200ms ease-in-out;
+  transition: all 250ms ease-in-out;
   z-index: 50;
 
   > svg {
@@ -465,6 +563,15 @@ export default {
       transition: all 250ms;
     }
   }
+  .button-group {
+    transition: all 250ms;
+    input {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.1em;
+    }
+  }
   &.closed {
     svg.fa-times-circle {
       display: none;
@@ -473,6 +580,7 @@ export default {
       display: block;
     }
     ul li {
+      scale: 0;
       width: 0;
       height: 0;
       .night-order {
@@ -481,6 +589,12 @@ export default {
       .token {
         border-width: 0;
       }
+    }
+    .button-group,
+    .button-group * {
+      width: 0px;
+      height: 0px;
+      scale: 0;
     }
   }
 }

@@ -91,10 +91,12 @@
   "townsquare":{
     "others": "Autres Rôles",
     "bluffs": "Bluffs de Démon",
-    "fabled": "Fabuleux"
+    "fabled": "Fabuleux",
+    "storytellerTools": "Narration"
   },
   "towninfo":{
-    "addPlayers":"Appuyez sur [A] pour ajouter plus de joueurs !"
+    "addPlayers": "Appuyez sur [A] pour ajouter plus de joueurs !",
+    "nightPhase": "C'est la nuit"
   },
   "player":{
     "handUp": "Main levée",
@@ -118,7 +120,7 @@
   "intro":{
     "header": "Bienvenue sur le Centre-ville Virtuel (non-officiel) pour Blood on the Clocktower! Veuillez ajouter des Joueurs via le",
     "menu": "Menu",
-    "body": "en haut à droite ou en appuyant sur [A] pour commencer. Vous pouvez aussi rejoindre une ssession en appuyant sur [J].",
+    "body": "en haut à droite ou en appuyant sur [A] pour commencer. Vous pouvez aussi rejoindre une session en appuyant sur [J].",
     "footerStart": "Ce programme est libre et ses sources peuvent être trouvées sur",
     "footerEnd": ". Ce site n'est pas affilié à The Pandemonium Institute. \"Blood on the Clocktower\" est une marque déposée de Steven Medway & The Pandemonium Institute."
   },

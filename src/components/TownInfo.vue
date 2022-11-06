@@ -63,20 +63,27 @@
           :icon="teams.traveler > 1 ? 'user-friends' : 'user'"
         />
       </span>
-      <span v-if="grimoire.isNight">
-        Night phase
-        <font-awesome-icon :icon="['fas', 'cloud-moon']" />
-      </span>
-      <span v-if="grimoire.isRinging">
-        <audio
-          :autoplay="!grimoire.isMuted"
-          src="../assets/sounds/countdown.mp3"
-          :muted="grimoire.isMuted"
-        ></audio>
-        <font-awesome-icon :icon="['fas', 'music']" />
-        <font-awesome-icon :icon="['fas', 'bell']" />
-        <font-awesome-icon :icon="['fas', 'music']" />
-      </span>
+    </li>
+    <li v-if="grimoire.isNight">
+      <font-awesome-icon :icon="['fas', 'cloud-moon']" />
+      {{ locale.towninfo.nightPhase }}
+    </li>
+    <li v-if="grimoire.isRinging">
+      <audio
+        :autoplay="!grimoire.isMuted"
+        src="../assets/sounds/countdown.mp3"
+        :muted="grimoire.isMuted"
+      ></audio>
+      <font-awesome-icon :icon="['fas', 'music']" />
+      <font-awesome-icon :icon="['fas', 'bell']" />
+      <font-awesome-icon :icon="['fas', 'music']" />
+    </li>
+    <li>
+      <Countdown
+        v-if="grimoire.timer.duration"
+        :timerName="grimoire.timer.name"
+        :timerDuration="grimoire.timer.duration"
+      />
     </li>
   </ul>
 </template>
@@ -84,8 +91,12 @@
 <script>
 import gameJSON from "./../game";
 import { mapState } from "vuex";
+import Countdown from "./Countdown";
 
 export default {
+  components: {
+    Countdown
+  },
   computed: {
     teams: function() {
       const { players } = this.$store.state.players;
@@ -102,7 +113,10 @@ export default {
           ).length
       };
     },
-    ...mapState(["edition", "grimoire"]),
+    countdownStyle: function() {
+      return `--timer: ${this.$store.state.grimoire.timer.duration}`;
+    },
+    ...mapState(["edition", "grimoire", "locale"]),
     ...mapState("players", ["players"])
   }
 };
@@ -184,7 +198,7 @@ export default {
     background-repeat: no-repeat;
     background-size: 100% auto;
     position: absolute;
-    top: -25%;
+    top: -50%;
   }
 }
 </style>
