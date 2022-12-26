@@ -117,7 +117,7 @@ export default {
 
 ul.tokens li {
   border-radius: 50%;
-  width: 6vw;
+  width: 6vmax;
   margin: 1%;
   transition: transform 500ms ease;
 

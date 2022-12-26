@@ -173,10 +173,10 @@ export default {
 @import "../../vars.scss";
 
 ul.tokens {
-  padding-left: 5%;
+  padding-left: 5vmin;
   li {
     border-radius: 50%;
-    width: 5vw;
+    width: 5vmax;
     margin: 5px;
     opacity: 0.5;
     transition: all 250ms;

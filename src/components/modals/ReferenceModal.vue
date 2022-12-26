@@ -214,7 +214,6 @@ h3 {
 .team {
   display: flex;
   align-items: stretch;
-  width: 100%;
   &:not(:last-child):after {
     content: " ";
     display: block;
@@ -254,20 +253,25 @@ h3 {
 
 ul {
   flex-grow: 1;
-  display: flex;
-  padding: 5px 0;
+  display: grid;
+  width: calc(100% - 35px);
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  padding: 15px 5px;
 
   li {
     display: flex;
     align-items: center;
-    flex-grow: 1;
-    width: 420px;
+    max-width: 100%;
+    text-align: justify;
     .icon {
-      width: 8vh;
-      background-size: cover;
-      background-position: 0 -5px;
+      width: 12vmin;
+      background-size: contain;
+      background-position: center right;
+      background-repeat: no-repeat;
       flex-shrink: 0;
       flex-grow: 0;
+      position: relative;
+      top: 0.5em;
       &:after {
         content: " ";
         display: block;
@@ -294,16 +298,11 @@ ul {
   }
 }
 
-/** break into 1 column below 1200px **/
-@media screen and (max-width: 1199.98px) {
-  .modal {
-    max-width: 60%;
-  }
+/** break into 1 column below 600px **/
+@media screen and (max-width: 600px) {
   ul {
+    grid-template-columns: 1fr;
     li {
-      .icon {
-        width: 6vh;
-      }
       .role {
         line-height: 100%;
       }
@@ -318,12 +317,8 @@ ul {
       }
     }
   }
-}
-
-/** trim icon size on maximized one-column sheet **/
-@media screen and (max-width: 991.98px) {
-  .characters .modal.maximized ul li .icon {
-    width: 5.1vh;
+  .team aside {
+    width: 15px;
   }
 }
 

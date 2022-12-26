@@ -66,7 +66,8 @@ export default {
   display: flex;
   flex-direction: column;
   max-height: 80vh;
-  max-width: 80vw;
+  width:90vw;
+  max-width: 1800px;
 
   .editions &,
   .vote-history &,
@@ -78,7 +79,6 @@ export default {
   .roles &,
   .characters & {
     max-height: 100vh;
-    max-width: 60vw;
   }
 
   ul {

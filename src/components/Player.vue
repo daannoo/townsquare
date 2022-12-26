@@ -234,15 +234,14 @@ export default {
       return indexAdjusted < session.lockedVote - 1;
     },
     zoom: function() {
-      const unit = window.innerWidth > window.innerHeight ? "vh" : "vw";
       if (this.players.length < 7) {
-        return { width: 18 + this.grimoire.zoom + unit };
+        return { width: 18 + this.grimoire.zoom + "vmin" };
       } else if (this.players.length <= 10) {
-        return { width: 16 + this.grimoire.zoom + unit };
+        return { width: 16 + this.grimoire.zoom + "vmin" };
       } else if (this.players.length <= 15) {
-        return { width: 14 + this.grimoire.zoom + unit };
+        return { width: 14 + this.grimoire.zoom + "vmin" };
       } else {
-        return { width: 12 + this.grimoire.zoom + unit };
+        return { width: 12 + this.grimoire.zoom + "vmin" };
       }
     }
   },

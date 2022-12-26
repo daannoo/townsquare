@@ -362,15 +362,16 @@ export default {
 
 .circle {
   padding: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vmin;
+  height: 100vmin;
   list-style: none;
   margin: 0;
 
   > li {
     position: absolute;
     left: 50%;
-    height: 50%;
+    height: 50vmin;
+    max-height: 50%;
     transform-origin: 0 100%;
     pointer-events: none;
 
@@ -498,7 +499,7 @@ export default {
     top: 10px;
   }
   &.storytelling{
-    bottom: 20vmin;
+    bottom: 10px;
     left: auto;
     right: 10px;
     width: min-content;
@@ -556,8 +557,8 @@ export default {
     align-items: center;
     justify-content: center;
     li {
-      width: 14vh;
-      height: 14vh;
+      width: 14vmin;
+      height: 14vmin;
       margin: 0 0.5%;
       display: inline-block;
       transition: all 250ms;
