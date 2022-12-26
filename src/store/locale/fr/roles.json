@@ -1714,7 +1714,7 @@
     "team": "minion",
     "firstNight": 26,
     "firstNightReminder": "Le Semeur de peur désigne un joueur. Placez le marqueur 'Peur' sur le joueur désigné.",
-    "otherNight": 18,
+    "otherNight": 17,
     "otherNightReminder": "Le Semeur de peur désigne un joueur. Si le joueur désigné n'est plus le même que la nuit précédente, déplacez le marqueur 'Peur'.",
     "reminders": [
       "Peur"
@@ -1757,7 +1757,7 @@
     "team": "minion",
     "firstNight": 27,
     "firstNightReminder": "Indiquez au Mephit son mot secret.",
-    "otherNight": 19,
+    "otherNight": 18,
     "otherNightReminder": "Si un joueur Bon a pronnoncé le mot secret aujourd'hui: réveillez-le et informez-le qu'il fait maintenant partie de l'équipe des Mauvais.",
     "reminders": [
       "Mauvais",
@@ -1773,7 +1773,7 @@
     "team": "minion",
     "firstNight": 27,
     "firstNightReminder": "Indiquez au Mezepheles son mot secret.",
-    "otherNight": 19,
+    "otherNight": 18,
     "otherNightReminder": "Si un joueur Bon a pronnoncé le mot secret aujourd'hui: réveillez-le et informez-le qu'il fait maintenant partie de l'équipe des Mauvais.",
     "reminders": [
       "Mauvais",
