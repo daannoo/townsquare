@@ -101,6 +101,16 @@
                 ]"
             /></em>
           </li>
+          <li @click="streamerMode">
+            <small>{{ locale.menu.grimoire.streamerMode }}</small>
+            <em
+              ><font-awesome-icon
+                :icon="[
+                  'fas',
+                  grimoire.isStreamerMode ? 'check-square' : 'square'
+                ]"
+            /></em>
+          </li>
           <li @click="toggleStatic">
             {{ locale.menu.grimoire.animations }}
             <em
@@ -292,6 +302,9 @@ export default {
         this.toggleImageOptIn();
       }
     },
+    streamerMode() {
+      this.toggleStreamerMode();
+    },
     joinSession() {
       if (this.session.sessionId) return this.leaveSession();
       let sessionId = prompt(
@@ -356,6 +369,7 @@ export default {
       "toggleGrimoire",
       "toggleMenu",
       "toggleImageOptIn",
+      "toggleStreamerMode",
       "toggleMuted",
       "toggleNightOrder",
       "toggleStatic",

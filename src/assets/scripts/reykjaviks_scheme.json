@@ -2,7 +2,8 @@
   {
     "id": "_meta",
     "name": "Reykjavik's Scheme",
-    "author": "Gordon Fitzgerald"
+    "author": "Gordon Fitzgerald",
+    "background": "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/reykjaviks_scheme.bg.png"
   },
   {
     "id": "slayer"

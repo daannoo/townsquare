@@ -2,7 +2,8 @@
   {
     "id": "_meta",
     "name": "Trouble with Violets",
-    "author": "The Pandemonium Institute"
+    "author": "The Pandemonium Institute",
+    "background": "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/trouble_with_violets.bg.png"
   },
   {
     "id": "washerwoman"

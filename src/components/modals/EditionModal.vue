@@ -158,6 +158,14 @@ export default {
         [
           "Simpletown Village",
           "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/pont_saint_esprit.json"
+        ],
+        [
+          "Trouble Brewing Advanced",
+          "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/trouble_brewing_advanced.json"
+        ],
+        [
+          "Storyteller's Vengeance",
+          "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/storytellers_vengeance.json"
         ]
       ]
     };
@@ -241,22 +249,24 @@ export default {
 </script>
 
 <style scoped lang="scss">
-ul.editions .edition {
-  font-family: PiratesBay, sans-serif;
-  letter-spacing: 1px;
-  text-align: center;
-  padding-top: 15%;
-  background-position: center center;
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-  width: 30%;
-  margin: 5px;
-  font-size: 120%;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-    1px 1px 0 #000, 0 0 5px rgba(0, 0, 0, 0.75);
-  cursor: pointer;
-  &:hover {
-    color: red;
+ul.editions {
+  .edition {
+    font-family: PiratesBay, sans-serif;
+    letter-spacing: 1px;
+    text-align: center;
+    padding-top: 15%;
+    background-position: center center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    width: 30%;
+    margin: 5px;
+    font-size: 120%;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+      1px 1px 0 #000, 0 0 5px rgba(0, 0, 0, 0.75);
+    cursor: pointer;
+    &:hover {
+      color: red;
+    }
   }
 }
 

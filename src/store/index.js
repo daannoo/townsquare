@@ -110,6 +110,7 @@ export default new Vuex.Store({
       isStatic: false,
       isMuted: false,
       isImageOptIn: false,
+      isStreamerMode: false,
       zoom: 0,
       background: "",
       timer: {
@@ -183,6 +184,7 @@ export default new Vuex.Store({
     toggleRinging: toggle("isRinging"),
     toggleGrimoire: toggle("isPublic"),
     toggleImageOptIn: toggle("isImageOptIn"),
+    toggleStreamerMode: toggle("isStreamerMode"),
     setTimer(state, timer) {
       state.grimoire.timer = timer;
     },

@@ -8,15 +8,14 @@
       static: grimoire.isStatic
     }"
     :style="{
-      backgroundImage: grimoire.background
-        ? `url('${grimoire.background}')`
-        : ''
+      backgroundImage: `url('${background}')`,
+      backgroundColor: `${backgroundColor}`
     }"
   >
     <video
       id="background"
-      v-if="grimoire.background && grimoire.background.match(/\.(mp4|webm)$/i)"
-      :src="grimoire.background"
+      v-if="background && background.match(/\.(mp4|webm)$/i)"
+      :src="background"
       autoplay
       loop
     ></video>
@@ -74,8 +73,19 @@ export default {
     Gradients
   },
   computed: {
-    ...mapState(["grimoire", "session"]),
-    ...mapState("players", ["players"])
+    ...mapState(["grimoire", "session", "edition"]),
+    ...mapState("players", ["players"]),
+    background: function() {
+      if (this.grimoire.isStreamerMode) {
+        return "none";
+      }
+      return this.grimoire.background || this.edition.background || "none";
+    },
+    backgroundColor: function() {
+      return this.grimoire.isStreamerMode
+        ? "#00FF00"
+        : "transparent"
+    }
   },
   data() {
     return {
