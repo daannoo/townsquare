@@ -81,6 +81,16 @@
           ⏵
         </div>
       </div>
+      <div class="button-group" v-if="session.nomination">
+        <div @click="setAccusationTimer()" class="button">{{ locale.townsquare.timer.accusation.button }}</div>
+        <div @click="setDefenseTimer()" class="button">{{ locale.townsquare.timer.defense.button }}</div>
+        <div @click="setDebateTimer()" class="button">{{ locale.townsquare.timer.debate.button }}</div>
+      </div>
+      <div class="button-group" v-else>
+        <div @click="setDaytimeTimer()" class="button">{{ locale.townsquare.timer.daytime.button }}</div>
+        <div @click="setNominationTimer()" class="button">{{ locale.townsquare.timer.nominations.button }}</div>
+        <div @click="setDuskTimer()" class="button">{{ locale.townsquare.timer.dusk.button }}</div>
+      </div>
       <div class="button-group">
         <div @click="toggleNight()" class="button" :class="{disabled: grimoire.isNight}">☀</div>
         <div @click="toggleNight()" class="button" :class="{disabled: !grimoire.isNight}">☽</div>
@@ -317,16 +327,46 @@ export default {
       this.nominate = -1;
     },
     renameTimer() {
-      let newName = prompt("Timer Name", "");
+      let newName = prompt(this.locale.townsquare.timer.prompt.name, this.timerName);
       if (newName === "") {
-        return;
+        newName = this.locale.townsquare.timer.default.text;
       }
       this.timerName = newName.trim();
     },
+    setDaytimeTimer() {
+      this.timerDuration = 8;
+      this.timerName = this.locale.townsquare.timer.daytime.text;
+    },
+    setNominationTimer() {
+      this.timerDuration = 2;
+      this.timerName = this.timerName = this.locale.townsquare.timer.nominations.text;
+    },
+    setDuskTimer() {
+      this.timerDuration = 1;
+      this.timerName = this.timerName = this.locale.townsquare.timer.dusk.text;
+    },
+    setAccusationTimer() {
+      this.timerDuration = 1;
+      let timerText = this.locale.townsquare.timer.accusation.text;
+      timerText = timerText.replace("$accusator", this.players[this.session.nomination[0]].name).replace("$accusee", this.players[this.session.nomination[1]].name);
+      this.timerName = timerText;
+    },
+    setDefenseTimer() {
+      this.timerDuration = 1;
+      let timerText = this.locale.townsquare.timer.defense.text;
+      timerText = timerText.replace("$accusee", this.players[this.session.nomination[1]].name).replace("$accusator", this.players[this.session.nomination[0]].name);
+      this.timerName = timerText;
+    },
+    setDebateTimer() {
+      this.timerDuration = 2;
+      let timerText = this.locale.townsquare.timer.debate.text;
+      timerText = timerText.replace("$accusee", this.players[this.session.nomination[1]].name);
+      this.timerName = timerText;
+    },
     setTimer() {
-      let newDuration = prompt("Timer Duration in minutes");
+      let newDuration = prompt(this.locale.townsquare.timer.prompt.duration);
       if (isNaN(newDuration)) {
-        return alert("Incorrect number");
+        return alert(this.locale.townsquare.timer.prompt.durationError);
       }
       if (newDuration > 0) {
         this.timerDuration = newDuration;

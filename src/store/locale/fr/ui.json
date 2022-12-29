@@ -93,7 +93,41 @@
     "others": "Autres Rôles",
     "bluffs": "Bluffs de Démon",
     "fabled": "Fabuleux",
-    "storytellerTools": "Narration"
+    "storytellerTools": "Narration",
+    "timer": {
+      "default": {
+        "text": "Compte à rebours"
+      },
+      "prompt": {
+        "name": "Nom du compte à rebours",
+        "duration": "Durée en minutes",
+        "durationError": "Veuillez saisir un nombre en minutes"
+      },
+      "daytime": {
+        "button": "Journée",
+        "text": "Journée"
+      },
+      "nominations": {
+        "button": "Nominations",
+        "text": "Nominations ouvertes"
+      },
+      "dusk": {
+        "button": "Fin de Journée",
+        "text": "Fin de Journée"
+      },
+      "accusation": {
+        "button": "Accusation",
+        "text": "$accusator accuse $accusee"
+      },
+      "defense": {
+        "button": "Défense",
+        "text": "$accusee se défend de $accusator"
+      },
+      "debate": {
+        "button": "Débat",
+        "text": "$accusee doit mourrir ?"
+      }
+    }
   },
   "towninfo":{
     "addPlayers": "Appuyez sur [A] pour ajouter plus de joueurs !",

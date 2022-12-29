@@ -93,7 +93,41 @@
     "others": "Other characters",
     "bluffs": "Demon bluffs",
     "fabled": "Fabled",
-    "storytellerTools": "Storytelling"
+    "storytellerTools": "Storytelling",
+    "timer": {
+      "default": {
+        "text": "Timer"
+      },
+      "prompt": {
+        "name": "Timer name",
+        "duration": "Timer duration in minutes",
+        "durationError": "Timer duration must be a number"
+      },
+      "daytime": {
+        "button": "Daytime",
+        "text": "Daytime"
+      },
+      "nominations": {
+        "button": "Nominations",
+        "text": "Nominations open"
+      },
+      "dusk": {
+        "button": "Dusk",
+        "text": "End of day"
+      },
+      "accusation": {
+        "button": "Accusation",
+        "text": "$accusator accuses $accusee"
+      },
+      "defense": {
+        "button": "Defense",
+        "text": "$accusee defends against $accusator"
+      },
+      "debate": {
+        "button": "Debate",
+        "text": "Should $accusee be executed ?"
+      }
+    }
   },
   "towninfo":{
     "addPlayers":"Please add more players!",
