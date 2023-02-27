@@ -1,0 +1,17 @@
+version: "3.5"
+services:
+  blood_on_the_clocktower:
+    container_name: frontend
+    build: "${PROJECT_LOCAL_PATH}"
+    restart: unless-stopped
+    volumes:
+      - "${SSH_KEYS}:/root/.ssh"
+    environment:
+      NODE_ENV: development
+    ports:
+      - "${NODE_PORT}:8080"
+    working_dir: /app
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "200k"
