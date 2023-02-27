@@ -448,6 +448,7 @@ export default {
   position: absolute;
   right: 0;
   top: 0;
+  user-select: none;
 
   &.open {
     transform: rotate(0deg);

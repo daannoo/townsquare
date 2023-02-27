@@ -718,6 +718,7 @@ li.move:not(.from) .player .overlay svg.move {
   top: 5px;
   box-shadow: 0 0 5px black;
   padding: 0 4px;
+  user-select: none;
 
   svg {
     top: 3px;
@@ -790,6 +791,7 @@ li.move:not(.from) .player .overlay svg.move {
   margin-left: 15px;
   cursor: pointer;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  user-select: none;
 
   &:before {
     content: " ";
