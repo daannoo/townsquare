@@ -819,6 +819,7 @@ li.move:not(.from) .player .overlay svg.move {
 
   svg {
     margin-right: 2px;
+    user-select: none;
   }
 }
 
