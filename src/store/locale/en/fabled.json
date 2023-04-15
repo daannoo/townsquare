@@ -23,7 +23,7 @@
     "id": "buddhist",
     "firstNightReminder": "",
     "otherNightReminder": "",
-    "reminders": [],
+    "reminders": ["Veteran"],
     "setup": false,
     "name": "Buddhist",
     "team": "fabled",
