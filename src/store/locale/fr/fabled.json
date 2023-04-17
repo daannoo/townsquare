@@ -7,7 +7,7 @@
 		"otherNightReminder": "",
 		"reminders": [],
 		"setup": false,
-		"ability": "Si 4 joueurs ou plus sont en vie, chaque joueur vivant peut, une fois par partie, décider qu'un joueur de son propre alignement meurre."
+		"ability": "Si 4 joueurs ou plus sont en vie, chaque joueur vivant peut, une fois par partie, décider qu'un joueur de son propre alignement meure."
   },
   {
     "id": "angel",
@@ -57,7 +57,7 @@
     "setup": false,
     "name": "Violoniste",
     "team": "fabled",
-    "ability": "Une fois par partie, le Démon choisit un joueur Bon en secret: tous les joueurs votent pour décider l'équipe duquel de ces 2 joueurs a gagné."
+    "ability": "Une fois par partie, le Démon choisit un joueur Bon en secret : tous les joueurs votent pour décider l'équipe duquel de ces 2 joueurs a gagné."
   },
   {
     "id": "toymaker",
