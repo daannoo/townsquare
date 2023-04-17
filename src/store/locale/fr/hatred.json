@@ -69,19 +69,19 @@
       },
       {
         "id": "Ravenkeeper",
-        "reason": "Si le Léviathan est en jeu et que le Corbeau meurt par exécution, Il se réveille cette nuit pour utiliser son pouvoir. "
+        "reason": "Si le Léviathan est en jeu et que le Corbeau meurt par exécution, il se réveille cette nuit pour utiliser son pouvoir. "
       },
       {
         "id": "Sage",
-        "reason": "Si le Léviathan est en jeu et que le Sage meurt par execution, Il se réveille cette nuit pour utiliser son pouvoir. "
+        "reason": "Si le Léviathan est en jeu et que le Sage meurt par execution, il se réveille cette nuit pour utiliser son pouvoir. "
       },
       {
         "id": "Farmer",
-        "reason": "Si le Léviathan est en jeu et que le Fermier meurt par éxécution, Un joueur gentil devient un Fermier cette nuit. "
+        "reason": "Si le Léviathan est en jeu et que le Fermier meurt par éxécution, un joueur gentil devient un Fermier cette nuit. "
       },
       {
         "id": "Mayor",
-        "reason": "Si le Léviathan est en jeu et qu'il n'y a pas d'exécution le cinquième jour, Les méchants remportent la partie. "
+        "reason": "Si le Léviathan est en jeu et qu'il n'y a pas d'exécution le cinquième jour, les méchants remportent la partie. "
       }
     ]
   },
@@ -103,7 +103,7 @@
     "hatred": [
       {
         "id": "Poppy Grower",
-        "reason": "Si le Cultivateur de Pavots est en jeu, Les Serviteurs ne se réveillent pas ensemble. Ils sont réveillés un par un jusqu'à ce que l'un d'entre eux décide d'être babysitter. "
+        "reason": "Si le Cultivateur de Pavot est en jeu, Les Serviteurs ne se réveillent pas ensemble. Ils sont réveillés un par un jusqu'à ce que l'un d'entre eux décide d'être babysitter. "
       },
       {
         "id": "Magician",
@@ -120,7 +120,7 @@
     "hatred": [
       {
         "id": "Gambler",
-        "reason": "Si le Lycanthrope est en vie et que le Joueur se suicide la nuit, aucun autre joueur ne peut mourrir cette nuit. "
+        "reason": "Si le Lycanthrope est en vie et que le Joueur se suicide la nuit, aucun autre joueur ne peut mourir cette nuit. "
       }
     ]
   },
@@ -129,7 +129,7 @@
     "hatred": [
       {
         "id": "Engineer",
-        "reason": "Legion et l'Ingénieur ne peuvent pas être tous les deux en jeu au début de la partie. Si l'Ingénieur crée une Légion, la moité des joueurs (Y compris les Mauvais joueurs) deviennent de Mauvaises Légions. "
+        "reason": "Legion et l'Ingénieur ne peuvent pas être tous les deux en jeu au début de la partie. Si l'Ingénieur crée une Légion, la moité des joueurs (y compris les Mauvais joueurs) deviennent de Mauvaises Légions. "
       },
       {
         "id": "Preacher",
@@ -159,7 +159,7 @@
       },
       {
         "id": "Poppy Grower",
-        "reason": "Si le Cultivateur de Pavot est en jeu, l'Espion ne peut pas voir le Grimoire avant la mort du Cultivateur de Pavots. "
+        "reason": "Si le Cultivateur de Pavot est en jeu, l'Espion ne peut pas voir le Grimoire avant la mort du Cultivateur de Pavot. "
       },
       {
         "id": "Damsel",
@@ -210,11 +210,11 @@
     "hatred": [
       {
         "id": "Lil' Monsta",
-        "reason": "La Marionette est voisine d'un Serviteur, pas du Démon. La Marionette n'est pas réveillée pour décider qui babysit le Bébé Monstre. "
+        "reason": "La Marionette est voisine d'un Serviteur, pas du Démon. La Marionette n'est pas réveillée pour décider qui baby-sitte le Bébé Monstre. "
       },
       {
         "id": "Poppy Grower",
-        "reason": "Quand le Cultivateur de Pavots meurt, le Démon apprend qui est la Marionette, mais la Marionette n'apprend rien. "
+        "reason": "Quand le Cultivateur de Pavot meurt, le Démon apprend qui est la Marionette, mais la Marionette n'apprend rien. "
       },
       {
         "id": "Snitch",
@@ -239,15 +239,15 @@
     "hatred": [
       {
         "id": "Engineer",
-        "reason": "Emeute et Ingénieur ne peuvent pas être tous les deux en jeu au début de la partie. \nSi l'ingénieur crée une Emeute, tous les joueurs Mauvais deviennent des Emeutes. "
+        "reason": "Émeute et Ingénieur ne peuvent pas être tous les deux en jeu au début de la partie. \nSi l'ingénieur crée une Émeute, tous les joueurs Mauvais deviennent des Émeutes. "
       },
       {
         "id": "Golem",
-        "reason": "Si le Golem accuse une Emeute, ce joueur ne meurt pas. "
+        "reason": "Si le Golem accuse une Émeute, ce joueur ne meurt pas. "
       },
       {
         "id": "Snitch",
-        "reason": "Si la Balance est en jeu, chaque joueur qui a le rôle d'Emeute reçoit 3 bluffs supplémentaires. "
+        "reason": "Si la Balance est en jeu, chaque joueur qui a le rôle d'Émeute reçoit 3 bluffs supplémentaires. "
       },
       {
         "id": "Saint",
@@ -255,11 +255,11 @@
       },
       {
         "id": "Butler",
-        "reason": "Le Majordome ne peut pas Accuser son Maître. "
+        "reason": "Le Majordome ne peut pas accuser son Maître. "
       },
       {
         "id": "Pit-Hag",
-        "reason": "Si le Chaudronnier crée une Emeute, tous les joueurs Mauvais deviennent des Emeutes. \nSi le Chaudronnier crée une Emeute après le jour 3, la partie continue pour un jour de plus. "
+        "reason": "Si le Chaudronnier crée une Émeute, tous les joueurs Mauvais deviennent des Émeutes. \nSi le Chaudronnier crée une Émeute après le jour 3, la partie continue pour un jour de plus. "
       },
       {
         "id": "Mayor",
@@ -267,35 +267,35 @@
       },
       {
         "id": "Monk",
-        "reason": "Si un joueur d'Emeute accuse un joueur protégé par le Moine, ce joueur ne meurt pas. "
+        "reason": "Si un joueur d'Émeute accuse un joueur protégé par le Moine, ce joueur ne meurt pas. "
       },
       {
         "id": "Farmer",
-        "reason": "Si un joueur d'Emeute accuse et tue un Fermier, le Fermier utilise son Pouvoir cette nuit. "
+        "reason": "Si un joueur d'Émeute accuse et tue un Fermier, le Fermier utilise son Pouvoir cette nuit. "
       },
       {
         "id": "Innkeeper",
-        "reason": "Si un joueur d'Emeute accuse et tue un joueur protégé par l'Aubergiste, ce joueur ne meurt pas. "
+        "reason": "Si un joueur d'Émeute accuse et tue un joueur protégé par l'Aubergiste, ce joueur ne meurt pas. "
       },
       {
         "id": "Sage",
-        "reason": "Si un joueur d'Emeute accuse et tue le Sage, le Sage utilise son pouvoir cette nuit. "
+        "reason": "Si un joueur d'Émeute accuse et tue le Sage, le Sage utilise son pouvoir cette nuit. "
       },
       {
         "id": "Ravenkeeper",
-        "reason": "Si un Joueur d'Emeute accuse et tue le Corbeau, le Corbeau utilise son pouvoir cette nuit. "
+        "reason": "Si un Joueur d'Émeute accuse et tue le Corbeau, le Corbeau utilise son pouvoir cette nuit. "
       },
       {
         "id": "Soldier",
-        "reason": "Si un joueur d'Emeute accuse le Soldat, le Soldat ne meurt pas. "
+        "reason": "Si un joueur d'Émeute accuse le Soldat, le Soldat ne meurt pas. "
       },
       {
         "id": "Grandmother",
-        "reason": "Si un joueur d'Emeute accuse et tue la Grand-mère, le Petit-Fils meurt aussi. "
+        "reason": "Si un joueur d'Émeute accuse et tue la Grand-mère, le Petit-Fils meurt aussi. "
       },
       {
         "id": "King",
-        "reason": "Si une joueur d'Emeute accuse et tue le Roi et que l'Enfant de Choeur est en vie, l'Enfant de Choeur utilise son pouvoir cette nuit. "
+        "reason": "Si une joueur d'Émeute accuse et tue le Roi, et si l'Enfant de Choeur est en vie, l'Enfant de Choeur utilise son pouvoir cette nuit. "
       },
       {
         "id": "Exorcist",
@@ -327,23 +327,23 @@
       },
       {
         "id": "Investigator",
-        "reason": "Emeute est considéré comme un Serviteur pour l'Enquéteur. "
+        "reason": "Émeute est considéré comme un Serviteur pour l'Enquéteur. "
       },
       {
         "id": "Clockmaker",
-        "reason": "Emeute est considéré comme un Serviteur pour l'Horloger. "
+        "reason": "Émeute est considéré comme un Serviteur pour l'Horloger. "
       },
       {
         "id": "Town Crier",
-        "reason": "Emeute est considéré comme un Serviteur pour la Criée. "
+        "reason": "Émeute est considéré comme un Serviteur pour la Criée. "
       },
       {
         "id": "Damsel",
-        "reason": "Emeute est considéré comme un Serviteur pour la Demoiselle. "
+        "reason": "Émeute est considéré comme un Serviteur pour la Demoiselle. "
       },
       {
         "id": "Preacher",
-        "reason": "Emeute est considéré comme un Serviteur pour le précheur. "
+        "reason": "Émeute est considéré comme un Serviteur pour le précheur. "
       }
     ]
   },
@@ -352,7 +352,7 @@
     "hatred": [
       {
         "id": "Mastermind",
-        "reason": "Si le Cerveau est en vie et que la Sangsue meurt par execution, la Sangsue survie mais perd son pouvoir. "
+        "reason": "Si le Cerveau est en vie et que la Sangsue meurt par execution, la Sangsue survit mais perd son pouvoir. "
       },
       {
         "id": "Slayer",
