@@ -1299,9 +1299,9 @@
     "edition": "",
     "team": "townsfolk",
     "firstNight": 45,
-    "firstNightReminder": "Indiquer au chasseur de primes un joueur de l'équipe des Mauvais. Réveillez le villageois qui fait partie des Mauvais pour l'informer qu'il est Mauvais.",
+    "firstNightReminder": "Indiquer au Mercenaire un joueur de l'équipe des Mauvais. Réveillez le Villageois qui fait partie des Mauvais pour l'informer qu'il est Mauvais.",
     "otherNight": 65,
-    "otherNightReminder": "Si le Mauvais connu par le chasseur de primes est mort, informez-le d'un autre Mauvais.",
+    "otherNightReminder": "Si le Mauvais connu par le Mercenaire est mort, informez-le d'un autre Mauvais.",
     "reminders": [
       "Connu"
     ],
