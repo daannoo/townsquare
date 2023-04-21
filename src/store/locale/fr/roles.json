@@ -1780,7 +1780,7 @@
       "Épuisé"
     ],
     "setup": false,
-    "ability": "Vous commencez la partie en connaissant un mot secret. La première fois qu'un Bon joueur prononce ce mot en présence du Narrateur, il devient Mauvais la nuit suivante, sans changer de rôle."
+    "ability": "Vous commencez la partie en connaissant un mot secret. La première fois qu'un Bon joueur prononce ce mot en présence du Narrateur, il devient Mauvais durant la nuit, sans changer de rôle."
   },
   {
     "id": "marionette",
