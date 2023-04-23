@@ -86,7 +86,7 @@
       "Fausse piste"
     ],
     "setup": false,
-    "ability": "Chaque nuit, désignez 2 joueurs : vous apprenez si l'un des deux est le Démon. L'un des bons joueurs vous apparaît comme un Démon aussi."
+    "ability": "Chaque nuit, désignez 2 joueurs : vous apprenez si l'un des deux est Démon. L'un des bons joueurs vous apparaît comme un Démon aussi."
   },
   {
     "id": "undertaker",
@@ -685,7 +685,7 @@
       "Épuisé"
     ],
     "setup": false,
-    "ability": "Une fois par partie, la nuit, désignez un joueur : il meurt, même si, pour une raison ou une autre, il ne devrait pas pouvoir mourir."
+    "ability": "Une fois par partie, la nuit*, désignez un joueur : il meurt, même si, pour une raison ou une autre, il ne devrait pas pouvoir mourir."
   },
   {
     "id": "mastermind",
@@ -804,7 +804,7 @@
       "Épuisé"
     ],
     "setup": false,
-    "ability": "Une fois par partie, si un autre joueur a été accusé, vous pouvez forcer le résultat du vote à réussir ou à échouer."
+    "ability": "Une fois par partie, si un autre joueur a lancé une accusation, vous pouvez forcer le résultat du vote à réussir ou à échouer."
   },
   {
     "id": "bishop",
@@ -1299,9 +1299,9 @@
     "edition": "",
     "team": "townsfolk",
     "firstNight": 45,
-    "firstNightReminder": "Indiquer au chasseur de primes un joueur de l'équipe des Mauvais. Réveillez le villageois qui fait partie des Mauvais pour l'informer qu'il est Mauvais.",
+    "firstNightReminder": "Indiquer au Mercenaire un joueur de l'équipe des Mauvais. Réveillez le Villageois qui fait partie des Mauvais pour l'informer qu'il est Mauvais.",
     "otherNight": 65,
-    "otherNightReminder": "Si le Mauvais connu par le chasseur de primes est mort, informez-le d'un autre Mauvais.",
+    "otherNightReminder": "Si le Mauvais connu par le Mercenaire est mort, informez-le d'un autre Mauvais.",
     "reminders": [
       "Connu"
     ],
@@ -1330,12 +1330,12 @@
     "edition": "",
     "team": "townsfolk",
     "firstNight": 49,
-    "firstNightReminder": "Indiquez quelle équipe est selon vous en train de mener la partie : les gentils, les Mauvais ou personne.",
+    "firstNightReminder": "Indiquez quelle équipe est selon vous en train de mener la partie : les Bons, les Mauvais ou personne.",
     "otherNight": 69,
-    "otherNightReminder": "Indiquez quelle équipe est selon vous en train de mener la partie : les gentils, les Mauvais ou personne.",
+    "otherNightReminder": "Indiquez quelle équipe est selon vous en train de mener la partie : les Bons, les Mauvais ou personne.",
     "reminders": [],
     "setup": false,
-    "ability": "Chaque nuit, vous apprenez quelle équipe est en train de mener la partie selon le narrateur : les gentils, les Mauvais ou personne."
+    "ability": "Chaque nuit, vous apprenez quelle équipe est en train de mener la partie selon le narrateur : les Bons, les Mauvais ou personne."
   },
   {
     "id": "preacher",
@@ -1780,7 +1780,7 @@
       "Épuisé"
     ],
     "setup": false,
-    "ability": "Vous commencez la partie en connaissant un mot secret. La première fois qu'un Bon joueur prononce ce mot en présence du Narrateur, il devient Mauvais la nuit suivante, sans changer de rôle."
+    "ability": "Vous commencez la partie en connaissant un mot secret. La première fois qu'un Bon joueur prononce ce mot en présence du Narrateur, il devient Mauvais durant la nuit, sans changer de rôle."
   },
   {
     "id": "marionette",

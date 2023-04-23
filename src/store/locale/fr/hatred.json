@@ -22,7 +22,7 @@
     "hatred": [
       {
         "id": "Mathematician",
-        "reason": "Le Mathématicien apprend si le Lunatique attaque des joueurs différents du véritable Démon. "
+        "reason": "Le Mathématicien apprend si l'Aliéné attaque des joueurs différents du véritable Démon. "
       }
     ]
   },
@@ -48,7 +48,7 @@
     "hatred": [
       {
         "id": "Goblin",
-        "reason": "Le Cerenovus peut choisir de rendre un joueur fou d'être le Goblin. "
+        "reason": "Le Cerenovus peut choisir de rendre un joueur fou d'être le Gobelin. "
       }
     ]
   },
@@ -90,7 +90,7 @@
     "hatred": [
       {
         "id": "Scarlet Woman",
-        "reason": "S'il y a deux Al-Hadikhias en vie, le Gourgandin devenu Al-Hadikhia redevient Gourgandin. "
+        "reason": "S'il y a deux Al-Hadikhias en vie, la Gourgandine devenue Al-Hadikhia redevient Gourgandine. "
       },
       {
         "id": "Mastermind",
@@ -103,7 +103,7 @@
     "hatred": [
       {
         "id": "Poppy Grower",
-        "reason": "Si le Cultivateur de Pavot est en jeu, Les Serviteurs ne se réveillent pas ensemble. Ils sont réveillés un par un jusqu'à ce que l'un d'entre eux décide d'être babysitter. "
+        "reason": "Si le Planteur de pavot est en jeu, Les Serviteurs ne se réveillent pas ensemble. Ils sont réveillés un par un jusqu'à ce que l'un d'entre eux décide d'être babysitter. "
       },
       {
         "id": "Magician",
@@ -111,7 +111,7 @@
       },
       {
         "id": "Scarlet Woman",
-        "reason": "S'il y a 5 joueurs ou plus en vie et que le babysitter du Bébé Monstre se fait exécuter, le Gourgandin récupére le Bébé Monstre cette nuit. "
+        "reason": "S'il y a 5 joueurs ou plus en vie et que le babysitter du Bébé Monstre se fait exécuter, la Gourgandine récupére le Bébé Monstre cette nuit. "
       }
     ]
   },
@@ -120,7 +120,7 @@
     "hatred": [
       {
         "id": "Gambler",
-        "reason": "Si le Lycanthrope est en vie et que le Joueur se suicide la nuit, aucun autre joueur ne peut mourir cette nuit. "
+        "reason": "Si le Lycanthrope est en vie et que le Parieur se suicide la nuit, aucun autre joueur ne peut mourir cette nuit. "
       }
     ]
   },
@@ -142,7 +142,7 @@
     "hatred": [
       {
         "id": "Scarlet Woman",
-        "reason": "Si le Fang Gu désigne un étranger et meurt, Le Gourgandin ne devient pas le Fang Gu . "
+        "reason": "Si le Fang Gu désigne un étranger et meurt, La Gourgandine ne devient pas le Fang Gu . "
       }
     ]
   },
@@ -155,11 +155,11 @@
       },
       {
         "id": "Alchemist",
-        "reason": "L'alchimiste ne peut pas avoir la capacité de l'Espion. "
+        "reason": "L'Alchimiste ne peut pas avoir la capacité de l'Espion. "
       },
       {
         "id": "Poppy Grower",
-        "reason": "Si le Cultivateur de Pavot est en jeu, l'Espion ne peut pas voir le Grimoire avant la mort du Cultivateur de Pavot. "
+        "reason": "Si le Planteur de Pavot est en jeu, l'Espion ne peut pas voir le Grimoire avant la mort du Planteur de Pavot. "
       },
       {
         "id": "Damsel",
@@ -180,11 +180,11 @@
       },
       {
         "id": "Poppy Grower",
-        "reason": "Si le Cultivateur de Pavot est en jeu, La Veuve ne voit pas le Grimoire avant la mort du Cultivateur de Pavot. "
+        "reason": "Si le Planteur de pavot est en jeu, La Veuve ne voit pas le Grimoire avant la mort du Cultivateur de Pavot. "
       },
       {
         "id": "Alchemist",
-        "reason": "L'alchimiste ne peut pas avoir la capacité de la Veuve. "
+        "reason": "L'Alchimiste ne peut pas avoir la capacité de la Veuve. "
       },
       {
         "id": "Damsel",
@@ -214,7 +214,7 @@
       },
       {
         "id": "Poppy Grower",
-        "reason": "Quand le Cultivateur de Pavot meurt, le Démon apprend qui est la Marionette, mais la Marionette n'apprend rien. "
+        "reason": "Quand le Planteur de Pavot meurt, le Démon apprend qui est la Marionette, mais la Marionette n'apprend rien. "
       },
       {
         "id": "Snitch",
@@ -335,7 +335,7 @@
       },
       {
         "id": "Town Crier",
-        "reason": "Émeute est considéré comme un Serviteur pour la Criée. "
+        "reason": "Emeute est considéré comme un Serviteur pour le Crieur public. "
       },
       {
         "id": "Damsel",
@@ -343,7 +343,7 @@
       },
       {
         "id": "Preacher",
-        "reason": "Émeute est considéré comme un Serviteur pour le précheur. "
+        "reason": "Emeute est considéré comme un Serviteur pour le Prêcheur. "
       }
     ]
   },
