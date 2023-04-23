@@ -685,7 +685,7 @@
       "Épuisé"
     ],
     "setup": false,
-    "ability": "Une fois par partie, la nuit, désignez un joueur : il meurt, même si, pour une raison ou une autre, il ne devrait pas pouvoir mourir."
+    "ability": "Une fois par partie, la nuit*, désignez un joueur : il meurt, même si, pour une raison ou une autre, il ne devrait pas pouvoir mourir."
   },
   {
     "id": "mastermind",
