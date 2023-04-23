@@ -1330,12 +1330,12 @@
     "edition": "",
     "team": "townsfolk",
     "firstNight": 49,
-    "firstNightReminder": "Indiquez quelle équipe est selon vous en train de mener la partie: les gentils, les Mauvais ou personne.",
+    "firstNightReminder": "Indiquez quelle équipe est selon vous en train de mener la partie : les Bons, les Mauvais ou personne.",
     "otherNight": 69,
-    "otherNightReminder": "Indiquez quelle équipe est selon vous en train de mener la partie: les gentils, les Mauvais ou personne.",
+    "otherNightReminder": "Indiquez quelle équipe est selon vous en train de mener la partie : les Bons, les Mauvais ou personne.",
     "reminders": [],
     "setup": false,
-    "ability": "Chaque nuit, vous apprenez quelle équipe est en train de mener la partie selon le narrateur: les gentils, les Mauvais ou personne."
+    "ability": "Chaque nuit, vous apprenez quelle équipe est en train de mener la partie selon le narrateur : les Bons, les Mauvais ou personne."
   },
   {
     "id": "preacher",
