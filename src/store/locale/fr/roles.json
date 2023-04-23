@@ -804,7 +804,7 @@
       "Épuisé"
     ],
     "setup": false,
-    "ability": "Une fois par partie, si un autre joueur a été accusé, vous pouvez forcer le résultat du vote à réussir ou à échouer."
+    "ability": "Une fois par partie, si un autre joueur a lancé une accusation, vous pouvez forcer le résultat du vote à réussir ou à échouer."
   },
   {
     "id": "bishop",
