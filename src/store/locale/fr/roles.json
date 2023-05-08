@@ -1877,7 +1877,7 @@
       "Mourant"
     ],
     "setup": true,
-    "ability": "Chaque nuit*, un joueur peut mourir. Les exécutions ratent si seuls des joueurs Mauvais ont voté. Vous apparaissez comme un Serviteur. [La majorité des joueurs sont Légion]"
+    "ability": "Chaque nuit*, un joueur peut mourir. Les exécutions ratent si seuls des joueurs Mauvais ont voté. Vous apparaissez également comme un Serviteur. [La majorité des joueurs sont Légion]"
   },
   {
     "id": "leviathan",
