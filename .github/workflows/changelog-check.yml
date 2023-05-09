@@ -10,7 +10,11 @@ jobs:
     name: Check Actions
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - name: Setup node version
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+      - uses: actions/checkout@v2
       - name: Changelog check
         uses: Zomzog/changelog-checker@v1.2.0
         with:
