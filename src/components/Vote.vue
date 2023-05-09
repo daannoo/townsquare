@@ -10,7 +10,17 @@
       <em>{{ nominee.name }}</em
       >!
       <br />
-      <em class="blue"> {{ voters.length }} {{ locale.vote.votes }} </em>
+      <em
+        class="blue"
+        v-if="
+          !grimoire.isOrganVoteMode ||
+            nominee.role.team == 'traveler' ||
+            !session.isSpectator
+        "
+      >
+        {{ voters.length }} {{ locale.vote.votes }}
+      </em>
+      <em class="blue" v-else> ? {{ locale.vote.votes }} </em>
       {{ locale.vote.inFavor }}
       <em v-if="nominee.role.team !== 'traveler'">
         ({{ locale.vote.majorityIs }} {{ Math.ceil(alive / 2) }})
