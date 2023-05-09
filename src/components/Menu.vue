@@ -62,6 +62,17 @@
             <template>{{ locale.menu.grimoire.ringBell }}</template>
             <em>[B]</em>
           </li>
+          <li @click="toggleOrganVoteMode" v-if="!session.isSpectator">
+            {{ locale.menu.grimoire.organGrinder }}
+            <em>
+              <font-awesome-icon
+                :icon="[
+                  'fas',
+                  grimoire.isOrganVoteMode ? 'check-square' : 'square'
+                ]"
+              />
+            </em>
+          </li>
           <li @click="toggleNightOrder" v-if="players.length">
             {{ locale.menu.grimoire.order }}
             <em>
@@ -360,6 +371,9 @@ export default {
       if (this.grimoire.isNight) {
         this.$store.commit("session/setMarkedPlayer", -1);
       }
+    },
+    toggleOrganVoteMode() {
+      this.$store.commit("toggleOrganVoteMode");
     },
     toggleRinging() {
       this.$store.commit("toggleRinging", true);

@@ -1,3 +1,5 @@
+import gameInfo from '../index.js';
+
 /**
  * Handle a vote request.
  * If the vote is from a seat that is already locked, ignore it.
@@ -71,6 +73,7 @@ const mutations = {
   /**
    * Create an entry in the vote history log. Requires current player array because it might change later in the game.
    * Only stores votes that were completed.
+   * If the Organ Grinder is active, save the votes only for the Story Teller
    * @param state
    * @param players
    */
@@ -78,15 +81,17 @@ const mutations = {
     if (!state.isVoteHistoryAllowed && state.isSpectator) return;
     if (!state.nomination || state.lockedVote <= players.length) return;
     const isExile = players[state.nomination[1]].role.team === "traveler";
+    const organGrinder = gameInfo.state.grimoire.isOrganVoteMode && !isExile;
     state.voteHistory.push({
       timestamp: new Date(),
       nominator: players[state.nomination[0]].name,
       nominee: players[state.nomination[1]].name,
-      type: isExile ? "Exile" : "Execution",
+      type: isExile ? "Exile" : ("Execution" + ((organGrinder && !state.isSpectator) ? "*" : "")),
       majority: Math.ceil(
         players.filter(player => !player.isDead || isExile).length / 2
       ),
-      votes: players
+      votes: organGrinder && state.isSpectator ? null : 
+        players
         .filter((player, index) => state.votes[index])
         .map(({ name }) => name)
     });
