@@ -49,13 +49,21 @@
           <!-- Grimoire -->
           <li class="headline">{{ locale.menu.grimoire.title }}</li>
           <li @click="toggleGrimoire" v-if="players.length">
-            <template v-if="!grimoire.isPublic">{{ locale.menu.grimoire.hide }}</template>
-            <template v-if="grimoire.isPublic">{{ locale.menu.grimoire.show }}</template>
+            <template v-if="!grimoire.isPublic">{{
+              locale.menu.grimoire.hide
+            }}</template>
+            <template v-if="grimoire.isPublic">{{
+              locale.menu.grimoire.show
+            }}</template>
             <em>[G]</em>
           </li>
           <li @click="toggleNight" v-if="!session.isSpectator">
-            <template v-if="!grimoire.isNight">{{ locale.menu.grimoire.nightSwitch }}</template>
-            <template v-if="grimoire.isNight">{{ locale.menu.grimoire.daySwitch }}</template>
+            <template v-if="!grimoire.isNight">{{
+              locale.menu.grimoire.nightSwitch
+            }}</template>
+            <template v-if="grimoire.isNight">{{
+              locale.menu.grimoire.daySwitch
+            }}</template>
             <em>[S]</em>
           </li>
           <li @click="toggleRinging" v-if="!session.isSpectator">
@@ -141,18 +149,31 @@
         <template v-if="tab === 'session'">
           <!-- Session -->
           <li class="headline" v-if="session.sessionId">
-            {{ session.isSpectator ? locale.menu.session.title.player : locale.menu.session.title.host }}
+            {{
+              session.isSpectator
+                ? locale.menu.session.title.player
+                : locale.menu.session.title.host
+            }}
           </li>
           <li class="headline" v-else>
             {{ locale.menu.session.title.create }}
           </li>
           <template v-if="!session.sessionId">
-            <li @click="hostSession">{{ locale.menu.session.storyteller }}<em>[H]</em></li>
-            <li @click="joinSession">{{ locale.menu.session.player }}<em>[J]</em></li>
+            <li @click="hostSession">
+              {{ locale.menu.session.storyteller }}<em>[H]</em>
+            </li>
+            <li @click="joinSession">
+              {{ locale.menu.session.player }}<em>[J]</em>
+            </li>
           </template>
           <template v-else>
             <li v-if="session.ping">
-              {{ locale.menu.session.delay }} {{ session.isSpectator ?  locale.menu.session.host  : locale.menu.session.players }}
+              {{ locale.menu.session.delay }}
+              {{
+                session.isSpectator
+                  ? locale.menu.session.host
+                  : locale.menu.session.players
+              }}
               <em>{{ session.ping }}ms</em>
             </li>
             <li @click="copySessionUrl">
@@ -179,7 +200,9 @@
         <template v-if="tab === 'players' && !session.isSpectator">
           <!-- Users -->
           <li class="headline">{{ locale.menu.players.title }}</li>
-          <li @click="addPlayer" v-if="players.length < 20">{{ locale.menu.players.add }}<em>[A]</em></li>
+          <li @click="addPlayer" v-if="players.length < 20">
+            {{ locale.menu.players.add }}<em>[A]</em>
+          </li>
           <li @click="randomizeSeatings" v-if="players.length > 2">
             {{ locale.menu.players.randomize }}
             <em><font-awesome-icon icon="dice"/></em>
@@ -318,9 +341,7 @@ export default {
     },
     joinSession() {
       if (this.session.sessionId) return this.leaveSession();
-      let sessionId = prompt(
-        this.locale.prompt.joinSession
-      );
+      let sessionId = prompt(this.locale.prompt.joinSession);
       if (sessionId.match(/^https?:\/\//i)) {
         sessionId = sessionId.split("#").pop();
       }

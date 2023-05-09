@@ -82,9 +82,7 @@ export default {
       return this.grimoire.background || this.edition.background || "none";
     },
     backgroundColor: function() {
-      return this.grimoire.isStreamerMode
-        ? "#00FF00"
-        : "transparent"
+      return this.grimoire.isStreamerMode ? "#00FF00" : "transparent";
     }
   },
   data() {

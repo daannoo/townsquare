@@ -118,7 +118,8 @@ export default {
             firstNight: 5,
             team: "minion",
             players: this.players.filter(p => p.role.team === "minion"),
-            firstNightReminder: this.locale.modal.nightOrder.minionInfoDescription
+            firstNightReminder: this.locale.modal.nightOrder
+              .minionInfoDescription
           },
           {
             id: "evil",
@@ -126,7 +127,8 @@ export default {
             firstNight: 8,
             team: "demon",
             players: this.players.filter(p => p.role.team === "demon"),
-            firstNightReminder: this.locale.modal.nightOrder.demonInfoDescription
+            firstNightReminder: this.locale.modal.nightOrder
+              .demonInfoDescription
           }
         );
       }

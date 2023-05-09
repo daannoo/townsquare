@@ -731,7 +731,7 @@ class LiveSession {
     if (this._isSpectator) return;
     this._send("isRinging", this._store.state.grimoire.isRinging);
   }
-  
+
   /**
    * Send the isOrganVoteMode status. ST only
    */

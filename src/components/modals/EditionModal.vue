@@ -31,9 +31,9 @@
     <div class="custom" v-else>
       <h3>{{ locale.modal.edition.custom.title }}</h3>
       {{ locale.modal.edition.custom.introStart }}
-      <a href="https://script.bloodontheclocktower.com/" target="_blank"
-        >{{ locale.modal.edition.custom.scriptTool }}</a
-      >
+      <a href="https://script.bloodontheclocktower.com/" target="_blank">{{
+        locale.modal.edition.custom.scriptTool
+      }}</a>
       {{ locale.modal.edition.custom.introEnd }}.<br />
       <br />
       {{ locale.modal.edition.custom.instructionsStart }}
@@ -42,7 +42,7 @@
         target="_blank"
         >{{ locale.modal.edition.custom.documentation }}n</a
       >
-      {{ locale.modal.edition.custom.instructionsEnd }}<br/>
+      {{ locale.modal.edition.custom.instructionsEnd }}<br />
       <b>{{ locale.modal.edition.custom.warning }}</b>
       <h3>{{ locale.modal.edition.popularScripts }}</h3>
       <ul class="scripts">

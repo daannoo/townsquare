@@ -45,28 +45,44 @@
       <!-- Overlay icons -->
       <div class="overlay">
         <font-awesome-icon
-          v-if="!grimoire.isOrganVoteMode || !session.isSpectator || player.id==session.playerId"
+          v-if="
+            !grimoire.isOrganVoteMode ||
+              !session.isSpectator ||
+              player.id == session.playerId
+          "
           icon="hand-paper"
           class="vote"
           :title="locale.player.handUp"
           @click="vote()"
         />
         <font-awesome-icon
-          v-if="grimoire.isOrganVoteMode && session.isSpectator && player.id!==session.playerId"
+          v-if="
+            grimoire.isOrganVoteMode &&
+              session.isSpectator &&
+              player.id !== session.playerId
+          "
           icon="question"
           class="vote"
           :title="locale.player.handUp"
           @click="vote()"
         />
         <font-awesome-icon
-          v-if="!grimoire.isOrganVoteMode || !session.isSpectator || player.id==session.playerId"
+          v-if="
+            !grimoire.isOrganVoteMode ||
+              !session.isSpectator ||
+              player.id == session.playerId
+          "
           icon="times"
           class="vote"
           :title="locale.player.handDown"
           @click="vote()"
         />
         <font-awesome-icon
-          v-if="grimoire.isOrganVoteMode && session.isSpectator && player.id!==session.playerId"
+          v-if="
+            grimoire.isOrganVoteMode &&
+              session.isSpectator &&
+              player.id !== session.playerId
+          "
           icon="question"
           class="vote"
           :title="locale.player.handDown"
@@ -140,11 +156,15 @@
                 (session.isSpectator && player.id === session.playerId)
             "
           >
-            <font-awesome-icon icon="venus-mars" />{{ locale.player.changePronouns }}
+            <font-awesome-icon icon="venus-mars" />{{
+              locale.player.changePronouns
+            }}
           </li>
           <template v-if="!session.isSpectator">
             <li @click="changeName">
-              <font-awesome-icon icon="user-edit" />{{ locale.player.changeName }}
+              <font-awesome-icon icon="user-edit" />{{
+                locale.player.changeName
+              }}
             </li>
             <li @click="movePlayer()" :class="{ disabled: session.lockedVote }">
               <font-awesome-icon icon="redo-alt" />
@@ -591,7 +611,10 @@ export default {
 #townsquare.vote .player.vote-lock:not(.vote-yes) .overlay svg.vote.fa-times,
 #townsquare.vote .player.you.vote-yes .overlay svg.vote.fa-question,
 #townsquare.vote .player.vote-lock.vote-yes .overlay svg.vote.fa-question,
-#townsquare.vote .player.vote-lock:not(.vote-yes) .overlay svg.vote.fa-question {
+#townsquare.vote
+  .player.vote-lock:not(.vote-yes)
+  .overlay
+  svg.vote.fa-question {
   opacity: 1;
   transform: scale(1);
 }

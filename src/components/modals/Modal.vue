@@ -66,7 +66,7 @@ export default {
   display: flex;
   flex-direction: column;
   max-height: 80vh;
-  width:90vw;
+  width: 90vw;
   max-width: 1800px;
 
   .editions &,

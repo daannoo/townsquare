@@ -84,7 +84,10 @@ export default {
 
       reminders.push({ role: "good", name: this.locale.modal.reminder.good });
       reminders.push({ role: "evil", name: this.locale.modal.reminder.evil });
-      reminders.push({ role: "custom", name: this.locale.modal.reminder.custom });
+      reminders.push({
+        role: "custom",
+        name: this.locale.modal.reminder.custom
+      });
       return reminders;
     },
     ...mapState(["modals", "grimoire", "locale"]),
