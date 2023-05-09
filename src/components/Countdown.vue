@@ -36,10 +36,10 @@ div::before {
   animation: forwards countdown calc(var(--timer) * 1s) linear;
 }
 
-div::after{
-  position:absolute;
+div::after {
+  position: absolute;
   inset: 0;
-  text-align:center;
+  text-align: center;
   content: attr(data-text);
   z-index: 2;
   background: linear-gradient(
@@ -57,8 +57,8 @@ div::after{
     width: 100%;
   }
   100% {
-    width:0%;
-    display:none;
+    width: 0%;
+    display: none;
   }
 }
 </style>

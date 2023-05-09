@@ -13,7 +13,11 @@
         {{ locale.intro.footerEnd }}
       </div>
     </div>
-    <a class="redirect" v-if="language === 'zh-CN'" href="https://clocktower.gstonegames.com">
+    <a
+      class="redirect"
+      v-if="language === 'zh-CN'"
+      href="https://clocktower.gstonegames.com"
+    >
       <img src="../assets/gstone.png" class="gstone" alt="" />
       你想使用中文版魔典吗？
     </a>

@@ -124,11 +124,15 @@
                 (session.isSpectator && player.id === session.playerId)
             "
           >
-            <font-awesome-icon icon="venus-mars" />{{ locale.player.changePronouns }}
+            <font-awesome-icon icon="venus-mars" />{{
+              locale.player.changePronouns
+            }}
           </li>
           <template v-if="!session.isSpectator">
             <li @click="changeName">
-              <font-awesome-icon icon="user-edit" />{{ locale.player.changeName }}
+              <font-awesome-icon icon="user-edit" />{{
+                locale.player.changeName
+              }}
             </li>
             <li @click="movePlayer()" :class="{ disabled: session.lockedVote }">
               <font-awesome-icon icon="redo-alt" />

@@ -10,9 +10,7 @@
       <em>{{ nominee.name }}</em
       >!
       <br />
-      <em class="blue">
-        {{ voters.length }} {{ locale.vote.votes }}
-      </em>
+      <em class="blue"> {{ voters.length }} {{ locale.vote.votes }} </em>
       {{ locale.vote.inFavor }}
       <em v-if="nominee.role.team !== 'traveler'">
         ({{ locale.vote.majorityIs }} {{ Math.ceil(alive / 2) }})
@@ -55,7 +53,9 @@
             </div>
             <div class="button" @click="stop">{{ locale.vote.reset }}</div>
           </template>
-          <div class="button demon" @click="finish">{{ locale.vote.close }}</div>
+          <div class="button demon" @click="finish">
+            {{ locale.vote.close }}
+          </div>
         </div>
         <div class="button-group mark" v-if="nominee.role.team !== 'traveler'">
           <div
