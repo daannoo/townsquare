@@ -1322,7 +1322,7 @@
       "Pouvoir Dispo"
     ],
     "setup": false,
-    "ability": "Vous commencez la partie en sachant qu'un rôle de villageois en particulier est en jeu. Si vous vous êtes toujours fait passer pour ce personnage, vous gagnez sa capacité quand il meurt."
+    "ability": "Vous commencez la partie en sachant qu'un rôle de Villageois en particulier est en jeu. Si vous vous étiez persuadé d’être ce personnage, vous gagnez sa capacité quand il meurt."
   },
   {
     "id": "general",
@@ -1529,7 +1529,7 @@
     "otherNightReminder": "",
     "reminders": [],
     "setup": false,
-    "ability": "Le Démon croit que vous êtes un Serviteur. Les Serviteurs croient que vous êtes le Démon."
+    "ability": "Le Démon croit que vous êtes un Serviteur. Les Serviteurs croient que vous êtes un Démon."
   },
   {
     "id": "choirboy",
@@ -1571,7 +1571,7 @@
     "otherNightReminder": "",
     "reminders": [],
     "setup": true,
-    "ability": "Le Narrateur peut briser les règles du jeu. Si les joueurs exécutent le Narrateur, ils remportent la partie. [Aucun joueur n'est Mauvais]"
+    "ability": "Le Narrateur peut briser les règles du jeu. Si les joueurs exécutent le Narrateur, les bons remportent la partie. [Aucun joueur n'est Mauvais]"
   },
   {
     "id": "cannibal",
@@ -1610,12 +1610,12 @@
     "firstNight": 0,
     "firstNightReminder": "",
     "otherNight": 39,
-    "otherNightReminder": "Si l'un de ses voisins Villageois est Ivre ou Empoisonné, l'Accrobate meurt.",
+    "otherNightReminder": "Si l'un de ses bons voisins vivants est Ivre ou Empoisonné, l'Accrobate meurt.",
     "reminders": [
       "Mort"
     ],
     "setup": false,
-    "ability": "Chaque nuit*, si l'un de vos Bons voisins est Ivre ou Empoisonné, vous mourez."
+    "ability": "Chaque nuit*, si l'un de vos bons voisins vivants est ivre ou empoisonné, vous mourez."
   },
   {
     "id": "puzzlemaster",
@@ -1931,7 +1931,7 @@
       "Jour 3"
     ],
     "setup": true,
-    "ability": "Les accusés meurent et peuvent accuser immédiatement à la suite. Le troisième jour, les exécutés doivent accuser. À la fin du troisième jour, les Mauvais gagnent. [Tous les Serviteurs sont des Émeutes]"
+    "ability": "Les joueurs accusés meurent immédiatement sans vote mais peuvent accuser à leur tour. Le troisième jour, les joueurs accusés doivent accuser. À la fin du troisième jour, les mauvais gagnent. [Tous les Serviteurs sont des Émeutes]"
   },
   {
     "id": "gangster",

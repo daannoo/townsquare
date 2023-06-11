@@ -1,5 +1,104 @@
 # Release Notes
 
+======
+
+---
+
+### Version 3.10.1
+Correct some french descriptions (Magician, Acrobat, Riot, Legion, Pixie)
+
+---
+
+### Version 3.10.0
+- Add the Organ Grinder
+- Add new option to hide votes if there is an Organ Grinder
+
+---
+
+### Version 3.9.0
+Upgrade node engine to version 16
+
+---
+
+### Version 3.8.1
+Several translation correction in french version
+
+---
+
+### Version 3.8.0
+Corrected several misleading french translations
+
+---
+
+### Version 3.7.1
+Renamed some gambler & moonchild in french translation
+
+---
+
+### Version 3.7.0
+Additional reminders for Buddhist & Deviant
+
+---
+
+### Version 3.6.4
+Menu reorganization
+
+---
+
+### Version 3.6.3
+Small UI adjustments
+
+---
+
+### Version 3.6.2
+Dockerization of development environment
+
+---
+
+### Version 3.6.1
+Gitignore update to ignore some log files
+
+---
+
+### Version 3.6.0
+Timer presets
+
+---
+
+### Version 3.5.0
+Better design responsiveness for lower screen resolutions
+
+---
+
+### Version 3.4.1
+Fixed night order in french version
+
+---
+
+### Version 3.4.0
+Add Streamer mode
+
+---
+
+### Version 3.3.0
+Add Narrator tools panel and timers
+
+---
+
+### Version 3.2.0
+Add more scripts to the "Popular custom scripts" tab
+---
+
+### Version 3.1.0
+Add ring bell option
+
+---
+
+### Version 3.0.0
+Add localization capabilities and french translation
+
+---
+
 ### Version 2.16.1
 Updated character night order to be consistent with script tool
 
