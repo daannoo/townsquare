@@ -1,5 +1,10 @@
 # Release Notes
 
+### Version 2.18.2
+Correct Pixie's french description, using official vocabulary
+
+---
+
 ### Version 2.16.1
 Updated character night order to be consistent with script tool
 
