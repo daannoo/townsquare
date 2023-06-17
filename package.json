@@ -1,8 +1,8 @@
 {
   "name": "townsquare",
-  "version": "3.10.1",
+  "version": "3.10.2",
   "description": "Blood on the Clocktower Town Square",
-  "author": "Steffen Baumgart",
+  "author": "Pingumaskt",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build ./src/main.js",

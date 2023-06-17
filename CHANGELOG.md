@@ -2,6 +2,9 @@
 
 ======
 
+### Version 3.10.2
+Corrected french description for Minstrel
+
 ---
 
 ### Version 3.10.1
