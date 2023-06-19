@@ -96,77 +96,137 @@ export default {
       isCustom: false,
       scripts: [
         [
-          "Deadly Penance Day",
-          "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/deadly_penance_day.json"
+          "Boozling",
+          "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/boozling.json"
         ],
         [
           "Catfishing",
           "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/catfishing.json"
         ],
         [
-          "On thin ice (Teensyville)",
-          "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/on_thin_ice.json"
+          "Chaos in the streets",
+          "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/chaos_in_the_streets.json"
         ],
         [
-          "Race to the bottom (Teensyville)",
-          "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/race_to_the_bottom.json"
+          "Comrade Demon (Teensyville)",
+          "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/comrade_demon.json"
+        ],
+        [
+          "Cultists of Atlantis",
+          "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/cultists_of_atlantis.json"
+        ],
+        [
+          "Deadly Penance Day",
+          "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/deadly_penance_day.json"
         ],
         [
           "Frankenstein's Mayor (Teensyville)",
           "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/frankensteins_mayor.json"
         ],
         [
-          "Vigormortis High school (Teensyville)",
-          "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/vigormortis_high_school.json"
-        ],
-        [
-          "Trouble with Violets",
-          "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/trouble_with_violets.json"
-        ],
-        [
-          "Rochambeau",
-          "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/rochambeau.json"
-        ],
-        [
-          "Knowing me, Knowing you",
-          "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/knowing_me_knowing_you.json"
+          "Harold Holt's Revenge",
+          "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/harold_holts_revenge.json"
         ],
         [
           "Hide & Seek",
           "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/hide_and_seek.json"
         ],
         [
-          "Poppyganda",
-          "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/poppyganda.json"
+          "Knowing me, Knowing you",
+          "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/knowing_me_knowing_you.json"
         ],
         [
-          "Whose Cult is it Anyway",
-          "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/whose_cult_is_it_anyway.json"
+          "Late night drive by (Teensyville)",
+          "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/late_night_drive_by.json"
         ],
         [
-          "Uncertain Death",
-          "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/uncertain_death.json"
+          "Midnight Oasis",
+          "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/midnight_oasis.json"
         ],
         [
-          "Reykjavik's Scheme",
-          "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/reykjaviks_scheme.json"
+          "Minion is Angel Protected & the Demon Has 2 Bluffs (Teensyville)",
+          "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/minion_is_angel_protected_and_the_demon_has_2_bluffs.json"
+        ],
+        [
+          "No greater joy",
+          "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/no_greater_joy.json"
+        ],
+        [
+          "No roles barred",
+          "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/no_roles_barred.json"
+        ],
+        [
+          "On thin ice (Teensyville)",
+          "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/on_thin_ice.json"
         ],
         [
           "Pont Saint-Esprit",
           "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/pont_saint_esprit.json"
         ],
         [
+          "Poppyganda",
+          "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/poppyganda.json"
+        ],
+        [
+          "Race to the bottom (Teensyville)",
+          "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/race_to_the_bottom.json"
+        ],
+        [
+          "Reptiles !",
+          "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/reptiles.json"
+        ],
+        [
+          "Reptiles II : Lizard in the city",
+          "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/reptiles2.json"
+        ],
+        [
+          "Reykjavik's Scheme",
+          "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/reykjaviks_scheme.json"
+        ],
+        [
+          "Rochambeau",
+          "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/rochambeau.json"
+        ],
+        [
           "Simpletown Village",
-          "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/pont_saint_esprit.json"
+          "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/simpletown_village.json"
+        ],
+        [
+          "Spooky tea 2 : Very spooky (Teensyville)",
+          "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/spooky_tea2.json"
+        ],
+        [
+          "Storyteller's Vengeance",
+          "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/storytellers_vengeance.json"
+        ],
+        [
+          "The Horrifying Spectacle of Public Executions",
+          "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/the_horrifying_spectacle_of_public_executions.json"
         ],
         [
           "Trouble Brewing Advanced",
           "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/trouble_brewing_advanced.json"
         ],
         [
-          "Storyteller's Vengeance",
-          "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/storytellers_vengeance.json"
-        ]
+          "Trouble with Violets",
+          "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/trouble_with_violets.json"
+        ],
+        [
+          "Uncertain Death",
+          "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/uncertain_death.json"
+        ],
+        [
+          "Vigormortis High school (Teensyville)",
+          "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/vigormortis_high_school.json"
+        ],
+        [
+          "Visitors (Teensyville)",
+          "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/visitors.json"
+        ],
+        [
+          "Whose Cult is it Anyway",
+          "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/whose_cult_is_it_anyway.json"
+        ],
       ]
     };
   },
@@ -276,15 +336,19 @@ ul.editions {
     display: none;
   }
   .scripts {
+    margin-block: 2em;
     list-style-type: disc;
     font-size: 120%;
     cursor: pointer;
-    display: block;
-    width: 50%;
-    text-align: left;
-    margin: 10px auto;
-    li:hover {
-      color: red;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2em 0.5em;
+    li {
+      text-align:left;
+      list-style-type: none;
+      &:hover {
+        color: red;
+      }
     }
   }
 }

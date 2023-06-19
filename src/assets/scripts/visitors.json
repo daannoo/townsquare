@@ -1,0 +1,74 @@
+[
+    {
+        "id": "_meta",
+        "logo": "https://cdn-icons.flaticon.com/png/512/1769/premium/1769039.png?token=exp=1651719238~hmac=6296c80bf57ca57fafcee287412527d4",
+        "name": "Visitors",
+        "author": "Zets"
+    },
+    {
+        "id": "librarian"
+    },
+    {
+        "id": "investigator"
+    },
+    {
+        "id": "chef"
+    },
+    {
+        "id": "empath"
+    },
+    {
+        "id": "fortune_teller"
+    },
+    {
+        "id": "cult_leader"
+    },
+    {
+        "id": "nightwatchman"
+    },
+    {
+        "id": "ravenkeeper"
+    },
+    {
+        "id": "slayer"
+    },
+    {
+        "id": "soldier"
+    },
+    {
+        "id": "magician"
+    },
+    {
+        "id": "mayor"
+    },
+    {
+        "id": "cannibal"
+    },
+    {
+        "id": "drunk"
+    },
+    {
+        "id": "recluse"
+    },
+    {
+        "id": "snitch"
+    },
+    {
+        "id": "saint"
+    },
+    {
+        "id": "poisoner"
+    },
+    {
+        "id": "spy"
+    },
+    {
+        "id": "baron"
+    },
+    {
+        "id": "scarlet_woman"
+    },
+    {
+        "id": "imp"
+    }
+]
