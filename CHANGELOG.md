@@ -2,6 +2,11 @@
 
 ======
 
+### Version 3.11.0
+Add several included custom scripts
+
+---
+
 ### Version 3.10.2
 Corrected french description for Minstrel
 
