@@ -65,7 +65,7 @@ export default {
   box-shadow: 2px 2px 20px 1px #000;
   display: flex;
   flex-direction: column;
-  max-height: 80vh;
+  max-height: 95vh;
   width: 90vw;
   max-width: 1800px;
 

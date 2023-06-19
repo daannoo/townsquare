@@ -336,13 +336,13 @@ ul.editions {
     display: none;
   }
   .scripts {
-    margin-block: 2em;
+    margin-block: 1em;
     list-style-type: disc;
     font-size: 120%;
     cursor: pointer;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 2em 0.5em;
+    gap: 0.5em 1em;
     li {
       text-align:left;
       list-style-type: none;
