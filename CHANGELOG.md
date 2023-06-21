@@ -2,6 +2,11 @@
 
 ======
 
+### Version 3.11.2
+Various corrections in the french version
+
+---
+
 ### Version 3.11.1
 Small UI tweeks to custom scripts selection
 
