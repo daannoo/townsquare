@@ -126,7 +126,7 @@
       },
       "debate": {
         "button": "Debate",
-        "text": "Should $accusee be executed ?"
+        "text": "Should we kill $accusee ?"
       }
     }
   },
