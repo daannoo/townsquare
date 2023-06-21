@@ -2,6 +2,11 @@
 
 ======
 
+### Version 3.11.3
+Changing default vote duration (3s -> 1s)
+
+---
+
 ### Version 3.11.2
 Various corrections in the french version
 
