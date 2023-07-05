@@ -1,10 +1,15 @@
 # Release Notes
 
-======
+## Upcomming Version
 
-Correcting the print when ST assigns roles (adding spaces)
-Changing the default value of "isNightOrder"
 
+
+---
+
+### Version 3.13.0
+
+- Correcting the print when ST assigns roles (adding spaces)
+- Changing the default value of "isNightOrder"
 
 ---
 ### Version 3.12.0
