@@ -1,14 +1,22 @@
 # Release Notes
 
-======
-### Unreleased changes
+## Upcomming Version
+
+
+
+---
+
+### Version 3.13.0
+
+- Correcting the print when ST assigns roles (adding spaces)
+- Changing the default value of "isNightOrder"
 
 ---
 ### Version 3.12.0
-Printing the number of alive non-Travellers
-Adding the picture leaf-top6.png
-Some corrections in the jinxes (in French)
-Correcting Atheist's french description
+- Printing the number of alive non-Travellers
+- Adding the picture leaf-top6.png
+- Some corrections in the jinxes (in French)
+- Correcting Atheist's french description
 
 ---
 
