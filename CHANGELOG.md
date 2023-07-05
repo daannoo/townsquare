@@ -2,17 +2,9 @@
 
 ======
 
-### Version 3.11.7
+Printing the number of alive non-Travellers
 Adding the picture leaf-top6.png
-
----
-
-### Version 3.11.6
 Some corrections in the jinxes (in French)
-
----
-
-### Version 3.11.5
 Correcting Atheist's french description
 
 ---
