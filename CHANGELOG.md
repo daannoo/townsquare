@@ -2,6 +2,11 @@
 
 ======
 
+### Version 3.11.6
+Some corrections in the jinxes (in French)
+
+---
+
 ### Version 3.11.5
 Correcting Atheist's french description
 
