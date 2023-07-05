@@ -1,7 +1,8 @@
 # Release Notes
 
 ======
-### Unreleased changes
+
+Changing the default value of "isNightOrder"
 
 ---
 ### Version 3.12.0
