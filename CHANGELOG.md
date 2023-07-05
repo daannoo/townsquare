@@ -1,7 +1,10 @@
 # Release Notes
 
 ======
+### Unreleased changes
 
+---
+### Version 3.12.0
 Printing the number of alive non-Travellers
 Adding the picture leaf-top6.png
 Some corrections in the jinxes (in French)
