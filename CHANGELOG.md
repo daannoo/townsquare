@@ -4,10 +4,14 @@
 
 
 
+### Version 3.13.1
+Some corrections in the reminders tokens:
+- Correcting some french names
+- Putting some tokens in "remindersGlobal"
+- Deleting some useless tokens, or adding some other
+
 ---
-
 ### Version 3.13.0
-
 - Correcting the print when ST assigns roles (adding spaces)
 - Changing the default value of "isNightOrder"
 
