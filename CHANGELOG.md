@@ -2,7 +2,8 @@
 
 ## Upcomming Version
 
-
+### Version 3.13.2
+Malformed JSON breaking compilation
 
 ### Version 3.13.1
 Some corrections in the reminders tokens:
