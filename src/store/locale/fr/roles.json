@@ -976,7 +976,7 @@
     "otherNightReminder": "S'il ne l'a pas encore fait, le Philosophe choisit s'il souhaite utiliser son pouvoir. S'il le fait, il choisit un personnage Bon. Si ce personnage n'est pas en jeu, le philosophe gagne son pouvoir. Sinon, ce personnage devient Ivre.",
     "reminders": [
       "Ivre",
-      "Est le Philosophe",
+      "Philosophe",
       "Épuisé"
     ],
     "setup": false,
