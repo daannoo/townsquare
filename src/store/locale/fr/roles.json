@@ -213,7 +213,7 @@
     "otherNightReminder": "",
     "reminders": [],
     "remindersGlobal": [
-      "Ivre"
+      "Ivrogne"
     ],
     "setup": true,
     "ability": "Vous ne savez pas que vous êtres l'Ivrogne. Vous croyez avoir un rôle de Villageois, mais vous ne l'avez pas."
@@ -635,7 +635,8 @@
     "firstNightReminder": "S'il y a 7 joueurs ou plus, indiquez à l'Aliéné un nombre de rôles de Serviteurs correspondant au nombre de Serviteurs en jeu et des joueurs pour chacuns de ces personnages. Montrez 3 jetons de personnages bons de votre choix. Si le faux personnage de Démon assigné à l'Aliéné a des actions de nuit, prétendez que vous lui faites réaliser ces actions. Placez le(s) marqueur(s) d'attaque de l'Aliéné. Réveillez le vrai Démon. Dévoilez au Démon les véritables Serviteurs et 3 bons personnages qui ne sont pas en jeu. Dévoilez au Démon qui est l'Aliéné. Si l'Aliéné a attaqué des joueurs, dévoilez au véritable Démon les joueurs marqués puis retirez les marqueurs de l'Aliéné.",
     "otherNight": 21,
     "otherNightReminder": "Permettez à l'Aliéné de réaliser les actions du Démon qu'il croit être. Placez le(s) marqueur(s) d'attaque. Si l'Aliéné a indiqué des joueurs, réveillez le Démon. Dévoilez au Démon les marqueurs de l'Aliéné puis retirez-les.",
-    "reminders": [
+    "reminders": [],
+    "remindersGlobal": [
       "Aliéné"
     ],
     "setup": true,
@@ -975,7 +976,7 @@
     "otherNightReminder": "S'il ne l'a pas encore fait, le Philosophe choisit s'il souhaite utiliser son pouvoir. S'il le fait, il choisit un personnage Bon. Si ce personnage n'est pas en jeu, le philosophe gagne son pouvoir. Sinon, ce personnage devient Ivre.",
     "reminders": [
       "Ivre",
-      "Est le Philosophe",
+      "Philosophe",
       "Épuisé"
     ],
     "setup": false,
@@ -1006,7 +1007,7 @@
     "otherNight": 62,
     "otherNightReminder": "Si aujourd'hui était la première journée du jongleur, indiquez-lui combien de ses prédictions étaient juste.",
     "reminders": [
-      "Correcte",
+      "Correct",
       "Faux"
     ],
     "setup": false,
@@ -1090,7 +1091,8 @@
     "firstNightReminder": "Réveillez le Jumeau Maléfique et son Jumeau. Informez-les tous deux du rôle de l'autre.",
     "otherNight": 0,
     "otherNightReminder": "",
-    "reminders": [
+    "reminders": [],
+    "remindersGlobal": [
       "Jumeau"
     ],
     "setup": false,
@@ -1121,7 +1123,7 @@
     "otherNight": 16,
     "otherNightReminder": "Le Cerenovus désigne un joueur et un personnage. Reveillez ce joueur. Informez-le qu'il est persuadé d'être ce personnage. S'il n'est pas convaincant, il peut être exécuté.",
     "reminders": [
-      "Fou"
+      "Persuadé"
     ],
     "setup": false,
     "ability": "Chaque nuit, désignez un joueur et un personnage bon : il sera persuadé d'être ce personnage demain, ou pourra être exécuté."
@@ -1318,7 +1320,7 @@
     "otherNight": 0,
     "otherNightReminder": "",
     "reminders": [
-      "Fou",
+      "Persuadé",
       "Pouvoir Dispo"
     ],
     "setup": false,
@@ -1378,8 +1380,7 @@
       "Villageois vu",
       "Étranger vu",
       "Serviteur vu",
-      "Démon vu",
-      "Voyageur vu"
+      "Démon vu"
     ],
     "setup": true,
     "ability": "Chaque nuit, vous apprenez qu'un joueur a un personnage d'un type que vous n'avez pas encore vu jusqu'à ce que vous en connaissiez un de chaque. [+1 Étranger]."
@@ -1498,10 +1499,7 @@
     "otherNight": 0,
     "otherNightReminder": "Si la capacité de l'alchimiste s'utilise la nuit, réveillez le.",
     "reminders": [],
-    "remindersGlobal": [
-      "Alchimiste",
-      "Bon"
-    ],
+    "remindersGlobal": ["Alchimiste"],
     "setup": false,
     "ability": "Vous avez la capacité d'un Serviteur qui n'est pas en jeu."
   },
@@ -1890,7 +1888,7 @@
     "otherNightReminder": "Vous pouvez choisir un joueur, Ce joueur meurt.",
     "reminders": [
       "Mort",
-      "Mourant"
+      "Condamné"
     ],
     "setup": true,
     "ability": "Chaque nuit*, un joueur peut mourir. Les exécutions ratent si seuls des joueurs Mauvais ont voté. Vous apparaissez également comme un Serviteur. [La majorité des joueurs sont Légion]"
@@ -1905,12 +1903,14 @@
     "otherNight": 73,
     "otherNightReminder": "Changez le marqueur de jour du Léviathan.",
     "reminders": [
+      "Joueur Bon Exécuté"
+    ],
+    "remindersGlobal": [
       "Jour 1",
       "Jour 2",
       "Jour 3",
       "Jour 4",
       "Jour 5",
-      "Joueur Bon Exécuté"
     ],
     "setup": false,
     "ability": "Si plus d'un Bon joueur est exécuté, les Mauvais gagnent. Tous les joueurs savent que votre personnage est en jeu. Après 5 jours, les Mauvais gagnent."
