@@ -2,6 +2,9 @@
 
 ## Upcomming Version
 
+### Version 3.15.1
+Updating night order (and its print)
+
 ### Version 3.15.0
 - Night order bubbles always on for storyteller
 - Optional night order bubbles for players
