@@ -62,7 +62,7 @@
   {
     "id": "toymaker",
     "firstNightReminder": "",
-    "otherNight": 1,
+    "otherNight": 2,
     "otherNightReminder": "If it is a night when a Demon attack could end the game, and the Demon is marked “Final night: No Attack,” then the Demon does not act tonight. (Do not wake them.)",
     "reminders": ["Final Night: No Attack"],
     "setup": false,
@@ -83,7 +83,7 @@
   {
     "id": "duchess",
     "firstNightReminder": "",
-    "otherNight": 1,
+    "otherNight": 2,
     "otherNightReminder": "Wake each player marked “Visitor” or “False Info” one at a time. Show them the Duchess token, then fingers (1, 2, 3) equaling the number of evil players marked “Visitor” or, if you are waking the player marked “False Info,” show them any number of fingers except the number of evil players marked “Visitor.”",
     "reminders": ["Visitor", "False Info"],
     "setup": false,
