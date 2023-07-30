@@ -2,7 +2,21 @@
 
 ## Upcomming Version
 
+### Version 3.15.0
+- Night order bubbles always on for storyteller
+- Optional night order bubbles for players
 
+### Version 3.14.0
+Reworked script selection UI
+
+### Version 3.13.2
+Malformed JSON breaking compilation
+
+### Version 3.13.1
+Some corrections in the reminders tokens:
+- Correcting some french names
+- Putting some tokens in "remindersGlobal"
+- Deleting some useless tokens, or adding some other
 
 ### Version 3.13.1
 Some corrections in the reminders tokens:

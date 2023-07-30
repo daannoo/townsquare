@@ -1,84 +1,116 @@
 <template>
   <Modal class="editions" v-if="modals.edition" @close="toggleModal('edition')">
-    <div v-if="!isCustom">
-      <h3>{{ locale.modal.edition.title }}</h3>
-      <ul class="editions">
-        <li
-          v-for="edition in editions"
-          class="edition"
-          :class="['edition-' + edition.id]"
-          :style="{
-            backgroundImage: `url(${require('../../assets/editions/' +
-              edition.id +
-              '.png')})`
-          }"
-          :key="edition.id"
-          @click="setEdition(edition)"
+    <h3>{{ locale.modal.edition.title }}</h3>
+    <ul>
+      <li class="tabs" :class="tab">
+        <span
+          class="tab"
+          icon="book-open"
+          @click="tab = 'official'"
+          :class="{ active: tab == 'official' }"
+          >{{ locale.modal.edition.tab.official }}</span
         >
-          {{ edition.name }}
-        </li>
-        <li
-          class="edition edition-custom"
-          @click="isCustom = true"
-          :style="{
-            backgroundImage: `url(${require('../../assets/editions/custom.png')})`
-          }"
+        <span
+          class="tab"
+          icon="broadcast-tower"
+          @click="tab = 'popular'"
+          :class="{ active: tab == 'popular' }"
+          >{{ locale.modal.edition.tab.popular }}</span
         >
-          {{ locale.modal.edition.custom.button }}
-        </li>
-      </ul>
-    </div>
-    <div class="custom" v-else>
-      <h3>{{ locale.modal.edition.custom.title }}</h3>
-      {{ locale.modal.edition.custom.introStart }}
-      <a href="https://script.bloodontheclocktower.com/" target="_blank">{{
-        locale.modal.edition.custom.scriptTool
-      }}</a>
-      {{ locale.modal.edition.custom.introEnd }}.<br />
-      <br />
-      {{ locale.modal.edition.custom.instructionsStart }}
-      <a
-        href="https://github.com/bra1n/townsquare#custom-characters"
-        target="_blank"
-        >{{ locale.modal.edition.custom.documentation }}n</a
-      >
-      {{ locale.modal.edition.custom.instructionsEnd }}<br />
-      <b>{{ locale.modal.edition.custom.warning }}</b>
-      <h3>{{ locale.modal.edition.popularScripts }}</h3>
-      <ul class="scripts">
-        <li
-          v-for="(script, index) in scripts"
-          :key="index"
-          @click="handleURL(script[1])"
+        <span
+          class="tab"
+          icon="theater-masks"
+          @click="tab = 'teensyville'"
+          :class="{ active: tab == 'teensyville' }"
+          >{{ locale.modal.edition.tab.teensyville }}</span
         >
-          {{ script[0] }}
-        </li>
-      </ul>
-      <input
-        type="file"
-        ref="upload"
-        accept="application/json"
-        @change="handleUpload"
-      />
-      <div class="button-group">
-        <div class="button" @click="openUpload">
-          <font-awesome-icon icon="file-upload" />
-          {{ locale.modal.edition.custom.upload }}
+        <span
+          class="tab"
+          icon="question"
+          @click="tab = 'custom'"
+          :class="{ active: tab == 'custom' }"
+          >{{ locale.modal.edition.tab.custom }}</span
+        >
+      </li>
+      <template v-if="tab == 'official'">
+        <ul class="editions">
+          <li
+            v-for="edition in editions.official"
+            class="edition"
+            :class="['edition-' + edition.id]"
+            :style="{
+              backgroundImage: `url(${require('../../assets/editions/' +
+                edition.id +
+                '.png')})`
+            }"
+            :key="edition.id"
+            @click="setEdition(edition)"
+          >
+            {{ edition.name }}
+          </li>
+        </ul>
+      </template>
+      <template v-if="tab == 'popular'">
+        <ul class="scripts">
+          <li
+            v-for="(script, index) in editions.popular"
+            :key="index"
+            @click="handleURL(script[1])"
+          >
+            {{ script[0] }}
+          </li>
+        </ul>
+      </template>
+      <template v-if="tab == 'teensyville'">
+        <ul class="scripts">
+          <li
+            v-for="(script, index) in editions.teensyville"
+            :key="index"
+            @click="handleURL(script[1])"
+          >
+            {{ script[0] }}
+          </li>
+        </ul>
+      </template>
+      <template v-if="tab == 'custom'">
+        <div class="custom">
+          {{ locale.modal.edition.custom.introStart }}
+          <a href="https://script.bloodontheclocktower.com/" target="_blank">{{
+            locale.modal.edition.custom.scriptTool
+          }}</a>
+          {{ locale.modal.edition.custom.introEnd }}.<br />
+          <br />
+          {{ locale.modal.edition.custom.instructionsStart }}
+          <a
+            href="https://github.com/bra1n/townsquare#custom-characters"
+            target="_blank"
+            >{{ locale.modal.edition.custom.documentation }}n</a
+          >
+          {{ locale.modal.edition.custom.instructionsEnd }}<br />
+          <b>{{ locale.modal.edition.custom.warning }}</b>
+          <input
+            type="file"
+            ref="upload"
+            accept="application/json"
+            @change="handleUpload"
+          />
         </div>
-        <div class="button" @click="promptURL">
-          <font-awesome-icon icon="link" />
-          {{ locale.modal.edition.custom.url }}
+        <div class="button-group">
+          <div class="button" @click="openUpload">
+            <font-awesome-icon icon="file-upload" />
+            {{ locale.modal.edition.custom.upload }}
+          </div>
+          <div class="button" @click="promptURL">
+            <font-awesome-icon icon="link" />
+            {{ locale.modal.edition.custom.url }}
+          </div>
+          <div class="button" @click="readFromClipboard">
+            <font-awesome-icon icon="clipboard" />
+            {{ locale.modal.edition.custom.clipboard }}
+          </div>
         </div>
-        <div class="button" @click="readFromClipboard">
-          <font-awesome-icon icon="clipboard" />
-          {{ locale.modal.edition.custom.clipboard }}
-        </div>
-        <div class="button" @click="isCustom = false">
-          <font-awesome-icon icon="undo" />
-          {{ locale.modal.edition.custom.back }}
-        </div>
-      </div>
-    </div>
+      </template>
+    </ul>
   </Modal>
 </template>
 
@@ -92,142 +124,7 @@ export default {
   },
   data: function() {
     return {
-      editions: this.$store.state.editions,
-      isCustom: false,
-      scripts: [
-        [
-          "Boozling",
-          "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/boozling.json"
-        ],
-        [
-          "Catfishing",
-          "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/catfishing.json"
-        ],
-        [
-          "Chaos in the streets",
-          "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/chaos_in_the_streets.json"
-        ],
-        [
-          "Comrade Demon (Teensyville)",
-          "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/comrade_demon.json"
-        ],
-        [
-          "Cultists of Atlantis",
-          "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/cultists_of_atlantis.json"
-        ],
-        [
-          "Deadly Penance Day",
-          "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/deadly_penance_day.json"
-        ],
-        [
-          "Frankenstein's Mayor (Teensyville)",
-          "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/frankensteins_mayor.json"
-        ],
-        [
-          "Harold Holt's Revenge",
-          "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/harold_holts_revenge.json"
-        ],
-        [
-          "Hide & Seek",
-          "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/hide_and_seek.json"
-        ],
-        [
-          "Knowing me, Knowing you",
-          "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/knowing_me_knowing_you.json"
-        ],
-        [
-          "Late night drive by 1.6 (Teensyville)",
-          "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/late_night_drive_by.json"
-        ],
-        [
-          "Midnight Oasis",
-          "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/midnight_oasis.json"
-        ],
-        [
-          "Minion is Angel Protected & the Demon Has 2 Bluffs (Teensyville)",
-          "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/minion_is_angel_protected_and_the_demon_has_2_bluffs.json"
-        ],
-        [
-          "No greater joy (Teensyville)",
-          "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/no_greater_joy.json"
-        ],
-        [
-          "No roles barred",
-          "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/no_roles_barred.json"
-        ],
-        [
-          "On thin ice (Teensyville)",
-          "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/on_thin_ice.json"
-        ],
-        [
-          "Pont Saint-Esprit",
-          "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/pont_saint_esprit.json"
-        ],
-        [
-          "Poppyganda",
-          "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/poppyganda.json"
-        ],
-        [
-          "Race to the bottom (Teensyville)",
-          "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/race_to_the_bottom.json"
-        ],
-        [
-          "Reptiles !",
-          "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/reptiles.json"
-        ],
-        [
-          "Reptiles II : Lizard in the city",
-          "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/reptiles2.json"
-        ],
-        [
-          "Reykjavik's Scheme",
-          "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/reykjaviks_scheme.json"
-        ],
-        [
-          "Rochambeau",
-          "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/rochambeau.json"
-        ],
-        [
-          "Simpletown Village",
-          "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/simpletown_village.json"
-        ],
-        [
-          "Spooky tea 2 : Very spooky (Teensyville)",
-          "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/spooky_tea2.json"
-        ],
-        [
-          "Storyteller's Vengeance",
-          "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/storytellers_vengeance.json"
-        ],
-        [
-          "The Horrifying Spectacle of Public Executions",
-          "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/the_horrifying_spectacle_of_public_executions.json"
-        ],
-        [
-          "Trouble Brewing Advanced",
-          "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/trouble_brewing_advanced.json"
-        ],
-        [
-          "Trouble with Violets",
-          "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/trouble_with_violets.json"
-        ],
-        [
-          "Uncertain Death",
-          "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/uncertain_death.json"
-        ],
-        [
-          "Vigormortis High school (Teensyville)",
-          "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/vigormortis_high_school.json"
-        ],
-        [
-          "Visitors",
-          "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/visitors.json"
-        ],
-        [
-          "Whose Cult is it Anyway",
-          "https://raw.githubusercontent.com/Pingumask/townsquare/develop/src/assets/scripts/whose_cult_is_it_anyway.json"
-        ]
-      ]
+      tab: "official"
     };
   },
   computed: {
@@ -301,7 +198,6 @@ export default {
         });
         this.$store.commit("players/setFabled", { fabled });
       }
-      this.isCustom = false;
     },
     ...mapMutations(["toggleModal", "setEdition"])
   }
@@ -309,6 +205,10 @@ export default {
 </script>
 
 <style scoped lang="scss">
+ul {
+  width: 100%;
+}
+
 ul.editions {
   .edition {
     font-family: PiratesBay, sans-serif;
@@ -330,25 +230,65 @@ ul.editions {
   }
 }
 
+.tabs {
+  display: flex;
+  padding: 0;
+  justify-content: flex-start;
+  width: 100%;
+  gap: 0.25rem;
+  border-bottom: 3px solid white;
+  .tab {
+    text-align: center;
+    flex-grow: 1;
+    flex-shrink: 0;
+    height: 35px;
+    border: 1px solid grey;
+    border-radius: 5px 5px 0 0;
+    padding: 0.15em 1em;
+    cursor: pointer;
+    transition: color 250ms;
+    user-select: none;
+    &:hover {
+      color: red;
+    }
+    &.active {
+      background: linear-gradient(
+        rgb(31, 101, 255) 0%,
+        rgba(0, 0, 0, 0.5) 100%
+      );
+    }
+  }
+}
+
 .custom {
   text-align: center;
-  input[type="file"] {
-    display: none;
-  }
-  .scripts {
-    margin-block: 1em;
-    list-style-type: disc;
-    font-size: 120%;
-    cursor: pointer;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 0.5em 1em;
-    li {
-      text-align: left;
-      list-style-type: none;
-      &:hover {
-        color: red;
-      }
+  margin-block: 1em;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.scripts {
+  margin-block: 1em;
+  list-style-type: disc;
+  font-size: 120%;
+  cursor: pointer;
+  // display: grid;
+  // grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  display: flex;
+  gap: 0.75em 1em;
+  justify-content: flex-start;
+  li {
+    text-align: left;
+    list-style-type: none;
+    border: 1px solid white;
+    border-radius: 100vmax;
+    padding: 0.15em 1.5em;
+    background: linear-gradient(#4e4e4e, #040404);
+    user-select: none;
+    &:hover {
+      color: red;
     }
   }
 }
