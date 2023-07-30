@@ -2,6 +2,10 @@
 
 ## Upcomming Version
 
+### Version 3.15.0
+- Night order bubbles always on for storyteller
+- Optional night order bubbles for players
+
 ### Version 3.14.0
 Reworked script selection UI
 
