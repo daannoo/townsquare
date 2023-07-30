@@ -81,7 +81,7 @@
               />
             </em>
           </li>
-          <li @click="toggleNightOrder" v-if="players.length">
+          <li @click="toggleNightOrder" v-if="session.isSpectator">
             {{ locale.menu.grimoire.order }}
             <em>
               <font-awesome-icon

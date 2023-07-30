@@ -140,7 +140,10 @@
         >
           <div
             class="night-order first"
-            v-if="nightOrder.get(role).first && grimoire.isNightOrder"
+            v-if="
+              nightOrder.get(role).first &&
+                (grimoire.isNightOrder || !session.isSpectator)
+            "
           >
             <em>{{ nightOrder.get(role).first }}.</em>
             <span v-if="role.firstNightReminder">{{
@@ -149,7 +152,10 @@
           </div>
           <div
             class="night-order other"
-            v-if="nightOrder.get(role).other && grimoire.isNightOrder"
+            v-if="
+              nightOrder.get(role).other &&
+                (grimoire.isNightOrder || !session.isSpectator)
+            "
           >
             <em>{{ nightOrder.get(role).other }}.</em>
             <span v-if="role.otherNightReminder">{{
