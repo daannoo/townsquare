@@ -163,9 +163,13 @@
   "modal":{
     "edition":{
       "title": "Choisir un Scénario :",
+      "tab": {
+        "official": "Scénarios officiels",
+        "popular": "Scripts populaires",
+        "teensyville": "Teensyville",
+        "custom": "Partie personnalisée"
+      },
       "custom": {
-        "button": "Scénario Perso / Personnages",
-        "title": "Charger un Scénario Perso",
         "introStart": "Pour jouer avec un script personnalisé, vous pouvez sélectionner les personnages de votre choix grace à l'",
         "scriptTool": "outil officiel d'édition de scripts",
         "introEnd": "puis téléverser le fichier json généré directement ici ou depuis une URL hébergée.",
