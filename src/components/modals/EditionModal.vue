@@ -3,10 +3,34 @@
     <h3>{{ locale.modal.edition.title }}</h3>
     <ul>
       <li class="tabs" :class="tab">
-        <span class="tab" icon="book-open" @click="tab = 'official'" :class="{active: tab== 'official'}" >{{ locale.modal.edition.tab.official }}</span>
-        <span class="tab" icon="broadcast-tower" @click="tab = 'popular'" :class="{active: tab== 'popular'}" >{{ locale.modal.edition.tab.popular }}</span>
-        <span class="tab" icon="theater-masks" @click="tab = 'teensyville'" :class="{active: tab== 'teensyville'}" >{{ locale.modal.edition.tab.teensyville }}</span>
-        <span class="tab" icon="question" @click="tab = 'custom'" :class="{active: tab== 'custom'}" >{{ locale.modal.edition.tab.custom }}</span>
+        <span
+          class="tab"
+          icon="book-open"
+          @click="tab = 'official'"
+          :class="{ active: tab == 'official' }"
+          >{{ locale.modal.edition.tab.official }}</span
+        >
+        <span
+          class="tab"
+          icon="broadcast-tower"
+          @click="tab = 'popular'"
+          :class="{ active: tab == 'popular' }"
+          >{{ locale.modal.edition.tab.popular }}</span
+        >
+        <span
+          class="tab"
+          icon="theater-masks"
+          @click="tab = 'teensyville'"
+          :class="{ active: tab == 'teensyville' }"
+          >{{ locale.modal.edition.tab.teensyville }}</span
+        >
+        <span
+          class="tab"
+          icon="question"
+          @click="tab = 'custom'"
+          :class="{ active: tab == 'custom' }"
+          >{{ locale.modal.edition.tab.custom }}</span
+        >
       </li>
       <template v-if="tab == 'official'">
         <ul class="editions">
@@ -25,8 +49,8 @@
             {{ edition.name }}
           </li>
         </ul>
-      </template>      
-      <template v-if="tab =='popular'">
+      </template>
+      <template v-if="tab == 'popular'">
         <ul class="scripts">
           <li
             v-for="(script, index) in editions.popular"
@@ -37,7 +61,7 @@
           </li>
         </ul>
       </template>
-      <template v-if="tab =='teensyville'">
+      <template v-if="tab == 'teensyville'">
         <ul class="scripts">
           <li
             v-for="(script, index) in editions.teensyville"
@@ -48,7 +72,7 @@
           </li>
         </ul>
       </template>
-      <template v-if="tab =='custom'">
+      <template v-if="tab == 'custom'">
         <div class="custom">
           {{ locale.modal.edition.custom.introStart }}
           <a href="https://script.bloodontheclocktower.com/" target="_blank">{{
@@ -70,7 +94,6 @@
             accept="application/json"
             @change="handleUpload"
           />
-          
         </div>
         <div class="button-group">
           <div class="button" @click="openUpload">
@@ -101,8 +124,7 @@ export default {
   },
   data: function() {
     return {
-      tab: 'official',
-      
+      tab: "official"
     };
   },
   computed: {
@@ -213,14 +235,14 @@ ul.editions {
   padding: 0;
   justify-content: flex-start;
   width: 100%;
-  gap:0.25rem;
+  gap: 0.25rem;
   border-bottom: 3px solid white;
   .tab {
-    text-align:center;
+    text-align: center;
     flex-grow: 1;
     flex-shrink: 0;
     height: 35px;
-    border: 1px solid grey;    
+    border: 1px solid grey;
     border-radius: 5px 5px 0 0;
     padding: 0.15em 1em;
     cursor: pointer;
@@ -230,7 +252,10 @@ ul.editions {
       color: red;
     }
     &.active {
-      background: linear-gradient(rgb(31, 101, 255) 0%, rgba(0, 0, 0, 0.5) 100%)
+      background: linear-gradient(
+        rgb(31, 101, 255) 0%,
+        rgba(0, 0, 0, 0.5) 100%
+      );
     }
   }
 }
@@ -241,30 +266,30 @@ ul.editions {
 }
 
 input[type="file"] {
-    display: none;
-  }
+  display: none;
+}
 
 .scripts {
-    margin-block: 1em;
-    list-style-type: disc;
-    font-size: 120%;
-    cursor: pointer;
-    // display: grid;
-    // grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    display: flex;
-    gap: .75em 1em;
-    justify-content:flex-start;
-    li {
-      text-align: left;
-      list-style-type: none;
-      border: 1px solid white;
-      border-radius: 100vmax;
-      padding: 0.15em 1.5em;
-      background: linear-gradient(#4e4e4e, #040404);
-      user-select: none;
-      &:hover {
-        color: red;
-      }
+  margin-block: 1em;
+  list-style-type: disc;
+  font-size: 120%;
+  cursor: pointer;
+  // display: grid;
+  // grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  display: flex;
+  gap: 0.75em 1em;
+  justify-content: flex-start;
+  li {
+    text-align: left;
+    list-style-type: none;
+    border: 1px solid white;
+    border-radius: 100vmax;
+    padding: 0.15em 1.5em;
+    background: linear-gradient(#4e4e4e, #040404);
+    user-select: none;
+    &:hover {
+      color: red;
     }
   }
+}
 </style>

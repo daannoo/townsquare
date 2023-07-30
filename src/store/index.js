@@ -6,12 +6,7 @@ import players from "./modules/players";
 import session from "./modules/session";
 import editionJSON from "../editions.json";
 
-import {
-  locale,
-  rolesJSON,
-  jinxesJSON,
-  fabledJSON
-} from "./modules/locale";
+import { locale, rolesJSON, jinxesJSON, fabledJSON } from "./modules/locale";
 
 Vue.use(Vuex);
 
