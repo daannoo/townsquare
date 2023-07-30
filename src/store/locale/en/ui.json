@@ -163,9 +163,13 @@
   "modal":{
     "edition":{
       "title": "Select an edition:",
+      "tab": {
+        "official": "Official scripts",
+        "popular": "Popular scripts",
+        "teensyville": "Teensyville",
+        "custom": "Load custom"
+      },
       "custom": {
-        "button": "Custom Script / Characters",
-        "title": "Load custom script / characters",
         "introStart": "To play with a custom script, you need to select the characters you want to play with in the official",
         "scriptTool": "Script Tool",
         "introEnd": "and then upload the generated \"custom-list.json\" either directly here or provide a URL to such a hosted JSON file.",

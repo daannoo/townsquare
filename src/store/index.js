@@ -4,19 +4,19 @@ import persistence from "./persistence";
 import socket from "./socket";
 import players from "./modules/players";
 import session from "./modules/session";
+import editionJSON from "../editions.json";
 
 import {
   locale,
   rolesJSON,
   jinxesJSON,
-  fabledJSON,
-  editionJSON
+  fabledJSON
 } from "./modules/locale";
 
 Vue.use(Vuex);
 
 // helper functions
-const getRolesByEdition = (edition = editionJSON[0]) => {
+const getRolesByEdition = (edition = editionJSON.official[0]) => {
   return new Map(
     rolesJSON
       .filter(r => r.edition === edition.id || edition.roles.includes(r.id))
@@ -25,7 +25,7 @@ const getRolesByEdition = (edition = editionJSON[0]) => {
   );
 };
 
-const getTravelersNotInEdition = (edition = editionJSON[0]) => {
+const getTravelersNotInEdition = (edition = editionJSON.official[0]) => {
   return new Map(
     rolesJSON
       .filter(
@@ -54,7 +54,7 @@ const clean = id => id.toLocaleLowerCase().replace(/[^a-z0-9]/g, "");
 
 // global data maps
 const editionJSONbyId = new Map(
-  editionJSON.map(edition => [edition.id, edition])
+  editionJSON.official.map(edition => [edition.id, edition])
 );
 const rolesJSONbyId = new Map(rolesJSON.map(role => [role.id, role]));
 const fabled = new Map(fabledJSON.map(role => [role.id, role]));

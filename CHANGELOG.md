@@ -2,6 +2,9 @@
 
 ## Upcomming Version
 
+### Version 3.14.0
+Reworked script selection UI
+
 ### Version 3.13.2
 Malformed JSON breaking compilation
 

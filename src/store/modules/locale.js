@@ -27,4 +27,3 @@ export const locale = require(`../locale/${usedLanguage}/ui.json`);
 export const rolesJSON = require(`../locale/${usedLanguage}/roles.json`);
 export const jinxesJSON = require(`../locale/${usedLanguage}/hatred.json`);
 export const fabledJSON = require(`../locale/${usedLanguage}/fabled.json`);
-export const editionJSON = require(`../locale/${usedLanguage}/editions.json`);
