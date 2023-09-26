@@ -29,18 +29,18 @@ const getters = {
     const firstNight = [0];
     const otherNight = [0];
     fabled.forEach(role => {
-      if (role.firstNight && !firstNight.includes(role.firstNight)) {
+      if (role.firstNight && !firstNight.includes(role)) {
         firstNight.push(role);
       }
-      if (role.otherNight && !otherNight.includes(role.otherNight)) {
+      if (role.otherNight && !otherNight.includes(role)) {
         otherNight.push(role);
       }
     });
     players.forEach(({ role }) => {
-      if (role.firstNight && !firstNight.includes(role.firstNight)) {
+      if (role.firstNight && !firstNight.includes(role)) {
         firstNight.push(role);
       }
-      if (role.otherNight && !otherNight.includes(role.otherNight)) {
+      if (role.otherNight && !otherNight.includes(role)) {
         otherNight.push(role);
       }
     });
