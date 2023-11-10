@@ -1,6 +1,7 @@
 # Release Notes
 
 ## Upcomming Version
+- Correcting Leviathan's english description
 - Correcting "Late Night Drive By"'s name
 - Adding a token "Used" to the Doomsayer
 
