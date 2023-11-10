@@ -1,6 +1,14 @@
 # Release Notes
 
+
+
+---
+
 ## Upcomming Version
+
+### Version 3.16.0 (merged upstream 2.16.2)
+- fixed custom script format to support new script tool JSON
+- updated packages to be compatible with Node >= 18 again
 
 ### Version 3.15.0
 - Night order bubbles always on for storyteller
@@ -158,7 +166,7 @@ Add localization capabilities and french translation
 ---
 
 ### Version 2.16.1
-Updated character night order to be consistent with script tool
+- Updated character night order to be consistent with script tool
 
 ---
 
