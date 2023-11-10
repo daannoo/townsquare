@@ -5,7 +5,7 @@
     :class="{
       public: grimoire.isPublic,
       spectator: session.isSpectator,
-      vote: session.nomination
+      vote: session.nomination,
     }"
   >
     <ul class="circle" :class="['size-' + players.length]">
@@ -18,7 +18,7 @@
           from: Math.max(swap, move, nominate) === index,
           swap: swap > -1,
           move: move > -1,
-          nominate: nominate > -1
+          nominate: nominate > -1,
         }"
       ></Player>
     </ul>
@@ -142,7 +142,7 @@
             class="night-order first"
             v-if="
               nightOrder.get(role).first &&
-                (grimoire.isNightOrder || !session.isSpectator)
+              (grimoire.isNightOrder || !session.isSpectator)
             "
           >
             <em>{{ nightOrder.get(role).first }}.</em>
@@ -154,7 +154,7 @@
             class="night-order other"
             v-if="
               nightOrder.get(role).other &&
-                (grimoire.isNightOrder || !session.isSpectator)
+              (grimoire.isNightOrder || !session.isSpectator)
             "
           >
             <em>{{ nightOrder.get(role).other }}.</em>
@@ -184,12 +184,12 @@ export default {
     Player,
     Token,
     RoleModal,
-    ReminderModal
+    ReminderModal,
   },
   computed: {
     ...mapGetters({ nightOrder: "players/nightOrder" }),
     ...mapState(["grimoire", "roles", "session", "locale"]),
-    ...mapState("players", ["players", "bluffs", "fabled"])
+    ...mapState("players", ["players", "bluffs", "fabled"]),
   },
   data() {
     return {
@@ -204,7 +204,7 @@ export default {
       timerName: "Timer",
       timerDuration: 1,
       timerOn: false,
-      timerEnder: false
+      timerEnder: false,
     };
   },
   methods: {
@@ -259,7 +259,7 @@ export default {
       if (this.session.isSpectator || this.session.lockedVote) return;
       if (
         confirm(
-          `Do you really want to remove ${this.players[playerIndex].name}?`
+          `Do you really want to remove ${this.players[playerIndex].name}?`,
         )
       ) {
         const { nomination } = this.session;
@@ -274,7 +274,7 @@ export default {
             // update nomination array if removed player has lower index
             this.$store.commit("session/setNomination", [
               nomination[0] > playerIndex ? nomination[0] - 1 : nomination[0],
-              nomination[1] > playerIndex ? nomination[1] - 1 : nomination[1]
+              nomination[1] > playerIndex ? nomination[1] - 1 : nomination[1],
             ]);
           }
         }
@@ -290,7 +290,7 @@ export default {
         if (this.session.nomination) {
           // update nomination if one of the involved players is swapped
           const swapTo = this.players.indexOf(to);
-          const updatedNomination = this.session.nomination.map(nom => {
+          const updatedNomination = this.session.nomination.map((nom) => {
             if (nom === this.swap) return swapTo;
             if (nom === swapTo) return this.swap;
             return nom;
@@ -304,7 +304,7 @@ export default {
         }
         this.$store.commit("players/swap", [
           this.swap,
-          this.players.indexOf(to)
+          this.players.indexOf(to),
         ]);
         this.cancel();
       }
@@ -318,7 +318,7 @@ export default {
         if (this.session.nomination) {
           // update nomination if it is affected by the move
           const moveTo = this.players.indexOf(to);
-          const updatedNomination = this.session.nomination.map(nom => {
+          const updatedNomination = this.session.nomination.map((nom) => {
             if (nom === this.move) return moveTo;
             if (nom > this.move && nom <= moveTo) return nom - 1;
             if (nom < this.move && nom >= moveTo) return nom + 1;
@@ -333,7 +333,7 @@ export default {
         }
         this.$store.commit("players/move", [
           this.move,
-          this.players.indexOf(to)
+          this.players.indexOf(to),
         ]);
         this.cancel();
       }
@@ -359,7 +359,7 @@ export default {
     renameTimer() {
       let newName = prompt(
         this.locale.townsquare.timer.prompt.name,
-        this.timerName
+        this.timerName,
       );
       if (newName === "") {
         newName = this.locale.townsquare.timer.default.text;
@@ -372,7 +372,8 @@ export default {
     },
     setNominationTimer() {
       this.timerDuration = 2;
-      this.timerName = this.timerName = this.locale.townsquare.timer.nominations.text;
+      this.timerName = this.timerName =
+        this.locale.townsquare.timer.nominations.text;
     },
     setDuskTimer() {
       this.timerDuration = 1;
@@ -399,7 +400,7 @@ export default {
       let timerText = this.locale.townsquare.timer.debate.text;
       timerText = timerText.replace(
         "$accusee",
-        this.players[this.session.nomination[1]].name
+        this.players[this.session.nomination[1]].name,
       );
       this.timerName = timerText;
     },
@@ -422,8 +423,8 @@ export default {
       this.$store.commit("setTimer", {});
       this.timerOn = false;
       clearTimeout(this.timerEnder);
-    }
-  }
+    },
+  },
 };
 </script>
 

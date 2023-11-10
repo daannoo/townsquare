@@ -39,9 +39,9 @@
             class="edition"
             :class="['edition-' + edition.id]"
             :style="{
-              backgroundImage: `url(${require('../../assets/editions/' +
-                edition.id +
-                '.png')})`
+              backgroundImage: `url(${require(
+                '../../assets/editions/' + edition.id + '.png',
+              )})`,
             }"
             :key="edition.id"
             @click="setEdition(edition)"
@@ -120,15 +120,15 @@ import Modal from "./Modal";
 
 export default {
   components: {
-    Modal
+    Modal,
   },
-  data: function() {
+  data: function () {
     return {
-      tab: "official"
+      tab: "official",
     };
   },
   computed: {
-    ...mapState(["modals", "locale", "editions"])
+    ...mapState(["modals", "locale", "editions"]),
   },
   methods: {
     openUpload() {
@@ -178,7 +178,9 @@ export default {
     },
     parseRoles(roles) {
       if (!roles || !roles.length) return;
-      roles = roles.map(role => typeof role === "string" ? { id: role } : role);
+      roles = roles.map((role) =>
+        typeof role === "string" ? { id: role } : role,
+      );
       const metaIndex = roles.findIndex(({ id }) => id === "_meta");
       let meta = {};
       if (metaIndex > -1) {
@@ -187,7 +189,7 @@ export default {
       this.$store.commit("setCustomRoles", roles);
       this.$store.commit(
         "setEdition",
-        Object.assign({}, meta, { id: "custom" })
+        Object.assign({}, meta, { id: "custom" }),
       );
       // check for fabled and set those too, if present
       if (roles.some((role) => this.$store.state.fabled.has(role.id || role))) {
@@ -200,8 +202,8 @@ export default {
         this.$store.commit("players/setFabled", { fabled });
       }
     },
-    ...mapMutations(["toggleModal", "setEdition"])
-  }
+    ...mapMutations(["toggleModal", "setEdition"]),
+  },
 };
 </script>
 
@@ -222,8 +224,12 @@ ul.editions {
     width: 30%;
     margin: 5px;
     font-size: 120%;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-      1px 1px 0 #000, 0 0 5px rgba(0, 0, 0, 0.75);
+    text-shadow:
+      -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+      1px 1px 0 #000,
+      0 0 5px rgba(0, 0, 0, 0.75);
     cursor: pointer;
     &:hover {
       color: red;
