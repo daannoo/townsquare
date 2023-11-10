@@ -1,6 +1,7 @@
 # Release Notes
 
 ## Upcomming Version
+- Adding an asterisk in the roles reference
 - Correcting the message when someone wants to exile a Traveller
 - Correcting Leviathan's english description
 - Correcting "Late Night Drive By"'s name
