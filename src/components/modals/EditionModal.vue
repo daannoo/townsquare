@@ -44,7 +44,7 @@
               )})`,
             }"
             :key="edition.id"
-            @click="setEdition(edition)"
+            @click="runEdition(edition)"
           >
             {{ edition.name }}
           </li>
@@ -191,16 +191,19 @@ export default {
         "setEdition",
         Object.assign({}, meta, { id: "custom" }),
       );
-      // check for fabled and set those too, if present
-      if (roles.some((role) => this.$store.state.fabled.has(role.id || role))) {
-        const fabled = [];
-        roles.forEach((role) => {
-          if (this.$store.state.fabled.has(role.id || role)) {
-            fabled.push(this.$store.state.fabled.get(role.id || role));
-          }
-        });
-        this.$store.commit("players/setFabled", { fabled });
-      }
+      // set fabled
+      const fabled = [];
+      roles.forEach((role) => {
+        if (this.$store.state.fabled.has(role.id || role)) {
+          fabled.push(this.$store.state.fabled.get(role.id || role));
+        }
+      });
+      this.$store.commit("players/setFabled", { fabled });
+    },
+    runEdition(edition) {
+      this.$store.commit("setEdition", edition);
+      // The editions contain no Fabled
+      this.$store.commit("players/setFabled", { fabled: [] });
     },
     ...mapMutations(["toggleModal", "setEdition"]),
   },
