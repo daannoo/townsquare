@@ -44,6 +44,6 @@
     "url": "https://github.com//bra1n/townsquare.git"
   },
   "engines": {
-    "node": "^16"
+    "node": "^18"
   }
 }
