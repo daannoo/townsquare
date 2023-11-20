@@ -86,7 +86,6 @@ const actions = {
         id,
         pronouns,
       }));
-      commit("setFabled", { fabled: [] });
     }
     commit("set", players);
     commit("setBluff");
