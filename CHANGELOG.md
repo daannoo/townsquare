@@ -1,6 +1,7 @@
 # Release Notes
 
 ## Upcomming Version
+Correcting automatic adding/deletion of Fabled
 
 ### Version 3.17.0
 
