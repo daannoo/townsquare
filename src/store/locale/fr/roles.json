@@ -67,7 +67,7 @@
     "team": "townsfolk",
     "firstNight": 38,
     "firstNightReminder": "Indiquez combien de joueurs sont Mauvais parmi les voisins de l'Empathe.",
-    "otherNight": 56,
+    "otherNight": 57,
     "otherNightReminder": "Indiquez combien de joueurs sont Mauvais parmi les voisins vivants de l'Empathe.",
     "reminders": [],
     "setup": false,
@@ -80,7 +80,7 @@
     "team": "townsfolk",
     "firstNight": 39,
     "firstNightReminder": "Le Voyant désigne 2 joueurs. Indiquez si, oui ou non, l'un d'eux est le Démon (ou la fausse piste).",
-    "otherNight": 57,
+    "otherNight": 58,
     "otherNightReminder": "Le Voyant désigne 2 joueurs. Indiquez si, oui ou non, l'un d'eux est le Démon (ou la fausse piste).",
     "reminders": [
       "Fausse piste"
@@ -95,7 +95,7 @@
     "team": "townsfolk",
     "firstNight": 0,
     "firstNightReminder": "",
-    "otherNight": 58,
+    "otherNight": 59,
     "otherNightReminder": "Si un joueur est mort par execution aujourd'hui, indiquez le personnage du joueur exécuté.",
     "reminders": [
       "Executé"
@@ -125,7 +125,7 @@
     "team": "townsfolk",
     "firstNight": 0,
     "firstNightReminder": "",
-    "otherNight": 55,
+    "otherNight": 56,
     "otherNightReminder": "Si le Corbeau est mort cette nuit, il désigne un joueur. Indiquez le rôle de ce joueur.",
     "reminders": [],
     "setup": false,
@@ -194,7 +194,7 @@
     "team": "outsider",
     "firstNight": 40,
     "firstNightReminder": "Le Majordome désigne un joueur. Marquez ce joueur comme 'Maître'.",
-    "otherNight": 70,
+    "otherNight": 71,
     "otherNightReminder": "Le Majordome désigne un joueur. Marquez ce joueur comme 'Maître'.",
     "reminders": [
       "Maître"
@@ -266,7 +266,7 @@
     "team": "minion",
     "firstNight": 53,
     "firstNightReminder": "Montrez votre grimoire à l'Espion aussi longtemps qu'il en a besoin.",
-    "otherNight": 71,
+    "otherNight": 72,
     "otherNightReminder": "Montrez votre grimoire à l'Espion aussi longtemps qu'il en a besoin.",
     "reminders": [],
     "setup": false,
@@ -392,7 +392,7 @@
     "team": "townsfolk",
     "firstNight": 41,
     "firstNightReminder": "Indiquez à la Grand-mère qui est son Petit-fils.",
-    "otherNight": 54,
+    "otherNight": 55,
     "otherNightReminder": "Si le Petit-Fils a été tué par le Démon cette nuit: la Grand-mère meurt.",
     "reminders": [
       "Petit-fils"
@@ -422,7 +422,7 @@
     "team": "townsfolk",
     "firstNight": 56,
     "firstNightReminder": "La Femme de chambre désigne deux autres joueurs vivants. Indiquez combien parmi eux ont été reveillés pour leur pouvoir cette nuit.",
-    "otherNight": 74,
+    "otherNight": 75,
     "otherNightReminder": "La Femme de chambre désigne deux autres joueurs vivants. Indiquez combien parmi eux ont été reveillés pour leur pouvoir cette nuit.",
     "reminders": [],
     "setup": false,
@@ -514,7 +514,7 @@
     "team": "townsfolk",
     "firstNight": 0,
     "firstNightReminder": "",
-    "otherNight": 46,
+    "otherNight": 47,
     "otherNightReminder": "S'il ne l'a pas déjà fait, Le Professeur décide d'utiliser ou non sa capacité. S'il le fait, il désigne un joueur mort. Si c'est un Villageois, il est ressuscité.",
     "reminders": [
       "Vivant",
@@ -588,7 +588,7 @@
     "team": "outsider",
     "firstNight": 0,
     "firstNightReminder": "",
-    "otherNight": 52,
+    "otherNight": 53,
     "otherNightReminder": "Le bricoleur peut mourir à tout moment.",
     "reminders": [
       "Mort"
@@ -603,7 +603,7 @@
     "team": "outsider",
     "firstNight": 0,
     "firstNightReminder": "",
-    "otherNight": 53,
+    "otherNight": 54,
     "otherNightReminder": "Si l'Enfant de la lune a désigné un joueur et que ce joueur est bon, le joueur désigné meurt.",
     "reminders": [
       "Mort"
@@ -856,7 +856,7 @@
     "team": "townsfolk",
     "firstNight": 43,
     "firstNightReminder": "Le Rêveur désigne un joueur. Indiquez lui un rôle Bon et un rôle Mauvais. L'un de ces deux personnages est ce joueur.",
-    "otherNight": 59,
+    "otherNight": 60,
     "otherNightReminder": "Le Rêveur désigne un joueur. Indiquez lui un rôle Bon et un rôle Mauvais. L'un de ces deux personnages est ce joueur.",
     "reminders": [],
     "setup": false,
@@ -884,7 +884,7 @@
     "team": "townsfolk",
     "firstNight": 57,
     "firstNightReminder": "Indiquez combien de pouvoirs ont dysfonctionné à cause du pouvoir d'un autre joueur depuis la fin de la nuit précédente.",
-    "otherNight": 75,
+    "otherNight": 76,
     "otherNightReminder": "Indiquez combien de pouvoirs ont dysfonctionné à cause du pouvoir d'un autre joueur depuis la fin de la nuit précédente.",
     "reminders": [
       "Anormal"
@@ -899,7 +899,7 @@
     "team": "townsfolk",
     "firstNight": 0,
     "firstNightReminder": "",
-    "otherNight": 60,
+    "otherNight": 61,
     "otherNightReminder": "Indiquez si le Démon a voté ou non aujourd'hui.",
     "reminders": [
       "Démon Votant",
@@ -915,7 +915,7 @@
     "team": "townsfolk",
     "firstNight": 0,
     "firstNightReminder": "",
-    "otherNight": 60,
+    "otherNight": 62,
     "otherNightReminder": "Indiquez si un Serviteur a lancé une accusation aujourd'hui",
     "reminders": [
       "A Accusé",
@@ -931,7 +931,7 @@
     "team": "townsfolk",
     "firstNight": 0,
     "firstNightReminder": "",
-    "otherNight": 62,
+    "otherNight": 63,
     "otherNightReminder": "Indiquez combien de joueurs morts sont Mauvais.",
     "reminders": [],
     "setup": false,
@@ -957,7 +957,7 @@
     "team": "townsfolk",
     "firstNight": 44,
     "firstNightReminder": "Si le Couturier désigne 2 joueurs, indiquez si ces joueurs sont dans la même équipe.",
-    "otherNight": 63,
+    "otherNight": 64,
     "otherNightReminder": "Si le Couturier n'a pas encore utilisé son pouvoir et qu'il désigne 2 joueurs, indiquez si ces joueurs sont du même alignement.",
     "reminders": [
       "Épuisé"
@@ -1004,7 +1004,7 @@
     "team": "townsfolk",
     "firstNight": 0,
     "firstNightReminder": "",
-    "otherNight": 64,
+    "otherNight": 65,
     "otherNightReminder": "Si aujourd'hui était la première journée du jongleur, indiquez-lui combien de ses prédictions étaient juste.",
     "reminders": [
       "Correct",
@@ -1020,7 +1020,7 @@
     "team": "townsfolk",
     "firstNight": 0,
     "firstNightReminder": "",
-    "otherNight": 45,
+    "otherNight": 46,
     "otherNightReminder": "Si le sage a été tué par le Démon, indiquez-lui deux joueur dont l'un est le Démon.",
     "reminders": [],
     "setup": false,
@@ -1046,7 +1046,7 @@
     "team": "outsider",
     "firstNight": 0,
     "firstNightReminder": "",
-    "otherNight": 44,
+    "otherNight": 45,
     "otherNightReminder": "Si le Bien-aimé est mort aujourd'hui, choisissez un joueur qui sera définitivement Ivre.",
     "reminders": [
       "Ivre définitif"
@@ -1061,7 +1061,7 @@
     "team": "outsider",
     "firstNight": 0,
     "firstNightReminder": "",
-    "otherNight": 43,
+    "otherNight": 44,
     "otherNightReminder": "Si le Barbier est mort aujourd'hui, réveillez le Démon. Le Démon désigne 2 joueurs : reveillez ces joueurs et informez-les de leur nouveau personnage.",
     "reminders": [
       "Échanges"
@@ -1302,7 +1302,7 @@
     "team": "townsfolk",
     "firstNight": 50,
     "firstNightReminder": "Indiquer au Mercenaire un joueur de l'équipe des Mauvais. Réveillez le Villageois qui fait partie des Mauvais pour l'informer qu'il est Mauvais.",
-    "otherNight": 67,
+    "otherNight": 68,
     "otherNightReminder": "Si le Mauvais connu par le Mercenaire est mort, informez-le d'un autre Mauvais.",
     "reminders": [
       "Connu"
@@ -1333,7 +1333,7 @@
     "team": "townsfolk",
     "firstNight": 55,
     "firstNightReminder": "Indiquez quelle équipe est selon vous en train de mener la partie : les Bons, les Mauvais ou personne.",
-    "otherNight": 73,
+    "otherNight": 74,
     "otherNightReminder": "Indiquez quelle équipe est selon vous en train de mener la partie : les Bons, les Mauvais ou personne.",
     "reminders": [],
     "setup": false,
@@ -1361,7 +1361,7 @@
     "team": "townsfolk",
     "firstNight": 10,
     "firstNightReminder": "Informez le Démon de qui est le Roi.",
-    "otherNight": 66,
+    "otherNight": 67,
     "otherNightReminder": "S'il y a plus de joueurs morts que vivants, révélez au roi le personnage d'un joueur encore en vie.",
     "reminders": [],
     "setup": false,
@@ -1374,7 +1374,7 @@
     "team": "townsfolk",
     "firstNight": 48,
     "firstNightReminder": "Choisissez un type de personnage. Indiquez au Montgolfier le personnage d'un joueur qui est de ce type. Marquez ce personnage comme vu par le Montgolfier.",
-    "otherNight": 65,
+    "otherNight": 66,
     "otherNightReminder": "Choisissez un type de personnage qui n'a pas encore été vu par le Montgolfier. Indiquez au Montgolfier un joueur dont le personnage est de ce type. Marquez ce type de personnage comme vu par le Montgolfier.",
     "reminders": [
       "Villageois vu",
@@ -1392,7 +1392,7 @@
     "team": "townsfolk",
     "firstNight": 52,
     "firstNightReminder": "Si le Gourou change d'équipe, réveillez-le pour l'en informer.",
-    "otherNight": 69,
+    "otherNight": 70,
     "otherNightReminder": "Si le Gourou change d'équipe, réveillez-le pour l'en informer.",
     "reminders": [],
     "setup": false,
@@ -1420,7 +1420,7 @@
     "team": "townsfolk",
     "firstNight": 33,
     "firstNightReminder": "Décidez du pouvoir de l'Amnésique. Si sa capacité nécessite de le réveiller la nuit, réveillez l'Amnésique et faites-lui utiliser son pouvoir.",
-    "otherNight": 50,
+    "otherNight": 51,
     "otherNightReminder": "Si son pouvoir nécessite de le réveiller la nuit, réveillez l'Amnésique et faites-lui utiliser son pouvoir.",
     "reminders": [
       "?"
@@ -1435,7 +1435,7 @@
     "team": "townsfolk",
     "firstNight": 51,
     "firstNightReminder": "Le Garde de nuit peut désigner un joueur. Reveillez ce joueur, indiquez lui que le garde de nuit se dévoile à lui.",
-    "otherNight": 68,
+    "otherNight": 69,
     "otherNightReminder": "Le Garde de nuit peut désigner un joueur. Reveillez ce joueur, indiquez lui que le garde de nuit se dévoile à lui.",
     "reminders": [
       "Épuisé"
@@ -1481,7 +1481,7 @@
     "team": "townsfolk",
     "firstNight": 31,
     "firstNightReminder": "Le chasseur décide s'il souhaite utiliser sa compétence. S'il le fait : il désigne un joueur qu'il suppose être la demoiselle, s'il a raison, la demoiselle devient un villageois qui n'est pas encore en jeu.",
-    "otherNight": 48,
+    "otherNight": 49,
     "otherNightReminder": "S'il ne l'a pas encore fait, le chasseur décide s'il souhaite utiliser sa compétence. S'il le fait : il désigne un joueur qu'il suppose être la demoiselle, s'il a raison, la demoiselle devient un villageois qui n'est pas encore en jeu.",
     "reminders": [
       "Épuisé"
@@ -1510,7 +1510,7 @@
     "team": "townsfolk",
     "firstNight": 0,
     "firstNightReminder": "",
-    "otherNight": 51,
+    "otherNight": 52,
     "otherNightReminder": "Si le Fermier est mort aujourd'hui, réveillez un villageois et indiquez-lui qu'il est devenu le Fermier.",
     "reminders": [],
     "setup": false,
@@ -1536,7 +1536,7 @@
     "team": "townsfolk",
     "firstNight": 0,
     "firstNightReminder": "",
-    "otherNight": 47,
+    "otherNight": 48,
     "otherNightReminder": "Si le Roi a été tué par le Démon, réveillez l'Enfant de chœur et dévoilez-lui quel joueur est le Démon.",
     "reminders": [],
     "setup": true,
@@ -1651,7 +1651,7 @@
     "team": "outsider",
     "firstNight": 32,
     "firstNightReminder": "Réveillez tous les Serviteurs, informez les que la demoiselle est en jeu.",
-    "otherNight": 49,
+    "otherNight": 50,
     "otherNightReminder": "Si sélectionnée par le chasseur, la demoiselle devient un villageois qui n'était pas en jeu.",
     "reminders": [
       "Épuisé"
@@ -1900,7 +1900,7 @@
     "team": "demon",
     "firstNight": 59,
     "firstNightReminder": "Placez le marqueur 'Jour 1'. Annoncez 'Il y a un Léviathan en jeu; Ceci est votre premier jour.'",
-    "otherNight": 77,
+    "otherNight": 78,
     "otherNightReminder": "Changez le marqueur de jour du Léviathan.",
     "reminders": [
       "Joueur Bon Exécuté"
