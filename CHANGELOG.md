@@ -1,7 +1,7 @@
 # Release Notes
 
 ## Upcomming Version
-Correcting automatic adding/deletion of Fabled
+- Adding a missing jinx
 
 ### Version 3.17.0
 
