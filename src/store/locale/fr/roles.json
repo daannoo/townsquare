@@ -1650,9 +1650,9 @@
     "edition": "",
     "team": "outsider",
     "firstNight": 32,
-    "firstNightReminder": "Réveillez tous les Serviteurs, informez les que la demoiselle est en jeu.",
+    "firstNightReminder": "Si sélectionnée par le Chasseur, la demoiselle devient un Villageois qui n'était pas en jeu.",
     "otherNight": 50,
-    "otherNightReminder": "Si sélectionnée par le chasseur, la demoiselle devient un villageois qui n'était pas en jeu.",
+    "otherNightReminder": "Si sélectionnée par le Chasseur, la demoiselle devient un Villageois qui n'était pas en jeu.",
     "reminders": [
       "Épuisé"
     ],
