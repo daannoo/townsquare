@@ -40,8 +40,9 @@
               class="player"
               v-if="
                 (role.id == 'dawn' || role.team == 'fabled') &&
-                  !session.isSpectator &&
-                  players.length && players[0].role.id
+                !session.isSpectator &&
+                players.length &&
+                players[0].role.id
               "
             >
               <br />
@@ -109,8 +110,9 @@
                 (role.id == 'dawn' ||
                   role.id == 'dusk' ||
                   role.team == 'fabled') &&
-                  !session.isSpectator &&
-                  players.length && players[0].role.id
+                !session.isSpectator &&
+                players.length &&
+                players[0].role.id
               "
             >
               <br />
@@ -144,19 +146,19 @@ export default {
         firstNight: 60,
         team: "default",
         players: [],
-        firstNightReminder: this.locale.modal.nightOrder.dawnDescription1
+        firstNightReminder: this.locale.modal.nightOrder.dawnDescription1,
       });
       var toymaker = false;
       // Ajout des fabuleux
-      this.fabled.forEach(fabled => {
+      this.fabled.forEach((fabled) => {
         if (fabled.firstNight) {
           rolesFirstNight.push(Object.assign({ players: [] }, fabled));
         } else if (fabled.id == "toymaker") {
           toymaker = true;
         }
       });
-      this.roles.forEach(role => {
-        const players = this.players.filter(p => p.role.id === role.id);
+      this.roles.forEach((role) => {
+        const players = this.players.filter((p) => p.role.id === role.id);
         if (role.firstNight && role.team !== "traveler") {
           rolesFirstNight.push(Object.assign({ players }, role));
         }
@@ -164,14 +166,14 @@ export default {
       // Ajout des Voyageurs, en n'ajoutant qu'une fois ceux en double
       const seenTravelers = [];
       var nbTravelers = 0;
-      this.players.forEach(player => {
+      this.players.forEach((player) => {
         if (player.role.team == "traveler") {
           nbTravelers++;
           if (!seenTravelers.includes(player.role.id)) {
             seenTravelers.push(player.role.id);
             if (player.role.firstNight) {
               const players = this.players.filter(
-                p => p.role.id === player.role.id
+                (p) => p.role.id === player.role.id,
               );
               rolesFirstNight.push(Object.assign({ players }, player.role));
             }
@@ -213,7 +215,7 @@ export default {
           team: "default",
           otherNight: 1,
           players: [],
-          otherNightReminder: this.locale.modal.nightOrder.duskDescription
+          otherNightReminder: this.locale.modal.nightOrder.duskDescription,
         },
         {
           id: "dawn",
@@ -221,31 +223,30 @@ export default {
           team: "default",
           otherNight: Infinity,
           players: [],
-          otherNightReminder: this.locale.modal.nightOrder.dawnDescription2
-
-        }
+          otherNightReminder: this.locale.modal.nightOrder.dawnDescription2,
+        },
       );
       this.fabled
         .filter(({ otherNight }) => otherNight)
         .forEach((fabled) => {
           rolesOtherNight.push(Object.assign({ players: [] }, fabled));
         });
-      this.roles.forEach(role => {
-        const players = this.players.filter(p => p.role.id === role.id);
+      this.roles.forEach((role) => {
+        const players = this.players.filter((p) => p.role.id === role.id);
         if (role.otherNight && role.team !== "traveler") {
           rolesOtherNight.push(Object.assign({ players }, role));
         }
       });
       // Ajout des Voyageurs, en n'ajoutant qu'une fois ceux en double
       const seenTravelers = [];
-      this.players.forEach(player => {
+      this.players.forEach((player) => {
         if (
           player.role.otherNight &&
           player.role.team == "traveler" &&
           !seenTravelers.includes(player.role.id)
         ) {
           const players = this.players.filter(
-            p => p.role.id === player.role.id
+            (p) => p.role.id === player.role.id,
           );
           seenTravelers.push(player.role.id);
           rolesOtherNight.push(Object.assign({ players }, player.role));
@@ -260,9 +261,9 @@ export default {
       "edition",
       "grimoire",
       "locale",
-      "session"
+      "session",
     ]),
-    ...mapState("players", ["players", "fabled"])
+    ...mapState("players", ["players", "fabled"]),
   },
   methods: {
     ...mapMutations(["toggleModal"]),
