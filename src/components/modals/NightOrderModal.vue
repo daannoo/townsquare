@@ -36,6 +36,17 @@
                 }}</small
               >
             </span>
+            <span
+              class="player"
+              v-if="
+                (role.id == 'dawn' || role.team == 'fabled') &&
+                  !session.isSpectator &&
+                  players.length && players[0].role.id
+              "
+            >
+              <br />
+              <small> </small>
+            </span>
           </span>
           <span
             class="icon"
@@ -92,6 +103,19 @@
                 }}</small
               >
             </span>
+            <span
+              class="player"
+              v-if="
+                (role.id == 'dawn' ||
+                  role.id == 'dusk' ||
+                  role.team == 'fabled') &&
+                  !session.isSpectator &&
+                  players.length && players[0].role.id
+              "
+            >
+              <br />
+              <small> </small>
+            </span>
           </span>
           <span class="reminder" v-if="role.otherNightReminder">
             {{ role.otherNightReminder }}
@@ -113,13 +137,54 @@ export default {
   computed: {
     rolesFirstNight: function () {
       const rolesFirstNight = [];
+      // Ajouter le matin à l'ordre nocturne
+      rolesFirstNight.push({
+        id: "dawn",
+        name: this.locale.modal.nightOrder.dawn,
+        firstNight: 60,
+        team: "default",
+        players: [],
+        firstNightReminder: this.locale.modal.nightOrder.dawnDescription1
+      });
+      var toymaker = false;
+      // Ajout des fabuleux
+      this.fabled.forEach(fabled => {
+        if (fabled.firstNight) {
+          rolesFirstNight.push(Object.assign({ players: [] }, fabled));
+        } else if (fabled.id == "toymaker") {
+          toymaker = true;
+        }
+      });
+      this.roles.forEach(role => {
+        const players = this.players.filter(p => p.role.id === role.id);
+        if (role.firstNight && role.team !== "traveler") {
+          rolesFirstNight.push(Object.assign({ players }, role));
+        }
+      });
+      // Ajout des Voyageurs, en n'ajoutant qu'une fois ceux en double
+      const seenTravelers = [];
+      var nbTravelers = 0;
+      this.players.forEach(player => {
+        if (player.role.team == "traveler") {
+          nbTravelers++;
+          if (!seenTravelers.includes(player.role.id)) {
+            seenTravelers.push(player.role.id);
+            if (player.role.firstNight) {
+              const players = this.players.filter(
+                p => p.role.id === player.role.id
+              );
+              rolesFirstNight.push(Object.assign({ players }, player.role));
+            }
+          }
+        }
+      });
       // Ajouter minion / demon infos à l'ordre nocturne
-      if (this.players.length > 6) {
+      if (this.players.length - nbTravelers > 6 || toymaker) {
         rolesFirstNight.push(
           {
-            id: "evil",
+            id: "minion",
             name: this.locale.modal.nightOrder.minionInfo,
-            firstNight: 5,
+            firstNight: 7,
             team: "minion",
             players: this.players.filter((p) => p.role.team === "minion"),
             firstNightReminder:
@@ -128,7 +193,7 @@ export default {
           {
             id: "evil",
             name: this.locale.modal.nightOrder.demonInfo,
-            firstNight: 8,
+            firstNight: 10,
             team: "demon",
             players: this.players.filter((p) => p.role.team === "demon"),
             firstNightReminder:
@@ -136,38 +201,68 @@ export default {
           },
         );
       }
-      this.roles.forEach((role) => {
-        const players = this.players.filter((p) => p.role.id === role.id);
-        if (role.firstNight && (role.team !== "traveler" || players.length)) {
-          rolesFirstNight.push(Object.assign({ players }, role));
-        }
-      });
-      this.fabled
-        .filter(({ firstNight }) => firstNight)
-        .forEach((fabled) => {
-          rolesFirstNight.push(Object.assign({ players: [] }, fabled));
-        });
       rolesFirstNight.sort((a, b) => a.firstNight - b.firstNight);
       return rolesFirstNight;
     },
     rolesOtherNight: function () {
       const rolesOtherNight = [];
-      this.roles.forEach((role) => {
-        const players = this.players.filter((p) => p.role.id === role.id);
-        if (role.otherNight && (role.team !== "traveler" || players.length)) {
-          rolesOtherNight.push(Object.assign({ players }, role));
+      rolesOtherNight.push(
+        {
+          id: "dusk",
+          name: this.locale.modal.nightOrder.dusk,
+          team: "default",
+          otherNight: 1,
+          players: [],
+          otherNightReminder: this.locale.modal.nightOrder.duskDescription
+        },
+        {
+          id: "dawn",
+          name: this.locale.modal.nightOrder.dawn,
+          team: "default",
+          otherNight: Infinity,
+          players: [],
+          otherNightReminder: this.locale.modal.nightOrder.dawnDescription2
+
         }
-      });
+      );
       this.fabled
         .filter(({ otherNight }) => otherNight)
         .forEach((fabled) => {
           rolesOtherNight.push(Object.assign({ players: [] }, fabled));
         });
+      this.roles.forEach(role => {
+        const players = this.players.filter(p => p.role.id === role.id);
+        if (role.otherNight && role.team !== "traveler") {
+          rolesOtherNight.push(Object.assign({ players }, role));
+        }
+      });
+      // Ajout des Voyageurs, en n'ajoutant qu'une fois ceux en double
+      const seenTravelers = [];
+      this.players.forEach(player => {
+        if (
+          player.role.otherNight &&
+          player.role.team == "traveler" &&
+          !seenTravelers.includes(player.role.id)
+        ) {
+          const players = this.players.filter(
+            p => p.role.id === player.role.id
+          );
+          seenTravelers.push(player.role.id);
+          rolesOtherNight.push(Object.assign({ players }, player.role));
+        }
+      });
       rolesOtherNight.sort((a, b) => a.otherNight - b.otherNight);
       return rolesOtherNight;
     },
-    ...mapState(["roles", "modals", "edition", "grimoire", "locale"]),
-    ...mapState("players", ["players", "fabled"]),
+    ...mapState([
+      "roles",
+      "modals",
+      "edition",
+      "grimoire",
+      "locale",
+      "session"
+    ]),
+    ...mapState("players", ["players", "fabled"])
   },
   methods: {
     ...mapMutations(["toggleModal"]),
@@ -255,15 +350,32 @@ h4 {
     }
   }
 }
+.traveler {
+  .name {
+    background: linear-gradient(90deg, $traveler, transparent 35%);
+    .night .other & {
+      background: linear-gradient(-90deg, $traveler, transparent 35%);
+    }
+  }
+}
+.default {
+  .name {
+    background: linear-gradient(90deg, $default, transparent 35%);
+    .night .other & {
+      background: linear-gradient(-90deg, $default, transparent 35%);
+    }
+  }
+}
 ul {
   li {
     display: flex;
     width: 100%;
     margin-bottom: 3px;
     .icon {
-      width: 6vh;
-      background-size: cover;
-      background-position: 0 0;
+      width: 5vh;
+      background-size: 100% auto;
+      background-position: center center;
+      background-repeat: no-repeat;
       flex-grow: 0;
       flex-shrink: 0;
       text-align: center;
@@ -277,7 +389,7 @@ ul {
     .name {
       flex-grow: 0;
       flex-shrink: 0;
-      width: 15%;
+      width: 5%;
       text-align: right;
       font-size: 110%;
       padding: 5px;

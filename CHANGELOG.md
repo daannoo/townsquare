@@ -1,7 +1,8 @@
 # Release Notes
 
 ## Upcomming Version
-Correcting automatic adding/deletion of Fabled
+- Updating night order (and its print)
+- Correcting automatic adding/deletion of Fabled
 
 ### Version 3.17.0
 
