@@ -62,7 +62,7 @@
   {
     "id": "toymaker",
     "firstNightReminder": "",
-    "otherNight": 1,
+    "otherNight": 2,
     "otherNightReminder": "Si le Démon pourrait terminer la partie cette nuit, mais qu'il a toujours son marqueur 'nuit sans attaque', il n'agit pas cette nuit (ne le réveillez pas)",
     "reminders": ["Nuit sans attaque"],
     "setup": false,
@@ -83,7 +83,7 @@
   {
     "id": "duchess",
     "firstNightReminder": "",
-    "otherNight": 1,
+    "otherNight": 2,
     "otherNightReminder": "Reveillez chaque visiteur dans l'ordre un par un. Indiquez à chacun d'entre eux combien de Visiteurs sont mauvais. Excepté celui qui reçoit les fausses informations qui recevra à la place n'importe quel autre nombre.",
     "reminders": ["Visiteur 1", "Visiteur 2", "Visiteur 3", "Fausse Info"],
     "setup": false,
