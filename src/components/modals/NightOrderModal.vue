@@ -143,7 +143,7 @@ export default {
       rolesFirstNight.push({
         id: "dawn",
         name: this.locale.modal.nightOrder.dawn,
-        firstNight: 60,
+        firstNight: Infinity,
         team: "default",
         players: [],
         firstNightReminder: this.locale.modal.nightOrder.dawnDescription1,
