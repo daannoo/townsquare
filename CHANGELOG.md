@@ -1,5 +1,7 @@
 # Release Notes
 
+- Correcting Dawn night order
+
 ## Upcomming Version
 - Adding a missing jinx
 - Updating night order (and its print)
