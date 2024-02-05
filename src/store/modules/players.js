@@ -5,22 +5,22 @@ const NEWPLAYER = {
   reminders: [],
   isVoteless: false,
   isDead: false,
-  pronouns: ""
+  pronouns: "",
 };
 
 const state = () => ({
   players: [],
   fabled: [],
-  bluffs: []
+  bluffs: [],
 });
 
 const getters = {
   alive({ players }) {
-    return players.filter(player => !player.isDead).length;
+    return players.filter((player) => !player.isDead).length;
   },
   nonTravelers({ players }) {
     const nonTravelers = players.filter(
-      player => player.role.team !== "traveler"
+      (player) => player.role.team !== "traveler",
     );
     return Math.min(nonTravelers.length, 15);
   },
@@ -28,7 +28,7 @@ const getters = {
   nightOrder({ players, fabled }) {
     const firstNight = [0];
     const otherNight = [0];
-    fabled.forEach(role => {
+    fabled.forEach((role) => {
       if (role.firstNight && !firstNight.includes(role)) {
         firstNight.push(role);
       }
@@ -58,21 +58,21 @@ const getters = {
       nightOrder.set(role, { first, other });
     });
     return nightOrder;
-  }
+  },
 };
 
 const actions = {
   randomize({ state, commit }) {
     const players = state.players
-      .map(a => [Math.random(), a])
+      .map((a) => [Math.random(), a])
       .sort((a, b) => a[0] - b[0])
-      .map(a => a[1]);
+      .map((a) => a[1]);
     commit("set", players);
   },
   clearRoles({ state, commit, rootState }) {
     let players;
     if (rootState.session.isSpectator) {
-      players = state.players.map(player => {
+      players = state.players.map((player) => {
         if (player.role.team !== "traveler") {
           player.role = {};
         }
@@ -84,13 +84,12 @@ const actions = {
         ...NEWPLAYER,
         name,
         id,
-        pronouns
+        pronouns,
       }));
-      commit("setFabled", { fabled: [] });
     }
     commit("set", players);
     commit("setBluff");
-  }
+  },
 };
 
 const mutations = {
@@ -119,7 +118,7 @@ const mutations = {
   add(state, name) {
     state.players.push({
       ...NEWPLAYER,
-      name
+      name,
     });
   },
   remove(state, index) {
@@ -128,7 +127,7 @@ const mutations = {
   swap(state, [from, to]) {
     [state.players[from], state.players[to]] = [
       state.players[to],
-      state.players[from]
+      state.players[from],
     ];
     // hack: "modify" the array so that Vue notices something changed
     state.players.splice(0, 0);
@@ -153,7 +152,7 @@ const mutations = {
         state.fabled = fabled;
       }
     }
-  }
+  },
 };
 
 export default {
@@ -161,5 +160,5 @@ export default {
   state,
   getters,
   actions,
-  mutations
+  mutations,
 };
