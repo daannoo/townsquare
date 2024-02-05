@@ -47,12 +47,12 @@ const getters = {
     firstNight.sort((a, b) => a.firstNight - b.firstNight);
     otherNight.sort((a, b) => a.otherNight - b.otherNight);
     const nightOrder = new Map();
-    players.forEach(player => {
+    players.forEach((player) => {
       const first = Math.max(firstNight.indexOf(player.role), 0);
       const other = Math.max(otherNight.indexOf(player.role), 0);
       nightOrder.set(player, { first, other });
     });
-    fabled.forEach(role => {
+    fabled.forEach((role) => {
       const first = Math.max(firstNight.indexOf(role), 0);
       const other = Math.max(otherNight.indexOf(role), 0);
       nightOrder.set(role, { first, other });
