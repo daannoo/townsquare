@@ -82,6 +82,10 @@
       {
         "id": "Mayor",
         "reason": "Si le Léviathan est en jeu et qu'il n'y a pas d'exécution le cinquième jour, les bons gagnent. "
+      },
+      {
+        "id": "Pit-Hag",
+        "reason": "Après le jour 5, le Chaudronnier ne peut pas créer de Léviathan."
       }
     ]
   },

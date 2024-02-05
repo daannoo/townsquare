@@ -1,6 +1,7 @@
 # Release Notes
 
 ## Upcomming Version
+- Adding a missing jinx
 - Updating night order (and its print)
 - Correcting automatic adding/deletion of Fabled
 
