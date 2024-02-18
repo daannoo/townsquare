@@ -419,7 +419,7 @@
       },
       {
         "id": "Riot",
-        "reason": "Si à la mort du Chapelier, une Émeute choisit de devenir un autre Démon, une équipe de mauvais normale est créée. Si à la mort du Chapelier, le Démon choisit de devenir Émeute, les Serviturs deviennent des Émeute aussi."
+        "reason": "Si à la mort du Chapelier, une Émeute choisit de devenir un autre Démon, les autres Émeutes doivent devenir des Serviteurs. Si à la mort du Chapelier, le Démon choisit de devenir Émeute, les Serviteurs deviennent des Émeutes aussi."
       }
     ]
   }
