@@ -134,6 +134,37 @@
     "ability": "Désignez un rôle de gentil. S'il est en jeu, il ne peut mourrir que par exécution, mais les joueurs mauvais savent qui a ce rôle."
   },
   {
+    "id": "ferryman",
+    "firstNightReminder": "",
+    "otherNightReminder": "",
+    "reminders": [],
+    "setup": false,
+    "name": "Passeur",
+    "team": "fabled",
+    "ability": "Le dernier jour, tous les morts regagnent leur jeton de vote."
+  },
+  {
+    "id": "gardener",
+    "firstNightReminder": "",
+    "otherNightReminder": "",
+    "reminders": ["Rôle choisi"],
+    "setup": false,
+    "name": "Jardinier",
+    "team": "fabled",
+    "ability": "Le Narrateur choisit le rôle d’un ou de plusieurs joueurs."
+  },
+  {
+    "id": "bootlegger",
+    "firstNight": 1,
+    "firstNightReminder": "Annoncez que le Contrebandier est en jeu, et expliquez tous les rôles et toutes les règles faits-maison que vous utilisez.",
+    "otherNightReminder": "",
+    "reminders": [],
+    "setup": false,
+    "name": "Contrebandier",
+    "team": "fabled",
+    "ability": "Ce script possède des rôles ou des règles faits-maison."
+  },
+  {
     "id": "deusexfiasco",
     "firstNightReminder": "",
     "otherNightReminder": "",
