@@ -132,5 +132,36 @@
     "name": "Storm Catcher",
     "team": "fabled",
     "ability": "Name a good character. If in play, they can only die by execution, but evil players learn which player it is."
-  }
+  },
+  {
+    "id": "ferryman",
+    "firstNightReminder": "",
+    "otherNightReminder": "",
+    "reminders": [],
+    "setup": false,
+    "name": "Ferryman",
+    "team": "fabled",
+    "ability": "On the final day, all dead players regain their vote token."
+  },
+  {
+    "id": "gardener",
+    "firstNightReminder": "",
+    "otherNightReminder": "",
+    "reminders": ["Assigned"],
+    "setup": false,
+    "name": "Gardener",
+    "team": "fabled",
+    "ability": "The Storyteller assigns 1 or more players' characters."
+  },
+  {
+    "id": "bootlegger",
+    "firstNight": 1,
+    "firstNightReminder": "Announce the Bootlegger is in play and inform the group of all homebrew characters and/or rules you are using in this game.",
+    "otherNightReminder": "",
+    "reminders": [],
+    "setup": false,
+    "name": "Bootlegger",
+    "team": "fabled",
+    "ability": "This script has homebrew characters or rules."
+  },
 ]
