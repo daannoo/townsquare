@@ -1588,6 +1588,19 @@
     "ability": "Vous avez la capacité du dernier joueur mort par exécution. S'il était Mauvais, vous êtes empoisonné jusqu'à ce qu'un joueur Bon meure par exécution."
   },
   {
+    "id": "highpriestess",
+    "name": "Grande Prêtresse",
+    "edition": "",
+    "team": "townsfolk",
+    "firstNight": 56,
+    "firstNightReminder": "Désignez un joueur à la Grande Prêtresse.",
+    "otherNight": 75,
+    "otherNightReminder": "Désignez un joueur à la Grande Prêtresse.",
+    "reminders": [],
+    "setup": false,
+    "ability": "Chaque nuit, vous apprenez à quel joueur vous devez le plus parler, selon le Narrateur."
+  },
+  {
     "id": "snitch",
     "name": "Cafteur",
     "edition": "",
