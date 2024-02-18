@@ -1934,6 +1934,19 @@
     "ability": "Les joueurs accusés meurent immédiatement sans vote mais peuvent accuser à leur tour. Le troisième jour, les joueurs accusés doivent accuser. À la fin du troisième jour, les mauvais gagnent. [Tous les Serviteurs sont des Émeutes]"
   },
   {
+    "id": "kazali",
+    "name": "Kazali",
+    "edition": "",
+    "team": "demon",
+    "firstNight": 3,
+    "firstNightReminder": "Réveillez le Kazali. Celui-ci choisit un joueur et un rôle de Serviteur : changez le rôle de ce joueur. Répétez autant de fois qu'il faut de Serviteurs. Réveillez les joueurs désignés pour les informer de leurs nouveaux rôles.",
+    "otherNight": 39,
+    "otherNightReminder": "Le Kazali désigne un joueur : ce joueur meurt.",
+    "reminders": ["Mort"],
+    "setup": true,
+    "ability": "Chaque nuit*, désignez un joueur : il meurt. [Vous choisissez quels joueurs sont quels Serviteurs. -? à +? Étrangers]"
+  },
+  {
     "id": "gangster",
     "name": "Gangster",
     "edition": "",
