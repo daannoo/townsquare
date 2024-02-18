@@ -1438,6 +1438,19 @@
     "ability": "You have the ability of the recently killed executee. If they are evil, you are poisoned until a good player dies by execution."
   },
   {
+    "id": "villageidiot",
+    "name": "Village Idiot",
+    "edition": "",
+    "team": "townsfolk",
+    "firstNight": 51,
+    "firstNightReminder": "The Village Idiot points to a player; give a thumbs up if that player is good or a thumbs down if that player is evil.",
+    "otherNight": 68,
+    "otherNightReminder": "The Village Idiot points to a player; give a thumbs up if that player is good or a thumbs down if that player is evil.",
+    "reminders": ["Drunk"],
+    "setup": true,
+    "ability": "Each night, choose a player: you learn their alignment. [+0 to +2 Village Idiots. 1 of the extras is drunk]"
+  },
+  {
     "id": "snitch",
     "name": "Snitch",
     "edition": "",
