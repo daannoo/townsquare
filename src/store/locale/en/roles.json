@@ -1438,6 +1438,19 @@
     "ability": "You have the ability of the recently killed executee. If they are evil, you are poisoned until a good player dies by execution."
   },
   {
+    "id": "steward",
+    "name": "Steward",
+    "edition": "",
+    "team": "townsfolk",
+    "firstNight": 46,
+    "firstNightReminder": "Point to a good player.",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": ["Knows"],
+    "setup": false,
+    "ability": "You start knowing 1 good player."
+  },
+  {
     "id": "snitch",
     "name": "Snitch",
     "edition": "",
