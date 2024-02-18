@@ -401,5 +401,30 @@
         "reason": "Un seul personnage maudit peut être en jeu à la fois. Les joueurs mauvais commencent la partie en sachant de quel joueur et quel rôle il s'agit."
       }
     ]
+  },
+  {
+    "id": "Kazali",
+    "hatred": [
+      {
+        "id": "Bounty Hunter",
+        "reason": "Un Villageois ne devient mauvais que si le Mercenaire est toujours en jeu après l'action du Kazali."
+      },
+      {
+        "id": "Choirboy",
+        "reason":  "Le Kazali ne peut pas changer le Roi en Serviteur si l'Enfant de choeur est en jeu."
+      },
+      {
+        "id": "Goon",
+        "reason": "Si le Kazali choisit de transformer l'Homme de main en Serviteur, les Serviteurs restants sont choisis par le Narrateur."
+      },
+      {
+        "id": "Huntsman",
+        "reason": "Si le Kazali transforme la Demoiselle en Serviteur, et si le Chasseur est en jeu, un joueur bon devient Demoiselle."
+      },
+      {
+        "id": "Marionette",
+        "reason": "Si le Kazali veut créer une Marionnette, il doit choisir l'un de ses voisins."
+      }
+    ]
   }
 ]
