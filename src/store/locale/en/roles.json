@@ -1438,6 +1438,19 @@
     "ability": "You have the ability of the recently killed executee. If they are evil, you are poisoned until a good player dies by execution."
   },
   {
+    "id": "knight",
+    "name": "Knight",
+    "edition": "",
+    "team": "townsfolk",
+    "firstNight": 47,
+    "firstNightReminder": "Point to two players who are not the Demon.",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": ["Knows"],
+    "setup": false,
+    "ability": "You start knowing 2 players that are not the Demon."
+  },
+  {
     "id": "snitch",
     "name": "Snitch",
     "edition": "",
