@@ -1688,6 +1688,19 @@
     "ability": "Si vous étiez le principal responsable de la défaite de votre équipe, vous changez d'équipe et gagnez, même si vous êtes mort."
   },
   {
+    "id": "plaguedoctor",
+    "name": "Médecin de Peste",
+    "edition": "",
+    "team": "outsider",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": ["Capacité du Narrateur"],
+    "setup": false,
+    "ability": "Si vous mourez, le Narrateur gagne la capacité d’un Serviteur qui n’est pas en jeu."
+  },
+  {
     "id": "widow",
     "name": "Veuve",
     "edition": "",
