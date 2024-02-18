@@ -401,5 +401,26 @@
         "reason": "Un seul personnage maudit peut être en jeu à la fois. Les joueurs mauvais commencent la partie en sachant de quel joueur et quel rôle il s'agit."
       }
     ]
+  },
+  {
+    "id": "Hatter",
+    "hatred": [
+      {
+        "id": "Legion",
+        "reason": "Si le Chapelier meurt alors qu'une Légion est en jeu, rien ne se passe. Si le Chapelier meurt et qu'un mauvais choisit de devenir Légion, tous les joueurs mauvais deviennent une Légion."
+      },
+      {
+        "id": "Leviathan",
+        "reason":  "Si le Chapelier est mort durant ou après le cinquième jour, le Démon ne peut pas choisir de devenir Léviathan."
+      },
+      {
+        "id": "Lil' Monsta",
+        "reason": "Si un Démon choisit de devenir Bébé monstre, il choisit aussi un rôle de Serviteur et devient baby-sitter pour cette nuit."
+      },
+      {
+        "id": "Riot",
+        "reason": "Si à la mort du Chapelier, une Émeute choisit de devenir un autre Démon, une équipe de mauvais normale est créée. Si à la mort du Chapelier, le Démon choisit de devenir Émeute, les Serviturs deviennent des Émeute aussi."
+      }
+    ]
   }
 ]
