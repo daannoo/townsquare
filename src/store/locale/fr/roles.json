@@ -1934,6 +1934,19 @@
     "ability": "Les joueurs accusés meurent immédiatement sans vote mais peuvent accuser à leur tour. Le troisième jour, les joueurs accusés doivent accuser. À la fin du troisième jour, les mauvais gagnent. [Tous les Serviteurs sont des Émeutes]"
   },
   {
+    "id": "ojo",
+    "name": "Ojo",
+    "edition": "",
+    "team": "demon",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "otherNight": 35,
+    "otherNightReminder": "L'Ojo désigne un rôle. S'il est en jeu, marquez \"Mort\" un joueur avec ce rôle. Si le rôle choisi n'est pas en jeu, marquez \"Mort\" le(s) joueur(s) que vous voulez.",
+    "reminders": ["Mort"],
+    "setup": false,
+    "ability": "Chaque nuit*, désignez un rôle : il meurt. Si ce rôle n'est pas en jeu, le Narrateur choisit qui meurt."
+  },
+  {
     "id": "gangster",
     "name": "Gangster",
     "edition": "",
