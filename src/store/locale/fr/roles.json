@@ -1941,7 +1941,7 @@
     "firstNight": 0,
     "firstNightReminder": "",
     "otherNight": 35,
-    "otherNightReminder": "L'Ojo désigne un rôle. S'il est en jeu, marquez \"Mort\" un joueur avec ce rôle. Si le rôle choisi n'est pas en jeu, marquez \"Mort\" le(s) joueur(s) que vous voulez.",
+    "otherNightReminder": "L'Ojo désigne un rôle. S'il est en jeu, un joueur avec ce rôle meurt. Si le rôle choisi n'est pas en jeu, tuez le(s) joueur(s) que vous voulez.",
     "reminders": ["Mort"],
     "setup": false,
     "ability": "Chaque nuit*, désignez un rôle : il meurt. Si ce rôle n'est pas en jeu, le Narrateur choisit qui meurt."
