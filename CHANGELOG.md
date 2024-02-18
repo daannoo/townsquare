@@ -1,5 +1,7 @@
 # Release Notes
 
+- Adding all missing roles (up to Village Idiot)
+
 ## Upcomming Version
 - Adding a missing jinx
 - Updating night order (and its print)
