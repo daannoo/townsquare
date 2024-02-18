@@ -411,11 +411,11 @@
       },
       {
         "id": "Choirboy",
-        "reason":  "Le Kazali ne peut pas changer le Roi en Serviteur si l'Enfant de choeur est en jeu."
+        "reason":  "Le Kazali ne peut pas choisir de changer le Roi en Serviteur si l'Enfant de choeur est en jeu."
       },
       {
         "id": "Goon",
-        "reason": "Si le Kazali choisit de transformer l'Homme de main en Serviteur, les Serviteurs restants sont choisis par le Narrateur."
+        "reason": "Si le Kazali choisit de transformer l'Homme de main en Serviteur, il devient ivre, et les Serviteurs restants sont choisis par le Narrateur sans prendre en compte les décisions du Kazali."
       },
       {
         "id": "Huntsman",
