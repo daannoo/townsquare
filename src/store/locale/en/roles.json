@@ -1741,6 +1741,19 @@
     "ability": "Nominees die, but may nominate again immediately (on day 3, they must). After day 3, evil wins. [All Minions are Riot]"
   },
   {
+    "id": "yaggababble",
+    "name": "Yaggababble",
+    "edition": "",
+    "team": "demon",
+    "firstNight": 5.5,
+    "firstNightReminder": "Show the Yaggababble their secret phrase.",
+    "otherNight": 38.5,
+    "otherNightReminder": "Choose a number of players up to the total number of times the Yaggababble said their secret phrase publicly, those players die.",
+    "reminders": ["Dead"],
+    "setup": false,
+    "ability": "You start knowing a secret phrase. For each time you said it publicly today, a player might die."
+  },
+  {
     "id": "gangster",
     "name": "Gangster",
     "edition": "",
