@@ -1934,6 +1934,21 @@
     "ability": "Les joueurs accusés meurent immédiatement sans vote mais peuvent accuser à leur tour. Le troisième jour, les joueurs accusés doivent accuser. À la fin du troisième jour, les mauvais gagnent. [Tous les Serviteurs sont des Émeutes]"
   },
   {
+    "id": "yaggababble",
+    "name": "Yaggablabla",
+    "edition": "",
+    "team": "demon",
+    "firstNight": 5.5,
+    "firstNightReminder": "Révélez sa phrase au Yaggablabla.",
+    "otherNight": 38.5,
+    "otherNightReminder": "Choisissez un nombre de joueurs inférieur ou égal au nombre de fois que le Yaggablabla a dit sa phrase publiquement : ces joueurs meurent.",
+    "reminders": [
+      "Mort"
+    ],
+    "setup": false,
+    "ability": "Vous commencez en connaissant une phrase secrète. Pour chaque fois que vous l'avez dite publiquement aujourd'hui, un joueur peut mourir."
+  },
+  {
     "id": "gangster",
     "name": "Gangster",
     "edition": "",
