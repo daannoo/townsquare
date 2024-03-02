@@ -401,5 +401,14 @@
         "reason": "Only 1 jinxed character can be in play. Evil players start knowing which player and character it is."
       }
     ]
+  },
+  {
+    "id": "Yaggababble",
+    "hatred": [
+      {
+        "id": "Exorcist",
+        "reason": "If the Exorcist chooses the Yaggababble, the Yaggababble ability does not kill tonight."
+      }
+    ]
   }
 ]
