@@ -401,5 +401,14 @@
         "reason": "Un seul personnage maudit peut être en jeu à la fois. Les joueurs mauvais commencent la partie en sachant de quel joueur et quel rôle il s'agit."
       }
     ]
+  },
+  {
+    "id": "Yaggababble",
+    "hatred": [
+      {
+        "id": "Exorcist",
+        "reason": "Si l'Exorciste désigne le Yaggablabla, la capacité du Yaggablabla ne tue personne cette nuit."
+      }
+    ]
   }
 ]
