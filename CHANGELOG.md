@@ -1,6 +1,6 @@
 # Release Notes
 
-- Adding all missing roles (up to Village Idiot)
+- Adding all missing roles (up to Yaggababble)
 
 ## Upcomming Version
 - Adding a missing jinx
