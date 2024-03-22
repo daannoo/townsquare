@@ -1833,7 +1833,7 @@
     "firstNight": 9.5,
     "firstNightReminder": "Réveillez l'Invocateur, et indiquez-lui trois rôles bons qui ne sont pas en jeu.",
     "otherNight": 21.5,
-    "otherNightReminder": "S'il s'agit de la 3e nuit, réveillez l'Invocateur. Il chosiit un joueur et un Démon : ce joueur devient ce Démon.",
+    "otherNightReminder": "S'il s'agit de la 3e nuit, réveillez l'Invocateur. Il chosit un joueur et un Démon : ce joueur devient ce Démon.",
     "reminders": [
       "Nuit 1",
       "Nuit 2",
