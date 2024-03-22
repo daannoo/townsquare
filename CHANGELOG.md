@@ -1,6 +1,6 @@
 # Release Notes
 
-- Adding all missing roles (up to Yaggababble)
+- Adding all missing roles (up to Summoner)
 
 ## Upcomming Version
 - Adding a missing jinx
