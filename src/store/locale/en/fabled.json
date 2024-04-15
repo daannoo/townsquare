@@ -156,9 +156,9 @@
   {
     "id": "bootlegger",
     "firstNight": 1,
-    "firstNightReminder": "If applicable, use homebrew rule(s)",
+    "firstNightReminder": "If applicable, use homebrew rule(s).",
     "otherNight": 2,
-    "otherNightReminder": "If applicable, use homebrew rule(s)",
+    "otherNightReminder": "If applicable, use homebrew rule(s).",
     "reminders": [],
     "setup": false,
     "name": "Bootlegger",
