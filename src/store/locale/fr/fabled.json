@@ -155,9 +155,10 @@
   },
   {
     "id": "bootlegger",
-    "firstNight": 1,
-    "firstNightReminder": "Annoncez que le Contrebandier est en jeu, et expliquez tous les rôles et toutes les règles faits-maison que vous utilisez.",
-    "otherNightReminder": "",
+    "firstNight": 1,    
+    "firstNightReminder": "Si applicables, utilisez la (les) règle(s) faite(s)-maison.",
+    "otherNight": 2,
+    "otherNightReminder": "Si applicables, utilisez la (les) règle(s) faite(s)-maison.",
     "reminders": [],
     "setup": false,
     "name": "Contrebandier",
