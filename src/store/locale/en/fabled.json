@@ -156,8 +156,9 @@
   {
     "id": "bootlegger",
     "firstNight": 1,
-    "firstNightReminder": "Announce the Bootlegger is in play and inform the group of all homebrew characters and/or rules you are using in this game.",
-    "otherNightReminder": "",
+    "firstNightReminder": "If applicable, use homebrew rule(s)",
+    "otherNight": 2,
+    "otherNightReminder": "If applicable, use homebrew rule(s)",
     "reminders": [],
     "setup": false,
     "name": "Bootlegger",
