@@ -492,5 +492,30 @@
         "reason": "Si à la mort du Chapelier, une Émeute choisit de devenir un autre Démon, les autres Émeutes doivent devenir des Serviteurs. Si à la mort du Chapelier, le Démon choisit de devenir Émeute, les Serviteurs deviennent des Émeutes aussi."
       }
     ]
+  },
+  {
+    "id": "Kazali",
+    "hatred": [
+      {
+        "id": "Bounty Hunter",
+        "reason": "Un Villageois ne devient mauvais que si le Mercenaire est toujours en jeu après l'action du Kazali."
+      },
+      {
+        "id": "Choirboy",
+        "reason": "Le Kazali ne peut pas choisir de changer le Roi en Serviteur si l'Enfant de choeur est en jeu."
+      },
+      {
+        "id": "Goon",
+        "reason": "Si le Kazali choisit de transformer l'Homme de main en Serviteur, il devient ivre, et les Serviteurs restants sont choisis par le Narrateur sans prendre en compte les décisions du Kazali."
+      },
+      {
+        "id": "Huntsman",
+        "reason": "Si le Kazali transforme la Demoiselle en Serviteur, et si le Chasseur est en jeu, un joueur bon devient Demoiselle."
+      },
+      {
+        "id": "Marionette",
+        "reason": "Si le Kazali veut créer une Marionnette, il doit choisir l'un de ses voisins."
+      }
+    ]
   }
 ]
