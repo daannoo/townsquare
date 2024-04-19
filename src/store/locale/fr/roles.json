@@ -1600,9 +1600,26 @@
     "firstNightReminder": "Réveillez l'Idiot du Village. Celui-ci désigne un joueur : indiquez-lui l'alignement de ce joueur.",
     "otherNight": 68,
     "otherNightReminder": "Réveillez l'Idiot du Village. Celui-ci désigne un joueur : indiquez-lui l'alignement de ce joueur.",
-    "reminders": ["Ivre"],
+    "reminders": [
+      "Ivre"
+    ],
     "setup": true,
     "ability": "Chaque nuit, désignez un joueur : vous apprenez son alignement. [+0 à +2 Idiots du village, l’un d’eux étant ivre]"
+  },
+  {
+    "id": "knight",
+    "name": "Chevalier",
+    "edition": "",
+    "team": "townsfolk",
+    "firstNight": 47,
+    "firstNightReminder": "Désignez au Chevalier deux joueurs qui ne sont pas Démon",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [
+      "Connu"
+    ],
+    "setup": false,
+    "ability": "Vous commencez la partie en connaissant deux joueurs qui ne sont pas Démon."
   },
   {
     "id": "snitch",
@@ -1713,7 +1730,9 @@
     "firstNightReminder": "",
     "otherNight": 44,
     "otherNightReminder": "À la mort du Chapelier, effacez les rôles des Serviteurs et des Démons. Réveillez-les l'un après l'autre, en leur demandant à chacun le rôle qu'il souhaite devenir. Si l'un d'eux demande le même rôle qu'un joueur qui a déjà choisi, demandez-lui de choisir un autre rôle. Modifier les rôles de ces joueurs en conséquence.",
-    "reminders": ["Heure du Thé"],
+    "reminders": [
+      "Heure du Thé"
+    ],
     "setup": false,
     "ability": "Si vous êtes mort aujourd'hui (de jour comme de nuit), les Serviteurs et Démons peuvent choisir de devenir d'autres Serviteurs et Démons."
   },
@@ -1854,7 +1873,7 @@
     ],
     "setup": false,
     "ability": "Les votes ont lieu à bulletin secret. Vous ne pouvez être exécuté que si vous levez la main."
-  },  
+  },
   {
     "id": "harpy",
     "name": "Harpie",
@@ -2018,7 +2037,9 @@
     "firstNightReminder": "Réveillez le Kazali. Celui-ci choisit un joueur et un rôle de Serviteur : changez le rôle de ce joueur. Répétez autant de fois qu'il faut de Serviteurs. Réveillez les joueurs désignés pour les informer de leurs nouveaux rôles.",
     "otherNight": 39,
     "otherNightReminder": "Le Kazali désigne un joueur : ce joueur meurt.",
-    "reminders": ["Mort"],
+    "reminders": [
+      "Mort"
+    ],
     "setup": true,
     "ability": "Chaque nuit*, désignez un joueur : il meurt. [Vous choisissez quels joueurs sont quels Serviteurs. -? à +? Étrangers]"
   },

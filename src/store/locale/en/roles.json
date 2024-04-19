@@ -1596,9 +1596,26 @@
     "firstNightReminder": "The Village Idiot points to a player; give a thumbs up if that player is good or a thumbs down if that player is evil.",
     "otherNight": 68,
     "otherNightReminder": "The Village Idiot points to a player; give a thumbs up if that player is good or a thumbs down if that player is evil.",
-    "reminders": ["Drunk"],
+    "reminders": [
+      "Drunk"
+    ],
     "setup": true,
     "ability": "Each night, choose a player: you learn their alignment. [+0 to +2 Village Idiots. 1 of the extras is drunk]"
+  },
+  {
+    "id": "knight",
+    "name": "Knight",
+    "edition": "",
+    "team": "townsfolk",
+    "firstNight": 47,
+    "firstNightReminder": "Point to two players who are not the Demon.",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [
+      "Knows"
+    ],
+    "setup": false,
+    "ability": "You start knowing 2 players that are not the Demon."
   },
   {
     "id": "snitch",
@@ -1709,7 +1726,9 @@
     "firstNightReminder": "",
     "otherNight": 44,
     "otherNightReminder": "If the Hatter died today: Wake the Minions and Demon. Show them the 'This Character Selected You' info token, then the Hatter token. Each player either shakes their head no or points to another character of the same type as their current character. If a second player would end up with the same character as another player, shake your head no and gesture for them to choose again. Put them to sleep. Change each player to the character they chose.",
-    "reminders": ["Tea Party Tonight"],
+    "reminders": [
+      "Tea Party Tonight"
+    ],
     "setup": false,
     "ability": "If you died today or tonight, the Minion & Demon players may choose new Minion & Demon characters to be."
   },
@@ -2009,7 +2028,9 @@
     "firstNightReminder": "The Kazali points to a player and a Minion on the character sheet. They do this for as many Minions as should be in play. Change those players' tokens to the chosen Minion tokens in the Grim. Wake those players, show them the 'You Are' card, the Minions they have become, and a thumbs down.",
     "otherNight": 39,
     "otherNightReminder": "The Kazali points to a player. That player dies",
-    "reminders": ["Dead"],
+    "reminders": [
+      "Dead"
+    ],
     "setup": true,
     "ability": "Each night*, choose a player: they die. [You choose which players are Minions. -? to +? Outsiders]"
   },
