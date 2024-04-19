@@ -40,6 +40,10 @@
       {
         "id": "Politician",
         "reason": "A Pit-hag cannot create an evil Politician."
+      },
+      {
+        "id": "Village Idiot",
+        "reason": "If there is a spare token, the Pit-Hag can create an extra Village Idiot. If so, the drunk Village Idiot might change."
       }
     ]
   },
@@ -82,6 +86,10 @@
       {
         "id": "Mayor",
         "reason": "If Leviathan is in play and no execution occurs on day 5, good wins."
+      },
+      {
+        "id": "Pit-Hag",
+        "reason": "After day 5, the Pit-Hag cannot choose Leviathan."
       }
     ]
   },
@@ -382,7 +390,7 @@
       },
       {
         "id": "Flowergirl",
-        "reason":  "If players' eyes were closed during the nominations, the Flowergirl learns how many times the Demon voted."
+        "reason": "If players' eyes were closed during the nominations, the Flowergirl learns how many times the Demon voted."
       },
       {
         "id": "Lil' Monsta",
@@ -395,6 +403,164 @@
       {
         "id": "Preacher",
         "reason": "Only 1 jinxed character can be in play. Evil players start knowing which player and character it is."
+      }
+    ]
+  },
+  {
+    "id": "Yaggababble",
+    "hatred": [
+      {
+        "id": "Exorcist",
+        "reason": "If the Exorcist chooses the Yaggababble, the Yaggababble ability does not kill tonight."
+      }
+    ]
+  },
+  {
+    "id": "Plague Doctor",
+    "hatred": [
+      {
+        "id": "Baron",
+        "reason": "If the Storyteller gains the Baron ability, up to two players become out-of-play Outsiders."
+      },
+      {
+        "id": "Boomdandy",
+        "reason": "If the Plague Doctor is executed and the Storyteller would gain the Boomdandy ability, the Boomdandy ability triggers immediately."
+      },
+      {
+        "id": "Evil Twin",
+        "reason": "The Storyteller cannot gain the Evil Twin ability if the Plague Doctor dies."
+      },
+      {
+        "id": "Fearmonger",
+        "reason": "If the Plague Doctor dies, a living Minion gains the Fearmonger ability in addition to their own ability, and learns this."
+      },
+      {
+        "id": "Goblin",
+        "reason": "If the Plague Doctor dies, a living Minion gains the Goblin ability in addition to their own ability, and learns this."
+      },
+      {
+        "id": "Scarlet Woman",
+        "reason": "If the Plague Doctor dies, a living Minion gains the Scarlet Woman ability in addition to their own ability, and learns this."
+      },
+      {
+        "id": "Spy",
+        "reason": "If the Plague Doctor dies, a living Minion gains the Spy ability in addition to their own ability, and learns this."
+      },
+      {
+        "id": "Marionette",
+        "reason": "If the Demon has a neighbor who is alive and a Townsfolk or Outsider when the Plague Doctor dies, that player becomes an evil Marionette. If there is already an extra evil player, this does not happen."
+      }
+    ]
+  },
+  {
+    "id": "Summoner",
+    "hatred": [
+      {
+        "id": "Alchemist",
+        "reason": "If there is an Alchemist-Summoner in play, the game starts with a Demon in play, as normal. If the Alchemist-Summoner chooses a player, they make that player a Demon but do not change their alignment."
+      },
+      {
+        "id": "Clockmaker",
+        "reason": "If the Summoner is in play, the Clockmaker does not receive their information until a Demon is created."
+      },
+      {
+        "id": "Poppy Grower",
+        "reason": "If the Poppy Grower is alive when the Summoner acts, the Summoner chooses which Demon, but the Storyteller chooses which player."
+      },
+      {
+        "id": "Marionette",
+        "reason": "The Marionette neighbours the Summoner. The Summoner knows who the Marionette is."
+      },
+      {
+        "id": "Kazali",
+        "reason": "The Kazali can not choose to create a Summoner."
+      },
+      {
+        "id": "Legion",
+        "reason": "If the Summoner creates Legion, most players (including all evil players) become evil Legion."
+      },
+      {
+        "id": "Riot",
+        "reason": "If the Summoner creates Riot, the chosen player and all evil players become Riot. The chosen player must be one of the Summoner's good living neighbours."
+      }
+    ]
+  },
+  {
+    "id": "Vizier",
+    "hatred": [
+      {
+        "id": "Magician",
+        "reason": "Only 1 jinxed character can be in play. Evil players start knowing which player and character it is."
+      },
+      {
+        "id": "Alchemist",
+        "reason": "If the Alchemist has the Vizier ability, they may only choose to execute immediately if three or more players voted, regardless of those players' alignment."
+      },
+      {
+        "id": "Courtier",
+        "reason": "If the Vizier loses their ability, they learn this and if the Vizier is executed while they have their ability, their team wins."
+      },
+      {
+        "id": "Preacher",
+        "reason": "If the Vizier loses their ability, they learn this and if the Vizier is executed while they have their ability, their team wins."
+      },
+      {
+        "id": "Investigator",
+        "reason": "If the Investigator learns that the Vizier is in play, the existence of the Vizier is not announced by the Storyteller."
+      },
+      {
+        "id": "Fearmonger",
+        "reason": "The Vizier wakes with the Fearmonger, learns who they choose and cannot choose to execute that player."
+      },
+      {
+        "id": "Lil' Monsta",
+        "reason": "The Vizier can die by execution if they are babysitting Lil' Monsta."
+      }
+    ]
+  },
+  {
+    "id": "Hatter",
+    "hatred": [
+      {
+        "id": "Legion",
+        "reason": "If the Hatter dies and Legion is in play, nothing happens. If the Hatter dies and an evil player chooses Legion, all current evil players become Legion."
+      },
+      {
+        "id": "Leviathan",
+        "reason": "If the Hatter dies on or after day 5, the Demon cannot choose Leviathan."
+      },
+      {
+        "id": "Lil' Monsta",
+        "reason": "If a Demon chooses Lil' Monsta, they also choose a Minion to become and babysit Lil' Monsta tonight."
+      },
+      {
+        "id": "Riot",
+        "reason": "If the Hatter dies, Riot is in play and a Riot chooses a different Demon, a normal evil team is created from the Riot players. If the Hatter dies and the Demon chooses Riot, Minions become Riot too."
+      }
+    ]
+  },
+  {
+    "id": "Kazali",
+    "hatred": [
+      {
+        "id": "Bounty Hunter",
+        "reason": "An evil Townsfolk is only created if the Bounty Hunter is still in play after the Kazali acts."
+      },
+      {
+        "id": "Choirboy",
+        "reason": "The Kazali can not choose the King to become a Minion if a Choirboy is in play."
+      },
+      {
+        "id": "Goon",
+        "reason": "If the Kazali chooses the Goon to become a Minion, remaining Minions choices are decided by the Storyteller."
+      },
+      {
+        "id": "Huntsman",
+        "reason": "If the Kazali chooses the Damsel to become a Minion, and a Huntsman is in play, a good player becomes the Damsel."
+      },
+      {
+        "id": "Marionette",
+        "reason": "If the Kazali chooses to create a Marionette, they must choose one of their neighbors."
       }
     ]
   }

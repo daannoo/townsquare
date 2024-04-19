@@ -3,7 +3,9 @@
     "id": "doomsayer",
     "firstNightReminder": "",
     "otherNightReminder": "",
-    "reminders": ["Used"],
+    "reminders": [
+      "Used"
+    ],
     "setup": false,
     "name": "Doomsayer",
     "team": "fabled",
@@ -13,7 +15,10 @@
     "id": "angel",
     "firstNightReminder": "",
     "otherNightReminder": "",
-    "reminders": ["Protect", "Something Bad"],
+    "reminders": [
+      "Protect",
+      "Something Bad"
+    ],
     "setup": false,
     "name": "Angel",
     "team": "fabled",
@@ -23,7 +28,9 @@
     "id": "buddhist",
     "firstNightReminder": "",
     "otherNightReminder": "",
-    "reminders": ["Veteran"],
+    "reminders": [
+      "Veteran"
+    ],
     "setup": false,
     "name": "Buddhist",
     "team": "fabled",
@@ -33,7 +40,9 @@
     "id": "hellslibrarian",
     "firstNightReminder": "",
     "otherNightReminder": "",
-    "reminders": ["Something Bad"],
+    "reminders": [
+      "Something Bad"
+    ],
     "setup": false,
     "name": "Hell's Librarian",
     "team": "fabled",
@@ -43,7 +52,10 @@
     "id": "revolutionary",
     "firstNightReminder": "",
     "otherNightReminder": "",
-    "reminders": ["Same alignment", "Used"],
+    "reminders": [
+      "Same alignment",
+      "Used"
+    ],
     "setup": false,
     "name": "Revolutionary",
     "team": "fabled",
@@ -62,9 +74,11 @@
   {
     "id": "toymaker",
     "firstNightReminder": "",
-    "otherNight": 1,
+    "otherNight": 2,
     "otherNightReminder": "If it is a night when a Demon attack could end the game, and the Demon is marked “Final night: No Attack,” then the Demon does not act tonight. (Do not wake them.)",
-    "reminders": ["Final Night: No Attack"],
+    "reminders": [
+      "Final Night: No Attack"
+    ],
     "setup": false,
     "name": "Toymaker",
     "team": "fabled",
@@ -74,7 +88,9 @@
     "id": "fibbin",
     "firstNightReminder": "",
     "otherNightReminder": "",
-    "reminders": ["Used"],
+    "reminders": [
+      "Used"
+    ],
     "setup": false,
     "name": "Fibbin",
     "team": "fabled",
@@ -83,9 +99,12 @@
   {
     "id": "duchess",
     "firstNightReminder": "",
-    "otherNight": 1,
+    "otherNight": 2,
     "otherNightReminder": "Wake each player marked “Visitor” or “False Info” one at a time. Show them the Duchess token, then fingers (1, 2, 3) equaling the number of evil players marked “Visitor” or, if you are waking the player marked “False Info,” show them any number of fingers except the number of evil players marked “Visitor.”",
-    "reminders": ["Visitor", "False Info"],
+    "reminders": [
+      "Visitor",
+      "False Info"
+    ],
     "setup": false,
     "name": "Duchess",
     "team": "fabled",
@@ -105,7 +124,9 @@
     "id": "spiritofivory",
     "firstNightReminder": "",
     "otherNightReminder": "",
-    "reminders": ["No extra evil"],
+    "reminders": [
+      "No extra evil"
+    ],
     "setup": false,
     "name": "Spirit of Ivory",
     "team": "fabled",
@@ -127,10 +148,46 @@
     "firstNight": 1,
     "firstNightReminder": "Mark a good player as \"Safe\". Wake each evil player and show them the marked player.",
     "otherNightReminder": "",
-    "reminders": ["Safe"],
+    "reminders": [
+      "Safe"
+    ],
     "setup": false,
     "name": "Storm Catcher",
     "team": "fabled",
     "ability": "Name a good character. If in play, they can only die by execution, but evil players learn which player it is."
+  },
+  {
+    "id": "ferryman",
+    "firstNightReminder": "",
+    "otherNightReminder": "",
+    "reminders": [],
+    "setup": false,
+    "name": "Ferryman",
+    "team": "fabled",
+    "ability": "On the final day, all dead players regain their vote token."
+  },
+  {
+    "id": "gardener",
+    "firstNightReminder": "",
+    "otherNightReminder": "",
+    "reminders": [
+      "Assigned"
+    ],
+    "setup": false,
+    "name": "Gardener",
+    "team": "fabled",
+    "ability": "The Storyteller assigns 1 or more players' characters."
+  },
+  {
+    "id": "bootlegger",
+    "firstNight": 1,
+    "firstNightReminder": "If applicable, use homebrew rule(s).",
+    "otherNight": 2,
+    "otherNightReminder": "If applicable, use homebrew rule(s).",
+    "reminders": [],
+    "setup": false,
+    "name": "Bootlegger",
+    "team": "fabled",
+    "ability": "This script has homebrew characters or rules."
   }
 ]

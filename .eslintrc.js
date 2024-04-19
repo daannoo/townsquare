@@ -8,9 +8,9 @@ module.exports = {
     ecmaVersion: 2020,
   },
   rules: {
-    "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
-    "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
-    "vue/multi-word-component-names": "off",
-    "vue/no-reserved-component-names": "off",
+    "no-console": process.env.NODE_ENV === "production" ? 1 : 0,
+    "no-debugger": process.env.NODE_ENV === "production" ? 1 : 0,
+    "vue/multi-word-component-names": 0,
+    "vue/no-reserved-component-names": 0,
   },
 };

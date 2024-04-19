@@ -40,6 +40,10 @@
       {
         "id": "Politician",
         "reason": "Un Chaudronnier ne peut pas créer un Politicien mauvais. "
+      },
+      {
+        "id": "Village Idiot",
+        "reason": "S'il y a moins de trois Idiots du Village, le Chaudronnier a le droit d'en créer un nouveau. L'Idiot du Village ivre peut alors changer."
       }
     ]
   },
@@ -82,6 +86,10 @@
       {
         "id": "Mayor",
         "reason": "Si le Léviathan est en jeu et qu'il n'y a pas d'exécution le cinquième jour, les bons gagnent. "
+      },
+      {
+        "id": "Pit-Hag",
+        "reason": "Après le jour 5, le Chaudronnier ne peut pas créer de Léviathan."
       }
     ]
   },
@@ -395,6 +403,164 @@
       {
         "id": "Preacher",
         "reason": "Un seul personnage maudit peut être en jeu à la fois. Les joueurs mauvais commencent la partie en sachant de quel joueur et quel rôle il s'agit."
+      }
+    ]
+  },
+  {
+    "id": "Yaggababble",
+    "hatred": [
+      {
+        "id": "Exorcist",
+        "reason": "Si l'Exorciste désigne le Yaggablabla, la capacité du Yaggablabla ne tue personne cette nuit."
+      }
+    ]
+  },
+  {
+    "id": "Summoner",
+    "hatred": [
+      {
+        "id": "Alchemist",
+        "reason": "Si un Alchimiste-Invocateur est en jeu, la partie commence avec un Démon, comme d'habitude. Si l'Alchimiste-Invocateur désigne un joueur, il le transforme en Démon mais ne change pas son alignement."
+      },
+      {
+        "id": "Clockmaker",
+        "reason": "Si l'Invocateur est en jeu, l'Horloger ne reçoit aucune info jusqu'à ce qu'un Démon soit créé."
+      },
+      {
+        "id": "Poppy Grower",
+        "reason": "Si le Planteur de pavot est en vie lorsque l'Invocateur agit, l'Invocateur choisit un rôle de Démon, mais c'est le Narrateur qui choisit un joueur."
+      },
+      {
+        "id": "Marionette",
+        "reason": "La Marionnette est voisine de l'Invocateur. L'Invocateur sait qui est la Marionnette."
+      },
+      {
+        "id": "Kazali",
+        "reason": "Le Kazali ne peut pas créer un Invocateur."
+      },
+      {
+        "id": "Legion",
+        "reason": "Si l'Invocateur crée une Légion, la majorité des joueurs (y compris les joueurs mauvais) deviennent des Légions mauvaises."
+      },
+      {
+        "id": "Riot",
+        "reason": "Si l'Invocateur crée une Émeute, le joueur choisi et tous les mauvais deviennent des Émeutes. Le joueur choisi doit être un des bons voisins vivants de l'Invocateur."
+      }
+    ]
+  },
+  {
+    "id": "Vizier",
+    "hatred": [
+      {
+        "id": "Magician",
+        "reason": "Un seul personnage maudit peut être en jeu à la fois. Les joueurs mauvais commencent la partie en sachant de quel joueur et quel rôle il s'agit."
+      },
+      {
+        "id": "Alchemist",
+        "reason": "Si l'Alchimiste a la capacité du Vizir, il peut exécuter si et seulement si au moins 3 joueurs votent, peu importe leur alignement."
+      },
+      {
+        "id": "Courtier",
+        "reason": "Si le Vizir perd sa capacité, il l'apprend. Si le Vizir est exécuté alors qu'il a sa capacité, son équipe gagne."
+      },
+      {
+        "id": "Preacher",
+        "reason": "Si le Vizir perd sa capacité, il l'apprend. Si le Vizir est exécuté alors qu'il a sa capacité, son équipe gagne."
+      },
+      {
+        "id": "Investigator",
+        "reason": "Si l'Enquêteur apprend qu'un Vizir est en jeu, la présence du Vizir n'est pas annoncée publiquement."
+      },
+      {
+        "id": "Fearmonger",
+        "reason": "Le Vizir apprend quel joueur a été désigné par le Semeur de peur, et ne peut pas forcer l'exécution de ce joueur."
+      },
+      {
+        "id": "Lil' Monsta",
+        "reason": "Le Vizir peut mourir par exécution s'il a la garde du Bébé Monstre."
+      }
+    ]
+  },
+  {
+    "id": "Hatter",
+    "hatred": [
+      {
+        "id": "Legion",
+        "reason": "Si le Chapelier meurt alors qu'une Légion est en jeu, rien ne se passe. Si le Chapelier meurt et qu'un mauvais choisit de devenir Légion, tous les joueurs mauvais deviennent une Légion."
+      },
+      {
+        "id": "Leviathan",
+        "reason": "Si le Chapelier est mort durant ou après le cinquième jour, le Démon ne peut pas choisir de devenir Léviathan."
+      },
+      {
+        "id": "Lil' Monsta",
+        "reason": "Si un Démon choisit de devenir Bébé monstre, il choisit aussi un rôle de Serviteur et devient baby-sitter pour cette nuit."
+      },
+      {
+        "id": "Riot",
+        "reason": "Si à la mort du Chapelier, une Émeute choisit de devenir un autre Démon, les autres Émeutes doivent devenir des Serviteurs. Si à la mort du Chapelier, le Démon choisit de devenir Émeute, les Serviteurs deviennent des Émeutes aussi."
+      }
+    ]
+  },
+  {
+    "id": "Kazali",
+    "hatred": [
+      {
+        "id": "Bounty Hunter",
+        "reason": "Un Villageois ne devient mauvais que si le Mercenaire est toujours en jeu après l'action du Kazali."
+      },
+      {
+        "id": "Choirboy",
+        "reason": "Le Kazali ne peut pas choisir de changer le Roi en Serviteur si l'Enfant de choeur est en jeu."
+      },
+      {
+        "id": "Goon",
+        "reason": "Si le Kazali choisit de transformer l'Homme de main en Serviteur, il devient ivre, et les Serviteurs restants sont choisis par le Narrateur sans prendre en compte les décisions du Kazali."
+      },
+      {
+        "id": "Huntsman",
+        "reason": "Si le Kazali transforme la Demoiselle en Serviteur, et si le Chasseur est en jeu, un joueur bon devient Demoiselle."
+      },
+      {
+        "id": "Marionette",
+        "reason": "Si le Kazali veut créer une Marionnette, il doit choisir l'un de ses voisins."
+      }
+    ]
+  },
+  {
+    "id": "Plague Doctor",
+    "hatred": [
+      {
+        "id": "Baron",
+        "reason": "Si le Narrateur gagne la capacité du Baron, jusqu'à deux joueurs deviennent des Étrangers qui ne sont pas en jeu."
+      },
+      {
+        "id": "Boomdandy",
+        "reason": "Si le Médecin de Peste est exécuté et que le Narrateur aurait du gagner une capacité d'Homme-bombe, la capacité d'Homme-bombe s'active immédiatement."
+      },
+      {
+        "id": "Evil Twin",
+        "reason": "Le Narrateur ne peut pas gagner une capacité de Jumeau maléfique si le Médecin de Peste meurt."
+      },
+      {
+        "id": "Fearmonger",
+        "reason": "Si le Médecin de Peste aurait du donner la capacité de Semeur de peur au Narrateur, un Serviteur en vie gagne la capacité de Semeur de peur en plus de sa propre capacité, et l'apprend."
+      },
+      {
+        "id": "Goblin",
+        "reason": "Si le Médecin de Peste aurait du donner la capacité de Gobelin au Narrateur, un Serviteur en vie gagne la capacité de Gobelin en plus de sa propre capacité, et l'apprend."
+      },
+      {
+        "id": "Scarlet Woman",
+        "reason": "Si le Médecin de Peste aurait du donner la capacité de Gourgandine au Narrateur, un Serviteur en vie gagne la capacité de Gourgandine en plus de sa propre capacité, et l'apprend."
+      },
+      {
+        "id": "Spy",
+        "reason": "Si le Médecin de Peste aurait du donner la capacité d'Espion au Narrateur, un Serviteur en vie gagne la capacité d'Espion en plus de sa propre capacité, et l'apprend."
+      },
+      {
+        "id": "Marionette",
+        "reason": "Si l'un des voisins du Démon est un Villageois ou Étranger et est vivant quand le Médecin de Peste meurt, ce joueur devient une mauvaise Marionnette. S'il y a déjà un joueur mauvais de plus, cela n'arrive pas."
       }
     ]
   }
