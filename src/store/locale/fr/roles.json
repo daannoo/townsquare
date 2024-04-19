@@ -1828,6 +1828,22 @@
     ],
     "setup": false,
     "ability": "Les votes ont lieu à bulletin secret. Vous ne pouvez être exécuté que si vous levez la main."
+  },  
+  {
+    "id": "harpy",
+    "name": "Harpie",
+    "edition": "",
+    "team": "minion",
+    "firstNight": 28,
+    "firstNightReminder": "Réveillez la Harpie. Elle désigne deux joueurs, l'un après l'autre. Réveillez le premier joueur, et lui révéler qu'il est persuadé par la Harpie que le deuxième est mauvais.",
+    "otherNight": 19,
+    "otherNightReminder": "Réveillez la Harpie. Elle désigne deux joueurs, l'un après l'autre. Réveillez le premier joueur, et lui révéler qu'il est persuadé par la Harpie que le deuxième est mauvais.",
+    "reminders": [
+      "Persuadé",
+      "2e"
+    ],
+    "setup": false,
+    "ability": "Chaque nuit, désignez deux joueurs : demain, le premier sera persuadé que le deuxième est mauvais, ou ils pourront tous les deux mourir."
   },
   {
     "id": "summoner",
