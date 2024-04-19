@@ -1,6 +1,6 @@
 {
-  "menu":{
-    "grimoire":{
+  "menu": {
+    "grimoire": {
       "title": "Grimoire",
       "hide": "Cacher",
       "show": "Montrer",
@@ -16,8 +16,8 @@
       "ringBell": "Sonner Clocher",
       "organGrinder": "Vote d'Organiste"
     },
-    "session":{
-      "title":{
+    "session": {
+      "title": {
         "player": "Joueur",
         "host": "Hôte",
         "create": "Session Live"
@@ -32,20 +32,20 @@
       "voteHistory": "Historique Votes",
       "leave": "Quitter Session"
     },
-    "players":{
+    "players": {
       "title": "Joueurs",
       "add": "Ajouter",
       "randomize": "Mélanger Sièges",
       "removeAll": "Retirer Joueurs"
     },
-    "characters":{
+    "characters": {
       "title": "Personnages",
       "selectEdition": "Choisir Scénario",
       "assign": "Attribuer Rôles",
       "addFabled": "Ajouter Fabuleux",
       "removeAll": "Effacer Rôles"
     },
-    "help":{
+    "help": {
       "title": "Aide",
       "reference": "Référence rôles",
       "nightOrder": "Ordre Nocturne",
@@ -54,7 +54,7 @@
       "source": "Code Source"
     }
   },
-  "prompt":{
+  "prompt": {
     "background": "Entrez l'URL de l'image de fond",
     "createSession": "Entrez un nom ou numéro de session",
     "sendRoles": "Voulez-vous envoyer les rôles à tous les joueurs ASSIS ?",
@@ -69,7 +69,7 @@
     "customError": "Erreur lors du chargement du script",
     "customNote": "Ajouter une note personnalisée"
   },
-  "vote":{
+  "vote": {
     "nominates": "accuse",
     "callexile": "veut exiler",
     "exclam": " !",
@@ -92,7 +92,7 @@
     "seatToVote": "Asseyez-vous pour pouvoir voter",
     "doVote": "Votez"
   },
-  "townsquare":{
+  "townsquare": {
     "others": "Autres Rôles",
     "bluffs": "Bluffs de Démon",
     "fabled": "Fabuleux",
@@ -132,11 +132,11 @@
       }
     }
   },
-  "towninfo":{
+  "towninfo": {
     "addPlayers": "Appuyez sur [A] pour ajouter plus de joueurs !",
     "nightPhase": "C'est la nuit"
   },
-  "player":{
+  "player": {
     "handUp": "Main levée",
     "handDown": "Main baissée",
     "cancel": "Annuler",
@@ -155,15 +155,15 @@
     "vacateSeat": "Libérer le Siège",
     "occupiedSeat": "Siège Occupé"
   },
-  "intro":{
+  "intro": {
     "header": "Bienvenue sur le Centre-ville Virtuel (non-officiel) pour Blood on the Clocktower! Veuillez ajouter des Joueurs via le",
     "menu": "Menu",
     "body": "en haut à droite ou en appuyant sur [A] pour commencer. Vous pouvez aussi rejoindre une session en appuyant sur [J].",
     "footerStart": "Ce programme est libre et ses sources peuvent être trouvées sur",
     "footerEnd": ". Ce site n'est pas affilié à The Pandemonium Institute. \"Blood on the Clocktower\" est une marque déposée de Steven Medway & The Pandemonium Institute."
   },
-  "modal":{
-    "edition":{
+  "modal": {
+    "edition": {
       "title": "Choisir un Scénario :",
       "tab": {
         "official": "Scénarios officiels",
@@ -210,15 +210,15 @@
       "duskDescription": "Terminez la journée, et endormez les joueurs."
     },
     "reference": {
-        "title": "Réference de rôles",
-        "jinxed": "Jinx",
-        "notfirstnight": "* Pas la première nuit",
-        "teamNames": {
-          "townsfolk": "villageois",
-          "outsider": "étranger",
-          "minion": "serviteur",
-          "demon": "démon"
-        }
+      "title": "Réference de rôles",
+      "jinxed": "Jinx",
+      "notfirstnight": "* Pas la première nuit",
+      "teamNames": {
+        "townsfolk": "villageois",
+        "outsider": "étranger",
+        "minion": "serviteur",
+        "demon": "démon"
+      }
     },
     "reminder": {
       "title": "Apposer une note:",
@@ -235,13 +235,13 @@
     "roles": {
       "titleStart": "Selectionner les personnages pour ",
       "titleEnd": " joueurs:",
-      "warning":"Attention: certains des personnages sélectionnés changent la distribution de début de partie ! La distribution aléatoire n'effectue pas elle-même ces changements, pensez à modifier les attributions en conséquence avant d'envoyer les rôles aux joueurs.",
+      "warning": "Attention: certains des personnages sélectionnés changent la distribution de début de partie ! La distribution aléatoire n'effectue pas elle-même ces changements, pensez à modifier les attributions en conséquence avant d'envoyer les rôles aux joueurs.",
       "allowMultiple": "Permettre les doublons de personnages",
       "assignStart": "Attribuer aléatoirement ces ",
       "assignEnd": " rôles",
       "shuffle": "Tirer les personnages au sort"
     },
-    "voteHistory":{
+    "voteHistory": {
       "title": "Historique de votes",
       "accessibility": "Accessible aux Joueurs",
       "clear": "Effacer pour tous",

@@ -1,19 +1,24 @@
 [
   {
     "id": "doomsayer",
-		"name": "Prédicateur",
-		"team": "fabled",
-		"firstNightReminder": "",
-		"otherNightReminder": "",
-		"reminders": ["Utilisé"],
-		"setup": false,
-		"ability": "Si 4 joueurs ou plus sont en vie, chaque joueur vivant peut, une fois par partie, décider qu'un joueur de son propre alignement meure."
+    "name": "Prédicateur",
+    "team": "fabled",
+    "firstNightReminder": "",
+    "otherNightReminder": "",
+    "reminders": [
+      "Utilisé"
+    ],
+    "setup": false,
+    "ability": "Si 4 joueurs ou plus sont en vie, chaque joueur vivant peut, une fois par partie, décider qu'un joueur de son propre alignement meure."
   },
   {
     "id": "angel",
     "firstNightReminder": "",
     "otherNightReminder": "",
-    "reminders": ["Protégé", "Catastrophe"],
+    "reminders": [
+      "Protégé",
+      "Catastrophe"
+    ],
     "setup": false,
     "name": "Ange",
     "team": "fabled",
@@ -23,7 +28,9 @@
     "id": "buddhist",
     "firstNightReminder": "",
     "otherNightReminder": "",
-    "reminders": ["Vétéran"],
+    "reminders": [
+      "Vétéran"
+    ],
     "setup": false,
     "name": "Bouddhiste",
     "team": "fabled",
@@ -33,7 +40,9 @@
     "id": "hellslibrarian",
     "firstNightReminder": "",
     "otherNightReminder": "",
-    "reminders": ["Catastrophe"],
+    "reminders": [
+      "Catastrophe"
+    ],
     "setup": false,
     "name": "Libraire infernal",
     "team": "fabled",
@@ -43,7 +52,10 @@
     "id": "revolutionary",
     "firstNightReminder": "",
     "otherNightReminder": "",
-    "reminders": ["Même camp", "Utilisé"],
+    "reminders": [
+      "Même camp",
+      "Utilisé"
+    ],
     "setup": false,
     "name": "Révolutionnaire",
     "team": "fabled",
@@ -64,7 +76,9 @@
     "firstNightReminder": "",
     "otherNight": 2,
     "otherNightReminder": "Si le Démon pourrait terminer la partie cette nuit, mais qu'il a toujours son marqueur 'nuit sans attaque', il n'agit pas cette nuit (ne le réveillez pas)",
-    "reminders": ["Nuit sans attaque"],
+    "reminders": [
+      "Nuit sans attaque"
+    ],
     "setup": false,
     "name": "Fabricant de Jouet",
     "team": "fabled",
@@ -74,7 +88,9 @@
     "id": "fibbin",
     "firstNightReminder": "",
     "otherNightReminder": "",
-    "reminders": ["Utilisé"],
+    "reminders": [
+      "Utilisé"
+    ],
     "setup": false,
     "name": "Mensonge",
     "team": "fabled",
@@ -85,7 +101,12 @@
     "firstNightReminder": "",
     "otherNight": 2,
     "otherNightReminder": "Reveillez chaque visiteur dans l'ordre un par un. Indiquez à chacun d'entre eux combien de Visiteurs sont mauvais. Excepté celui qui reçoit les fausses informations qui recevra à la place n'importe quel autre nombre.",
-    "reminders": ["Visiteur 1", "Visiteur 2", "Visiteur 3", "Fausse Info"],
+    "reminders": [
+      "Visiteur 1",
+      "Visiteur 2",
+      "Visiteur 3",
+      "Fausse Info"
+    ],
     "setup": false,
     "name": "Duchesse",
     "team": "fabled",
@@ -105,7 +126,9 @@
     "id": "spiritofivory",
     "firstNightReminder": "",
     "otherNightReminder": "",
-    "reminders": ["Pas de méchant suplémentaire"],
+    "reminders": [
+      "Pas de méchant suplémentaire"
+    ],
     "setup": false,
     "name": "Esprit d'Ivoire",
     "team": "fabled",
@@ -127,7 +150,9 @@
     "firstNight": 1,
     "firstNightReminder": "Marquez un joueur comme \"Sûr\". Réveillez chaque joueur Mauvais et indiquez lui qui est ce joueur.",
     "otherNightReminder": "",
-    "reminders": ["Sûr"],
+    "reminders": [
+      "Sûr"
+    ],
     "setup": false,
     "name": "Chasseur d’orages",
     "team": "fabled",
@@ -147,7 +172,9 @@
     "id": "gardener",
     "firstNightReminder": "",
     "otherNightReminder": "",
-    "reminders": ["Rôle choisi"],
+    "reminders": [
+      "Rôle choisi"
+    ],
     "setup": false,
     "name": "Jardinier",
     "team": "fabled",
@@ -155,7 +182,7 @@
   },
   {
     "id": "bootlegger",
-    "firstNight": 1,    
+    "firstNight": 1,
     "firstNightReminder": "Si applicables, utilisez la (les) règle(s) faite(s)-maison.",
     "otherNight": 2,
     "otherNightReminder": "Si applicables, utilisez la (les) règle(s) faite(s)-maison.",
