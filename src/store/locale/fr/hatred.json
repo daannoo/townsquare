@@ -407,6 +407,15 @@
     ]
   },
   {
+    "id": "Yaggababble",
+    "hatred": [
+      {
+        "id": "Exorcist",
+        "reason": "Si l'Exorciste désigne le Yaggablabla, la capacité du Yaggablabla ne tue personne cette nuit."
+      }
+    ]
+  },
+  {
     "id": "Summoner",
     "hatred": [
       {
