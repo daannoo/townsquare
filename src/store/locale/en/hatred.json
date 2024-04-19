@@ -386,7 +386,7 @@
       },
       {
         "id": "Flowergirl",
-        "reason":  "If players' eyes were closed during the nominations, the Flowergirl learns how many times the Demon voted."
+        "reason": "If players' eyes were closed during the nominations, the Flowergirl learns how many times the Demon voted."
       },
       {
         "id": "Lil' Monsta",
@@ -411,7 +411,7 @@
       },
       {
         "id": "Clockmaker",
-        "reason":  "If the Summoner is in play, the Clockmaker does not receive their information until a Demon is created."
+        "reason": "If the Summoner is in play, the Clockmaker does not receive their information until a Demon is created."
       },
       {
         "id": "Poppy Grower",
@@ -432,6 +432,39 @@
       {
         "id": "Riot",
         "reason": "If the Summoner creates Riot, the chosen player and all evil players become Riot. The chosen player must be one of the Summoner's good living neighbours."
+      }
+    ]
+  },
+  {
+    "id": "Vizier",
+    "hatred": [
+      {
+        "id": "Magician",
+        "reason": "Only 1 jinxed character can be in play. Evil players start knowing which player and character it is."
+      },
+      {
+        "id": "Alchemist",
+        "reason": "If the Alchemist has the Vizier ability, they may only choose to execute immediately if three or more players voted, regardless of those players' alignment."
+      },
+      {
+        "id": "Courtier",
+        "reason": "If the Vizier loses their ability, they learn this and if the Vizier is executed while they have their ability, their team wins."
+      },
+      {
+        "id": "Preacher",
+        "reason": "If the Vizier loses their ability, they learn this and if the Vizier is executed while they have their ability, their team wins."
+      },
+      {
+        "id": "Investigator",
+        "reason": "If the Investigator learns that the Vizier is in play, the existence of the Vizier is not announced by the Storyteller."
+      },
+      {
+        "id": "Fearmonger",
+        "reason": "The Vizier wakes with the Fearmonger, learns who they choose and cannot choose to execute that player."
+      },
+      {
+        "id": "Lil' Monsta",
+        "reason": "The Vizier can die by execution if they are babysitting Lil' Monsta."
       }
     ]
   }

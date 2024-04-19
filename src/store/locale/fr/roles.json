@@ -1276,7 +1276,9 @@
     "firstNightReminder": "",
     "otherNight": 0,
     "otherNightReminder": "",
-    "reminders": ["Drôle"],
+    "reminders": [
+      "Drôle"
+    ],
     "setup": false,
     "ability": "Si vous avez été drôle aujourd'hui, vous ne pouvez pas mourir par exil."
   },
@@ -1499,7 +1501,9 @@
     "otherNight": 0,
     "otherNightReminder": "Si la capacité de l'alchimiste s'utilise la nuit, réveillez le.",
     "reminders": [],
-    "remindersGlobal": ["Alchimiste"],
+    "remindersGlobal": [
+      "Alchimiste"
+    ],
     "setup": false,
     "ability": "Vous avez la capacité d'un Serviteur qui n'est pas en jeu."
   },
@@ -1841,6 +1845,19 @@
     ],
     "setup": true,
     "ability": "Vous avez trois bluffs. Durant la troisième nuit, désignez un joueur : il devient le mauvais Démon de votre choix. [Aucun Démon]"
+  },
+  {
+    "id": "vizier",
+    "name": "Vizir",
+    "edition": "",
+    "team": "minion",
+    "firstNight": 1002,
+    "firstNightReminder": "Annoncez \"Le Vizir est en jeu\" et précisez de quel joueur il s'agit.",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [],
+    "setup": false,
+    "ability": "Tous les joueurs savent qui vous êtes. Vous ne pouvez pas mourir de jour. Si un bon a voté, vous pouvez choisir d'exécuter immédiatement."
   },
   {
     "id": "lilmonsta",

@@ -411,7 +411,7 @@
       },
       {
         "id": "Clockmaker",
-        "reason":  "Si l'Invocateur est en jeu, l'Horloger ne reçoit aucune info jusqu'à ce qu'un Démon soit créé."
+        "reason": "Si l'Invocateur est en jeu, l'Horloger ne reçoit aucune info jusqu'à ce qu'un Démon soit créé."
       },
       {
         "id": "Poppy Grower",
@@ -432,6 +432,39 @@
       {
         "id": "Riot",
         "reason": "Si l'Invocateur crée une Émeute, le joueur choisi et tous les mauvais deviennent des Émeutes. Le joueur choisi doit être un des bons voisins vivants de l'Invocateur."
+      }
+    ]
+  },
+  {
+    "id": "Vizier",
+    "hatred": [
+      {
+        "id": "Magician",
+        "reason": "Un seul personnage maudit peut être en jeu à la fois. Les joueurs mauvais commencent la partie en sachant de quel joueur et quel rôle il s'agit."
+      },
+      {
+        "id": "Alchemist",
+        "reason": "Si l'Alchimiste a la capacité du Vizir, il peut exécuter si et seulement si au moins 3 joueurs votent, peu importe leur alignement."
+      },
+      {
+        "id": "Courtier",
+        "reason": "Si le Vizir perd sa capacité, il l'apprend. Si le Vizir est exécuté alors qu'il a sa capacité, son équipe gagne."
+      },
+      {
+        "id": "Preacher",
+        "reason": "Si le Vizir perd sa capacité, il l'apprend. Si le Vizir est exécuté alors qu'il a sa capacité, son équipe gagne."
+      },
+      {
+        "id": "Investigator",
+        "reason": "Si l'Enquêteur apprend qu'un Vizir est en jeu, la présence du Vizir n'est pas annoncée publiquement."
+      },
+      {
+        "id": "Fearmonger",
+        "reason": "Le Vizir apprend quel joueur a été désigné par le Semeur de peur, et ne peut pas forcer l'exécution de ce joueur."
+      },
+      {
+        "id": "Lil' Monsta",
+        "reason": "Le Vizir peut mourir par exécution s'il a la garde du Bébé Monstre."
       }
     ]
   }
