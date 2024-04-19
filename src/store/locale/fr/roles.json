@@ -1692,6 +1692,19 @@
     "ability": "Si vous étiez le principal responsable de la défaite de votre équipe, vous changez d'équipe et gagnez, même si vous êtes mort."
   },
   {
+    "id": "hatter",
+    "name": "Chapelier",
+    "edition": "",
+    "team": "outsider",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "otherNight": 44,
+    "otherNightReminder": "À la mort du Chapelier, effacez les rôles des Serviteurs et des Démons. Réveillez-les l'un après l'autre, en leur demandant à chacun le rôle qu'il souhaite devenir. Si l'un d'eux demande le même rôle qu'un joueur qui a déjà choisi, demandez-lui de choisir un autre rôle. Modifier les rôles de ces joueurs en conséquence.",
+    "reminders": ["Heure du Thé"],
+    "setup": false,
+    "ability": "Si vous êtes mort aujourd'hui (de jour comme de nuit), les Serviteurs et Démons peuvent choisir de devenir d'autres Serviteurs et Démons."
+  },
+  {
     "id": "widow",
     "name": "Veuve",
     "edition": "",
