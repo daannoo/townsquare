@@ -1592,6 +1592,19 @@
     "ability": "Vous avez la capacité du dernier joueur mort par exécution. S'il était Mauvais, vous êtes empoisonné jusqu'à ce qu'un joueur Bon meure par exécution."
   },
   {
+    "id": "shugenja",
+    "name": "Shugenja",
+    "edition": "",
+    "team": "townsfolk",
+    "firstNight": 50,
+    "firstNightReminder": "Réveillez le Shugenja. Indiquez-lui dans quelle direction se trouve le mauvais le plus proche. En cas d'égalité, lui indiquer n'importe laquelle des deux directions.",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [],
+    "setup": false,
+    "ability": "Vous commencez la partie en sachant si le mauvais le plus proche est dans le sens horaire ou anti-horaire. Si équidistants, l'info est arbitraire."
+  },
+  {
     "id": "highpriestess",
     "name": "Grande Prêtresse",
     "edition": "",

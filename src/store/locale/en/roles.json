@@ -1588,6 +1588,19 @@
     "ability": "You have the ability of the recently killed executee. If they are evil, you are poisoned until a good player dies by execution."
   },
   {
+    "id": "shugenja",
+    "name": "Shugenja",
+    "edition": "",
+    "team": "townsfolk",
+    "firstNight": 50,
+    "firstNightReminder": "Wake the Shugenja; point horizontally in the direction of the closest evil player. If the two closest evil players are equidistant, point your finger horizontally in either direction.",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [],
+    "setup": false,
+    "ability": "You start knowing if your closest evil player is clockwise or anti-clockwise. If equidistant, this info is arbitrary."
+  },
+  {
     "id": "highpriestess",
     "name": "High Priestess",
     "edition": "",
