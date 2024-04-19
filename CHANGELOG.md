@@ -1,6 +1,7 @@
 # Release Notes
 
 - Adding all missing roles (up to Summoner)
+- Correcting Dawn night order
 
 ## Upcomming Version
 - Adding a missing jinx

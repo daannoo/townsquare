@@ -2045,9 +2045,9 @@
     "name": "Leviathan",
     "edition": "",
     "team": "demon",
-    "firstNight": 61,
+    "firstNight": 1001,
     "firstNightReminder": "Place the Leviathan 'Day 1' marker. Announce 'The Leviathan is in play; this is Day 1.'",
-    "otherNight": 80,
+    "otherNight": 1001,
     "otherNightReminder": "Change the Leviathan Day reminder for the next day.",
     "reminders": [
       "Good player executed"

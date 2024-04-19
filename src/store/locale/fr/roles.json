@@ -2049,9 +2049,9 @@
     "name": "Léviathan",
     "edition": "",
     "team": "demon",
-    "firstNight": 61,
+    "firstNight": 1001,
     "firstNightReminder": "Placez le marqueur 'Jour 1'. Annoncez 'Il y a un Léviathan en jeu; Ceci est votre premier jour.'",
-    "otherNight": 80,
+    "otherNight": 1001,
     "otherNightReminder": "Changez le marqueur de jour du Léviathan.",
     "reminders": [
       "Joueur Bon Exécuté"
