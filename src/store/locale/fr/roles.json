@@ -1592,6 +1592,19 @@
     "ability": "Vous avez la capacité du dernier joueur mort par exécution. S'il était Mauvais, vous êtes empoisonné jusqu'à ce qu'un joueur Bon meure par exécution."
   },
   {
+    "id": "villageidiot",
+    "name": "Idiot du Village",
+    "edition": "",
+    "team": "townsfolk",
+    "firstNight": 51,
+    "firstNightReminder": "Réveillez l'Idiot du Village. Celui-ci désigne un joueur : indiquez-lui l'alignement de ce joueur.",
+    "otherNight": 68,
+    "otherNightReminder": "Réveillez l'Idiot du Village. Celui-ci désigne un joueur : indiquez-lui l'alignement de ce joueur.",
+    "reminders": ["Ivre"],
+    "setup": true,
+    "ability": "Chaque nuit, désignez un joueur : vous apprenez son alignement. [+0 à +2 Idiots du village, l’un d’eux étant ivre]"
+  },
+  {
     "id": "snitch",
     "name": "Cafteur",
     "edition": "",

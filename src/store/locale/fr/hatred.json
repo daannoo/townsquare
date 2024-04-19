@@ -40,6 +40,10 @@
       {
         "id": "Politician",
         "reason": "Un Chaudronnier ne peut pas créer un Politicien mauvais. "
+      },
+      {
+        "id": "Village Idiot",
+        "reason": "S'il y a moins de trois Idiots du Village, le Chaudronnier a le droit d'en créer un nouveau. L'Idiot du Village ivre peut alors changer."
       }
     ]
   },
