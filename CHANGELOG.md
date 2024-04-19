@@ -1,12 +1,13 @@
 # Release Notes
 
-- Adding all missing roles (up to Summoner)
-- Correcting Dawn night order
+
 
 ## Upcomming Version
 - Adding a missing jinx
 - Updating night order (and its print)
 - Correcting automatic adding/deletion of Fabled
+- Adding all missing roles (up to Summoner)
+- Correcting Dawn night order
 
 ### Version 3.17.0
 
