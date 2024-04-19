@@ -2044,6 +2044,21 @@
     "ability": "Chaque nuit*, désignez un joueur : il meurt. [Vous choisissez quels joueurs sont quels Serviteurs. -? à +? Étrangers]"
   },
   {
+    "id": "ojo",
+    "name": "Ojo",
+    "edition": "",
+    "team": "demon",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "otherNight": 35,
+    "otherNightReminder": "L'Ojo désigne un rôle. S'il est en jeu, un joueur avec ce rôle meurt. Si le rôle choisi n'est pas en jeu, tuez le(s) joueur(s) que vous voulez.",
+    "reminders": [
+      "Mort"
+    ],
+    "setup": false,
+    "ability": "Chaque nuit*, désignez un rôle : il meurt. Si ce rôle n'est pas en jeu, le Narrateur choisit qui meurt."
+  },
+  {
     "id": "gangster",
     "name": "Gangster",
     "edition": "",
