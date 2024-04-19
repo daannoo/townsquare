@@ -517,5 +517,42 @@
         "reason": "Si le Kazali veut créer une Marionnette, il doit choisir l'un de ses voisins."
       }
     ]
+  },
+  {
+    "id": "Plague Doctor",
+    "hatred": [
+      {
+        "id": "Baron",
+        "reason": "Si le Narrateur gagne la capacité du Baron, jusqu'à deux joueurs deviennent des Étrangers qui ne sont pas en jeu."
+      },
+      {
+        "id": "Boomdandy",
+        "reason": "Si le Médecin de Peste est exécuté et que le Narrateur aurait du gagner une capacité d'Homme-bombe, la capacité d'Homme-bombe s'active immédiatement."
+      },
+      {
+        "id": "Evil Twin",
+        "reason": "Le Narrateur ne peut pas gagner une capacité de Jumeau maléfique si le Médecin de Peste meurt."
+      },
+      {
+        "id": "Fearmonger",
+        "reason": "Si le Médecin de Peste aurait du donner la capacité de Semeur de peur au Narrateur, un Serviteur en vie gagne la capacité de Semeur de peur en plus de sa propre capacité, et l'apprend."
+      },
+      {
+        "id": "Goblin",
+        "reason": "Si le Médecin de Peste aurait du donner la capacité de Gobelin au Narrateur, un Serviteur en vie gagne la capacité de Gobelin en plus de sa propre capacité, et l'apprend."
+      },
+      {
+        "id": "Scarlet Woman",
+        "reason": "Si le Médecin de Peste aurait du donner la capacité de Gourgandine au Narrateur, un Serviteur en vie gagne la capacité de Gourgandine en plus de sa propre capacité, et l'apprend."
+      },
+      {
+        "id": "Spy",
+        "reason": "Si le Médecin de Peste aurait du donner la capacité d'Espion au Narrateur, un Serviteur en vie gagne la capacité d'Espion en plus de sa propre capacité, et l'apprend."
+      },
+      {
+        "id": "Marionette",
+        "reason": "Si l'un des voisins du Démon est un Villageois ou Étranger et est vivant quand le Médecin de Peste meurt, ce joueur devient une mauvaise Marionnette. S'il y a déjà un joueur mauvais de plus, cela n'arrive pas."
+      }
+    ]
   }
 ]
