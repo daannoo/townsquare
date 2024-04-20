@@ -101,7 +101,7 @@
       "Executé"
     ],
     "setup": false,
-    "ability": "Chaque nuit*, si un joueur est mort par exécution pendant la journée, vous apprenez son personnage."
+    "ability": "Chaque nuit*, vous apprenez quel personnage est mort par exécution aujourd’hui."
   },
   {
     "id": "monk",
