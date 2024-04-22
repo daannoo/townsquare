@@ -2,6 +2,7 @@
 
 ## Upcomming Version
 
+- BUGFIX: missing translation in Night order modal
 - BUGFIX: reminder modal title from translation
 
 ### Version 3.18.0
