@@ -219,7 +219,8 @@
         "outsider": "outsider",
         "minion": "minion",
         "demon": "demon"
-      }
+      },
+      "nightOrder": "Show Night Order"
     },
     "reminder": {
       "title": "Choose a reminder token:",
