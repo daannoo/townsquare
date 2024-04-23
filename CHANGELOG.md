@@ -2,6 +2,7 @@
 
 ## Upcomming Version
 
+- MAINT: french translation inconcistancy for snake charmer
 - MAINT: changed french name for Baloonist from Montgolfier to Aéronaute
 - MAINT: adjustment to nomination messages
 - BUGFIX: missing translation in Roles modal
