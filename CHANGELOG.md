@@ -2,6 +2,7 @@
 
 ## Upcomming Version
 
+- MAINT: changed french name for Baloonist from Montgolfier to Aéronaute
 - MAINT: adjustment to nomination messages
 - BUGFIX: missing translation in Roles modal
 - BUGFIX: missing translation in Night order modal
