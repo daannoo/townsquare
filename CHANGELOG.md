@@ -2,6 +2,7 @@
 
 ## Upcomming Version
 
+- MAINT: chnged french translation for Minions from Serviteurs to sbrires
 - MAINT: changed french name for Fibbin from Mensonge to Menteur
 - MAINT: french translation inconcistancy for snake charmer
 - MAINT: changed french name for Baloonist from Montgolfier to Aéronaute
