@@ -1,6 +1,7 @@
 # Release Notes
 
 ## Upcomming Version
+
 - Various corrections in the French version
 - MAINT: Update of the icons
 - MAINT: chnged french translation for Minions from Serviteurs to sbrires
@@ -11,6 +12,7 @@
 - BUGFIX: missing translation in Roles modal
 - BUGFIX: missing translation in Night order modal
 - BUGFIX: reminder modal title from translation
+
 
 ### Version 3.18.0
 
