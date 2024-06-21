@@ -3,6 +3,7 @@
 ## Upcomming Version
 
 - Various corrections in the French version
+- MAINT: Updating King description
 - MAINT: Update of the icons
 - MAINT: chnged french translation for Minions from Serviteurs to sbrires
 - MAINT: changed french name for Fibbin from Mensonge to Menteur
