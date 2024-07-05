@@ -1,10 +1,24 @@
 # Release Notes
 
-## Upcomming Version
+## Upcoming version ##
 
 
+## Version 3.19.0
+
+- Various corrections in the French version
+- MAINT: Updating King description
+- MAINT: Update of the icons
+- MAINT: chnged french translation for Minions from Serviteurs to sbrires
+- MAINT: changed french name for Fibbin from Mensonge to Menteur
+- MAINT: french translation inconcistancy for snake charmer
+- MAINT: changed french name for Baloonist from Montgolfier to Aéronaute
+- MAINT: adjustment to nomination messages
+- BUGFIX: missing translation in Roles modal
+- BUGFIX: missing translation in Night order modal
+- BUGFIX: reminder modal title from translation
 
 ### Version 3.18.0
+
 - Adding a missing jinx
 - Updating night order (and its print)
 - Correcting automatic adding/deletion of Fabled
