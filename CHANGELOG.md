@@ -1,7 +1,7 @@
 # Release Notes
 
 ## Upcoming version ##
-
+- MAINT: Upgrade caniuselite
 
 ## Version 3.19.0
 
