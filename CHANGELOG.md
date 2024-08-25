@@ -1,10 +1,11 @@
 # Release Notes
 
-### Upcoming version
+## Upcoming version
 - MAINT: Upgrade caniuselite
 - Various corrections in the French version
 - Minor corrections in the English version
 
+- Various corrections in the French version
 ### Version 3.19.0
 
 - MAINT: Updating King description
