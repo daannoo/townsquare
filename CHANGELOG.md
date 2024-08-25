@@ -37,6 +37,7 @@
 - Adding a token "Used" to the Doomsayer
 - Updated packages & Dockerfile for node >=18
 
+---
 ### Version 3.16.0 (merged upstream 2.16.2)
 - fixed custom script format to support new script tool JSON
 - updated packages to be compatible with Node >= 18 again
