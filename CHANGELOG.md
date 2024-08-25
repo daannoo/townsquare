@@ -2,10 +2,11 @@
 
 ## Upcoming version ##
 - MAINT: Upgrade caniuselite
+- Various corrections in the French version
+- Minor corrections in the English version
 
 ## Version 3.19.0
 
-- Various corrections in the French version
 - MAINT: Updating King description
 - MAINT: Update of the icons
 - MAINT: chnged french translation for Minions from Serviteurs to sbrires
