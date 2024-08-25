@@ -5,6 +5,7 @@
 - Various corrections in the French version
 - Minor corrections in the English version
 - Various corrections in the French version
+- Translatable night description bubbles
 
 ### Version 3.19.0
 
