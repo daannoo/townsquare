@@ -41,6 +41,7 @@
 - fixed custom script format to support new script tool JSON
 - updated packages to be compatible with Node >= 18 again
 
+---
 ### Version 3.15.0
 - Night order bubbles always on for storyteller
 - Optional night order bubbles for players
