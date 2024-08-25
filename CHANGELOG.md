@@ -1,6 +1,11 @@
 # Release Notes
 
 ## Upcoming version
+
+
+
+### Version 3.20.0
+
 - MAINT: Upgrade caniuselite
 - Various corrections in the French version
 - Minor corrections in the English version
