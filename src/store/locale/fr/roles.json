@@ -13,7 +13,7 @@
       "Faux"
     ],
     "setup": false,
-    "ability": "Vous commencez la partie en connaissant le rôle de villageois d'un joueur parmi deux désignés."
+    "ability": "Vous commencez la partie en sachant qu'un joueur parmi deux est un Villageois spécifique."
   },
   {
     "id": "librarian",
@@ -29,7 +29,7 @@
       "Faux"
     ],
     "setup": false,
-    "ability": "Vous commencez la partie en connaissant le rôle d'Étranger d'un joueur parmi deux désignés (ou en sachant qu'il n'y en a pas)."
+    "ability": "Vous commencez la partie en sachant qu'un joueur parmi deux est un Étranger spécifique (ou qu'aucun Étranger n'est en jeu)."
   },
   {
     "id": "investigator",
@@ -45,7 +45,7 @@
       "Faux"
     ],
     "setup": false,
-    "ability": "Vous commencez la partie en connaissant le rôle de Sbire d'un joueur parmi deux désignés."
+    "ability": "Vous commencez la partie en sachant qu'un joueur parmi deux est un Sbire spécifique."
   },
   {
     "id": "chef",
@@ -116,7 +116,7 @@
       "Protégé"
     ],
     "setup": false,
-    "ability": "Chaque nuit*, choisissez un joueur autre que vous-même : il est à l'abri du Démon cette nuit."
+    "ability": "Chaque nuit*, choisissez un joueur (autre que vous-même) : il est à l'abri du Démon cette nuit."
   },
   {
     "id": "ravenkeeper",
@@ -129,7 +129,7 @@
     "otherNightReminder": "Si l'Ami des corbeaux est mort cette nuit, il désigne un joueur. Indiquez le rôle de ce joueur.",
     "reminders": [],
     "setup": false,
-    "ability": "Si vous mourez la nuit, vous êtes réveillé pour choisir un joueur et apprenez son rôle."
+    "ability": "Si vous mourez la nuit, vous êtes réveillé pour désigner un joueur et apprenez son personnage."
   },
   {
     "id": "virgin",
@@ -185,7 +185,7 @@
     "otherNightReminder": "",
     "reminders": [],
     "setup": false,
-    "ability": "S'il ne reste que 3 joueurs en vie et que la journée se termine sans exécution, votre équipe remporte la partie. Si vous mourez la nuit, un autre joueur peut mourir à votre place."
+    "ability": "Si 3 joueurs sont en vie & qu'il n'y a pas d'exécution, votre équipe gagne. Si vous mourez la nuit, il se peut qu'un autre joueur meure à la place."
   },
   {
     "id": "butler",
@@ -200,7 +200,7 @@
       "Maître"
     ],
     "setup": false,
-    "ability": "Chaque nuit, désignez un joueur autre que vous-même : demain, vous ne pourrez voter que si ce joueur a voté aussi."
+    "ability": "Chaque nuit, désignez un joueur (autre que vous-même) : demain, vous ne pourrez voter que si ce joueur a voté aussi."
   },
   {
     "id": "drunk",
@@ -216,7 +216,7 @@
       "Ivrogne"
     ],
     "setup": true,
-    "ability": "Vous ne savez pas que vous êtres l'Ivrogne. Vous croyez avoir un rôle de Villageois, mais vous ne l'avez pas."
+    "ability": "Vous ne savez pas que vous êtes l'Ivrogne. Vous croyez être un personnage Villageois, mais vous ne l'êtes pas."
   },
   {
     "id": "recluse",
@@ -229,7 +229,7 @@
     "otherNightReminder": "",
     "reminders": [],
     "setup": false,
-    "ability": "Vous pouvez apparaître comme Mauvais avec un rôle de Serviteur ou de Démon, même après votre mort."
+    "ability": "Il se peut que vous apparaissiez comme mauvais et comme Sbire ou Démon, même après votre mort."
   },
   {
     "id": "saint",
@@ -270,7 +270,7 @@
     "otherNightReminder": "Montrez votre grimoire à l'Espion aussi longtemps qu'il en a besoin.",
     "reminders": [],
     "setup": false,
-    "ability": "Chaque nuit, vous voyez le Grimoire du Narrateur. Vous pouvez apparaître comme Bon avec un rôle de Villageois ou d'Étranger, même après votre mort."
+    "ability": "Chaque nuit, vous voyez le Grimoire. Il se peut que vous apparaissiez comme bon et comme Villageois ou Étranger, même après votre mort."
   },
   {
     "id": "scarletwoman",
@@ -280,7 +280,7 @@
     "firstNight": 0,
     "firstNightReminder": "",
     "otherNight": 21,
-    "otherNightReminder": "Si le Démon est mort (et que la partie n'a pas pris fin), informez le Gourgandin qu'il devient le Démon.",
+    "otherNightReminder": "Si le Démon est mort (et que la partie n'a pas pris fin), informez la Gourgandine qu'elle devient le Démon.",
     "reminders": [
       "Démon"
     ],
@@ -329,7 +329,7 @@
       "Triple vote"
     ],
     "setup": false,
-    "ability": "Chaque nuit, désignez un autre joueur: ses votes comptent triple jusqu'à la tombée de la nuit."
+    "ability": "Chaque nuit, désignez un joueur (autre que vous-même) : demain, son vote comptera triple."
   },
   {
     "id": "thief",
@@ -344,7 +344,7 @@
       "Vote négatif"
     ],
     "setup": false,
-    "ability": "Chaque nuit, désignez un autre joueur : ses votes comptent négativement jusqu'à la tombée de la nuit."
+    "ability": "Chaque nuit, désignez un joueur (autre que vous-même) : demain, son vote comptera négativement."
   },
   {
     "id": "gunslinger",
@@ -370,7 +370,7 @@
     "otherNightReminder": "",
     "reminders": [],
     "setup": false,
-    "ability": "Si un joueur du même alignement que vous est exécuté, vous pouvez être exécuté à sa place."
+    "ability": "Si un joueur du même alignement que vous est exécuté, il se peut que vous soyez exécuté à la place."
   },
   {
     "id": "beggar",
@@ -398,7 +398,7 @@
       "Petit-fils"
     ],
     "setup": false,
-    "ability": "Vous commencez la partie en connaissant le rôle de Villageois d'un autre joueur. Si ce joueur est tué par le Démon, vous mourez aussi."
+    "ability": "Vous commencez la partie en connaissant le personnage d'un joueur bon. Si ce joueur est tué par le Démon, vous mourez aussi."
   },
   {
     "id": "sailor",
@@ -426,7 +426,7 @@
     "otherNightReminder": "La Femme de chambre désigne deux autres joueurs vivants. Indiquez combien parmi eux ont été reveillés pour leur pouvoir cette nuit.",
     "reminders": [],
     "setup": false,
-    "ability": "Chaque nuit, désignez 2 joueurs vivants (à part vous-même) : vous apprenez combien ont été réveillés à cause de leur pouvoir cette nuit."
+    "ability": "Chaque nuit, désignez deux joueurs vivants (autres que vous-même) : vous apprenez combien ont été réveillés par leur capacité cette nuit."
   },
   {
     "id": "exorcist",
@@ -472,7 +472,7 @@
       "Mort"
     ],
     "setup": false,
-    "ability": "Chaque nuit*, désignez un joueur et devinez son rôle : si vous vous trompez, vous mourez."
+    "ability": "Chaque nuit*, désignez un joueur et devinez son personnage : si vous vous trompez, vous mourez."
   },
   {
     "id": "gossip",
@@ -505,7 +505,7 @@
       "Épuisé"
     ],
     "setup": false,
-    "ability": "Une fois par partie, la nuit, désignez un rôle : il est Ivre pour 3 jours et 3 nuits."
+    "ability": "Une fois par partie, la nuit, désignez un personnage : il est ivre pour 3 jours et 3 nuits."
   },
   {
     "id": "professor",
@@ -564,7 +564,7 @@
     "otherNightReminder": "",
     "reminders": [],
     "setup": false,
-    "ability": "Les Bons joueurs exécutés peuvent ne pas mourir."
+    "ability": "Lorsqu'un joueur bon est exécuté, il se peut qu'il ne meure pas."
   },
   {
     "id": "fool",
@@ -594,7 +594,7 @@
       "Mort"
     ],
     "setup": false,
-    "ability": "Vous pouvez mourir à tout moment."
+    "ability": "À tout moment, il se peut que vous mouriez."
   },
   {
     "id": "moonchild",
@@ -624,7 +624,7 @@
       "Ivre"
     ],
     "setup": false,
-    "ability": "Chaque nuit, le premier joueur qui vous désigne avec son pouvoir est Ivre jusqu'à la tombée de la nuit. Vous acquérez son alignement."
+    "ability": "Chaque nuit, le premier joueur à vous désigner avec sa capacité est ivre jusqu'à la tombée de la nuit. Vous acquérez son alignement."
   },
   {
     "id": "lunatic",
@@ -640,7 +640,7 @@
       "Aliéné"
     ],
     "setup": true,
-    "ability": "Vous croyez être le Démon mais vous ne l'êtes pas. Le Démon sait qui vous êtes et qui vous désignez chaque nuit."
+    "ability": "Vous croyez être un Démon, mais vous ne l'êtes pas. Le Démon sait qui vous êtes et qui vous désignez chaque nuit."
   },
   {
     "id": "godfather",
@@ -655,7 +655,7 @@
       "Mort"
     ],
     "setup": true,
-    "ability": "Vous commencez la partie en connaissant tous les rôles d'Étrangers en jeu. Si l'un d'eux est mort aujourd'hui, désignez un joueur cette nuit : il meurt. [-1 ou +1 Étranger]"
+    "ability": "Vous commencez en connaissant les Étrangers en jeu. Si l'un est mort aujourd'hui, désignez un joueur cette nuit : il meurt. [-1 ou +1 Étranger]"
   },
   {
     "id": "devilsadvocate",
@@ -746,7 +746,7 @@
       "Vivant"
     ],
     "setup": false,
-    "ability": "Chaque nuit*, désignez 2 joueurs : ils meurent. Un joueur que vous avez désigné la nuit précédente peut être régurgité."
+    "ability": "Chaque nuit*, désignez 2 joueurs : ils meurent. Il se peut qu'un joueur mort que vous avez désigné la nuit précédente soit régurgité."
   },
   {
     "id": "po",
@@ -817,11 +817,11 @@
     "otherNight": 0,
     "otherNightReminder": "",
     "reminders": [
-      "Accusé Bon",
-      "Accusé Mauvais"
+      "Accuser bon",
+      "Accuser mauvais"
     ],
     "setup": false,
-    "ability": "Seul le Narrateur peut lancer des accusations. Chaque jour, au moins un joueur de chaque équipe est accusé."
+    "ability": "Seul le Narrateur peut lancer des accusations. Chaque jour, au moins un de vos adversaires est accusé."
   },
   {
     "id": "voudon",
@@ -860,7 +860,7 @@
     "otherNightReminder": "Le Rêveur désigne un joueur. Indiquez lui un rôle Bon et un rôle Mauvais. L'un de ces deux personnages est ce joueur.",
     "reminders": [],
     "setup": false,
-    "ability": "Chaque nuit, désignez un joueur (ni vous, ni un voyageur) : vous apprenez un personnage Bon et un personnage Mauvais. L'un des deux est celui de ce joueur."
+    "ability": "Chaque nuit, désignez un joueur (ni vous-même, ni un Voyageur) : vous apprenez un personnage bon et un mauvais, l'un d'eux étant son rôle."
   },
   {
     "id": "snakecharmer",
@@ -875,7 +875,7 @@
       "Empoisonné"
     ],
     "setup": false,
-    "ability": "Chaque nuit, désignez un joueur vivant: s'il est Démon, vous échangez de personnage et d'équipe avec lui, puis il est définitivement empoisonné."
+    "ability": "Chaque nuit, désignez un joueur vivant : s'il est Démon, vous échangez de personnage et d'équipe avec lui, puis il est empoisonné."
   },
   {
     "id": "mathematician",
@@ -890,7 +890,7 @@
       "Anormal"
     ],
     "setup": false,
-    "ability": "Chaque nuit, vous apprenez combien de pouvoirs ont dysfonctionné depuis le début de la journée à cause des pouvoirs d'autres joueurs."
+    "ability": "Chaque nuit, vous apprenez combien de joueurs ont vu leurs capacités dysfonctionner (depuis le matin) à cause d'un autre personnage."
   },
   {
     "id": "flowergirl",
@@ -963,7 +963,7 @@
       "Épuisé"
     ],
     "setup": false,
-    "ability": "Une fois par partie, la nuit, désignez deux autres joueurs : vous apprenez s'ils sont du même alignement."
+    "ability": "Une fois par partie, la nuit, désignez deux joueurs (autres que vous-même) : vous apprenez s'ils ont le même alignement."
   },
   {
     "id": "philosopher",
@@ -980,7 +980,7 @@
       "Épuisé"
     ],
     "setup": false,
-    "ability": "Une fois par partie, la nuit, choisissez un personnage bon : vous gagnez son pouvoir. Si ce personnage est en jeu, il est ivre."
+    "ability": "Une fois par partie, la nuit, désignez un personnage bon : vous gagnez sa capacité. Si ce personnage est en jeu, il est ivre."
   },
   {
     "id": "artist",
@@ -1037,7 +1037,7 @@
     "otherNightReminder": "",
     "reminders": [],
     "setup": false,
-    "ability": "Si vous êtes persuadé d’être un Étranger, vous pouvez être exécuté."
+    "ability": "Si vous êtes persuadé d’être un Étranger, il se peut que vous soyez exécuté."
   },
   {
     "id": "sweetheart",
@@ -1104,14 +1104,14 @@
     "edition": "snv",
     "team": "minion",
     "firstNight": 25,
-    "firstNightReminder": "S'il reste 4 joueurs ou plus en vie, la sorcière désigne un joueur. Si ce joueur accuse demain, il est exécuté.",
+    "firstNightReminder": "S'il reste 4 joueurs ou plus en vie, la Sorcière désigne un joueur. Si ce joueur accuse demain, il meurt.",
     "otherNight": 15,
-    "otherNightReminder": "S'il reste 4 joueurs ou plus en vie, la sorcière désigne un joueur. Si ce joueur accuse demain, il est exécuté.",
+    "otherNightReminder": "S'il reste 4 joueurs ou plus en vie, la Sorcière désigne un joueur. Si ce joueur accuse demain, il meurt.",
     "reminders": [
       "Ensorcelé"
     ],
     "setup": false,
-    "ability": "Chaque nuit, désignez un joueur : s'il accuse demain, il meurt. S'il ne reste que 3 joueurs en vie, vous perdez ce pouvoir."
+    "ability": "Chaque nuit, désignez un joueur : s'il accuse demain, il meurt. S'il ne reste que trois joueurs en vie, vous perdez cette capacité."
   },
   {
     "id": "cerenovus",
@@ -1126,7 +1126,7 @@
       "Persuadé"
     ],
     "setup": false,
-    "ability": "Chaque nuit, désignez un joueur et un personnage bon : il sera persuadé d'être ce personnage demain, ou pourra être exécuté."
+    "ability": "Chaque nuit, désignez un joueur et un personnage bon : il sera persuadé d'être ce personnage demain, ou il se peut qu'il soit exécuté."
   },
   {
     "id": "pithag",
@@ -1170,11 +1170,11 @@
     "otherNightReminder": "Le Vigormortis désigne un joueur. Ce joueur meurt. Si c'est un Sbire, l'un de ses voisins Villageois est empoisonné.",
     "reminders": [
       "Mort",
-      "Pouvoir conservé",
+      "Capacité conservée",
       "Empoisonné"
     ],
     "setup": true,
-    "ability": "Chaque nuit*, désignez un joueur : il meurt. Les Sbires que vous tuez conservent leurs pouvoirs après leur mort et empoisonnent l'un de leurs voisins villageois. [-1 Étranger]"
+    "ability": "Chaque nuit*, désignez un joueur : il meurt. Les Sbires tués par vous gardent leurs capacités et empoisonnent un voisin Villageois. [-1 Étranger]"
   },
   {
     "id": "nodashii",
@@ -1218,7 +1218,7 @@
     "otherNightReminder": "Choisissez un joueur, reveillez-le et indiquez-lui s'il est soigné et l'esprit clair ou s'il bénéficie de double capacité. Traitez-le en conséquences.",
     "reminders": [
       "Sobriété & Santé",
-      "Pouvoir doublé"
+      "Capacité doublée"
     ],
     "setup": false,
     "ability": "Chaque nuit, un joueur profite d'un bonus jusqu'à la nuit suivante : soit il devient sobre et en bonne santé et n'aura que de vraies informations, soit il peut utiliser sa capacité deux fois aujourd'hui. Il sait de quel bonus il bénéficie."
@@ -1236,7 +1236,7 @@
       "Mort"
     ],
     "setup": false,
-    "ability": "Chaque nuit*, désignez un joueur vivant : s'il est d'accord, vous apprenez son personnage, mais vous pouvez tous les deux mourir."
+    "ability": "Chaque nuit*, désignez un joueur vivant : s'il accepte, vous apprenez son personnage, mais il se peut que vous mouriez tous les deux."
   },
   {
     "id": "butcher",
@@ -1262,7 +1262,7 @@
     "otherNightReminder": "Le Collecteur d'os peut, s'il n'a pas encore utilisé sa capacité, désigner un joueur mort. S'il le fait, le joueur désigné peut utiliser sa capacité jusqu'à la nuit prochaine. (Pensez à le reveiller si son pouvoir s'active la nuit).",
     "reminders": [
       "Épuisé",
-      "Pouvoir Dispo"
+      "Capacité Dispo"
     ],
     "setup": false,
     "ability": "Une fois par partie, la nuit*, désignez un joueur mort : ce joueur dispose de sa capacité jusqu'à la nuit prochaine."
@@ -1292,7 +1292,7 @@
     "otherNight": 0,
     "otherNightReminder": "",
     "reminders": [
-      "Vu"
+      "Connu"
     ],
     "setup": false,
     "ability": "Vous commencez la partie en connaissant les noms de 3 joueurs, un seul parmi ces 3 joueurs est Mauvais."
@@ -1323,10 +1323,10 @@
     "otherNightReminder": "",
     "reminders": [
       "Persuadé",
-      "Pouvoir Dispo"
+      "Capacité Dispo"
     ],
     "setup": false,
-    "ability": "Vous commencez la partie en connaissant un rôle de Villageois en jeu. Si vous vous étiez persuadé d’être ce personnage, vous gagnez sa capacité quand il meurt."
+    "ability": "Vous commencez en connaissant un Villageois en jeu. Quand il meurt, si vous étiez persuadé d'être ce personnage, vous gagnez sa capacité."
   },
   {
     "id": "general",
@@ -1428,7 +1428,7 @@
       "?"
     ],
     "setup": false,
-    "ability": "Vous ne savez pas quel est votre pouvoir. Chaque jour, vous pouvez tenter de le deviner en privé avec le Narrateur : il vous indique si votre réponse est proche ou non de la vérité."
+    "ability": "Vous ne savez pas quelle est votre capacité. Chaque jour, devinez-la en privé avec le Narrateur : vous apprenez à quel point vous avez raison."
   },
   {
     "id": "nightwatchman",
@@ -1855,11 +1855,11 @@
   },
   {
     "id": "mephit",
-    "name": "Méphite",
+    "name": "Mezepheles",
     "edition": "",
     "team": "minion",
     "firstNight": 29,
-    "firstNightReminder": "Indiquez au Mephit son mot secret.",
+    "firstNightReminder": "Indiquez au Mezepheles son mot secret.",
     "otherNight": 20,
     "otherNightReminder": "Si un joueur Bon a pronnoncé le mot secret aujourd'hui, réveillez-le et informez-le qu'il fait maintenant partie de l'équipe des Mauvais.",
     "reminders": [
@@ -1867,7 +1867,7 @@
       "Épuisé"
     ],
     "setup": false,
-    "ability": "Vous commencez la partie en connaissant un mot secret. La première fois qu'un Bon joueur prononce ce mot en présence du Narrateur, il devient Mauvais la nuit suivante, sans changer de rôle."
+    "ability": "Vous commencez en sachant un mot secret. Le premier joueur bon à prononcer ce mot devient mauvais cette nuit."
   },
   {
     "id": "mezepheles",
@@ -1883,7 +1883,7 @@
       "Épuisé"
     ],
     "setup": false,
-    "ability": "Vous commencez la partie en connaissant un mot secret. La première fois qu'un Bon joueur prononce ce mot en présence du Narrateur, il devient Mauvais durant la nuit, sans changer de rôle."
+    "ability": "Vous commencez en sachant un mot secret. Le premier joueur bon à prononcer ce mot devient mauvais cette nuit."
   },
   {
     "id": "marionette",
@@ -1899,7 +1899,7 @@
       "Marionnette"
     ],
     "setup": true,
-    "ability": "Vous pensez avoir un Bon rôle, mais vous n'êtes pas ce personnage. Le Démon sait qui vous êtes. [Votre voisin est le Démon]"
+    "ability": "Vous croyez être un personnage bon, mais vous ne l'êtes pas. Le Démon sait qui vous êtes. [Le Démon est votre voisin]"
   },
   {
     "id": "boomdandy",
@@ -1916,7 +1916,7 @@
   },
   {
     "id": "organgrinder",
-    "name": "Organiste",
+    "name": "Organiste barbare",
     "edition": "",
     "team": "minion",
     "firstNight": 0,
@@ -1944,7 +1944,7 @@
       "2e"
     ],
     "setup": false,
-    "ability": "Chaque nuit, désignez deux joueurs : demain, le premier sera persuadé que le deuxième est mauvais, ou ils pourront tous les deux mourir."
+    "ability": "Chaque nuit, désignez deux joueurs : demain, le premier sera persuadé que le deuxième est mauvais, ou il se peut que les deux meurent."
   },
   {
     "id": "summoner",
@@ -1995,13 +1995,13 @@
   },
   {
     "id": "lleech",
-    "name": "Sangsue",
+    "name": "Ssangssue",
     "edition": "",
     "team": "demon",
     "firstNight": 17,
-    "firstNightReminder": "La Sangue désigne un joueur. Ce joueur est empoisonné.",
+    "firstNightReminder": "La Ssangssue désigne un joueur. Ce joueur est empoisonné.",
     "otherNight": 37,
-    "otherNightReminder": "La Sangsue désigne un joueur. Ce joueur meurt.",
+    "otherNightReminder": "La Ssangssue désigne un joueur. Ce joueur meurt.",
     "reminders": [
       "Mort",
       "Empoisonné permanent"
@@ -2042,7 +2042,7 @@
       "Condamné"
     ],
     "setup": true,
-    "ability": "Chaque nuit*, un joueur peut mourir. Les exécutions ratent si seuls des joueurs Mauvais ont voté. Vous apparaissez également comme un Serviteur. [La majorité des joueurs sont Légion]"
+    "ability": "Chaque nuit*, il se peut qu'un joueur meure. Les exécutions ratent sans vote de bon. Vous apparaissez aussi comme Sbire. [Majorité de Légion]"
   },
   {
     "id": "leviathan",
@@ -2097,7 +2097,7 @@
       "Mort"
     ],
     "setup": false,
-    "ability": "Vous commencez en connaissant une phrase secrète. Pour chaque fois que vous l'avez dite publiquement aujourd'hui, un joueur peut mourir."
+    "ability": "Vous commencez en sachant une phrase secrète. Pour chaque fois que vous l'avez dite publiquement aujourd'hui, il se peut qu'un joueur meure."
   },
   {
     "id": "kazali",
@@ -2127,7 +2127,7 @@
       "Mort"
     ],
     "setup": false,
-    "ability": "Chaque nuit*, désignez un rôle : il meurt. Si ce rôle n'est pas en jeu, le Narrateur choisit qui meurt."
+    "ability": "Chaque nuit*, désignez un personnage : il meurt. Si ce personnage n'est pas en jeu, le Narrateur choisit qui meurt."
   },
   {
     "id": "gangster",
