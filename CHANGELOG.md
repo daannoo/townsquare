@@ -1,6 +1,6 @@
 # Release Notes
 
-## Upcoming version
+### Upcoming version
 - MAINT: Upgrade caniuselite
 - Various corrections in the French version
 - Minor corrections in the English version
