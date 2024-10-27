@@ -184,10 +184,8 @@
               <font-awesome-icon icon="times-circle" />
               {{ locale.player.removePlayer }}
             </li>
-            <li
-              @click="updatePlayer('id', '', true)"
-              v-if="player.id && session.sessionId"
-            >
+            <li @click="updatePlayer('id', '', true)"
+                v-if="player.id && session.sessionId">
               <font-awesome-icon icon="chair" />
               {{ locale.player.emptySeat }}
             </li>
@@ -195,6 +193,12 @@
               <li @click="nominatePlayer()">
                 <font-awesome-icon icon="hand-point-right" />
                 {{ locale.player.nomination }}
+              </li>
+            </template>
+            <template v-if="grimoire.isNight">
+              <li @click="wakePlayer()">
+                <font-awesome-icon icon="hand-point-right" />
+                Wake
               </li>
             </template>
           </template>
@@ -376,6 +380,10 @@ export default {
     claimSeat() {
       this.isMenuOpen = false;
       this.$emit("trigger", ["claimSeat"]);
+    },
+    wakePlayer(player) {
+      this.isMenuOpen = false;
+      this.$emit("trigger", ["wakePlayer", player]);
     },
     /**
      * Allow the ST to override a locked vote.
@@ -790,7 +798,7 @@ li.move:not(.from) .player .overlay svg.move {
 
   #townsquare:not(.spectator) &:hover,
   &.active {
-    color: red;
+    color: $botc_brandY;
   }
 
   &:hover .pronouns {
@@ -861,7 +869,7 @@ li.move:not(.from) .player .overlay svg.move {
   }
 
   li:hover {
-    color: red;
+    color: $botc_brandY;
   }
 
   li.disabled {
@@ -917,20 +925,16 @@ li.move:not(.from) .player .overlay svg.move {
 
   .text {
     line-height: 90%;
-    color: black;
+    color: white;
     font-size: 50%;
-    font-weight: bold;
+    font-weight: 800;
     text-align: center;
     margin-top: 50%;
     height: 100%;
     width: 100%;
     position: absolute;
     top: 15%;
-    text-shadow:
-      0 1px 1px #f6dfbd,
-      0 -1px 1px #f6dfbd,
-      1px 0 1px #f6dfbd,
-      -1px 0 1px #f6dfbd;
+  
   }
 
   .icon,
@@ -943,7 +947,7 @@ li.move:not(.from) .player .overlay svg.move {
     background-size: 100%;
     background-position: center 0;
     background-repeat: no-repeat;
-    background-image: url("../assets/icons/plus.png");
+    
     transition: opacity 200ms;
   }
 

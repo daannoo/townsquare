@@ -40,7 +40,7 @@
             :class="['edition-' + edition.id]"
             :style="{
               backgroundImage: `url(${require(
-                '../../assets/editions/' + edition.id + '.png',
+                '../../assets/editions/logo_' + edition.id + '.png',
               )})`,
             }"
             :key="edition.id"
@@ -211,64 +211,61 @@ export default {
 </script>
 
 <style scoped lang="scss">
+  @import "../../vars.scss";
 ul {
   width: 100%;
 }
 
-ul.editions {
-  .edition {
-    font-family: PiratesBay, sans-serif;
-    letter-spacing: 1px;
-    text-align: center;
-    padding-top: 15%;
-    background-position: center center;
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-    width: 30%;
-    margin: 5px;
-    font-size: 120%;
-    text-shadow:
-      -1px -1px 0 #000,
-      1px -1px 0 #000,
-      -1px 1px 0 #000,
-      1px 1px 0 #000,
-      0 0 5px rgba(0, 0, 0, 0.75);
-    cursor: pointer;
-    &:hover {
-      color: red;
-    }
-  }
-}
+  ul.editions {
+    .edition {
+      font-family: PiratesBay, sans-serif;
+      letter-spacing: 1px;
+      text-align: center;
+      padding-top: 15%;
+      background-position: center center;
+      background-size: 50% auto;
+      background-repeat: no-repeat;
+      width: 30%;
+      margin: 5px;
+      font-size: 120%;
+      text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0 0 5px rgba(0, 0, 0, 0.75);
+      cursor: pointer;
 
-.tabs {
-  display: flex;
-  padding: 0;
-  justify-content: flex-start;
-  width: 100%;
-  gap: 0.25rem;
-  border-bottom: 3px solid white;
-  .tab {
-    text-align: center;
-    flex-grow: 1;
-    flex-shrink: 0;
-    height: 35px;
-    border: 1px solid grey;
-    border-radius: 5px 5px 0 0;
-    padding: 0.15em 1em;
-    cursor: pointer;
-    transition: color 250ms;
-    user-select: none;
-    &:hover {
-      color: red;
-    }
-    &.active {
-      background: linear-gradient(
-        rgb(31, 101, 255) 0%,
-        rgba(0, 0, 0, 0.5) 100%
-      );
+      &:hover {
+        color: $botc_brandY;
+      }
     }
   }
-}
+
+  .tabs {
+    display: flex;
+    padding: 0;
+    justify-content: flex-start;
+    width: 100%;
+    gap: 0.25rem;
+    border-bottom: 3px solid white;
+
+    .tab {
+      text-align: center;
+      flex-grow: 1;
+      flex-shrink: 0;
+      height: 35px;
+      border: 1px solid grey;
+      border-radius: 5px 5px 0 0;
+      padding: 0.15em 1em;
+      cursor: pointer;
+      transition: color 250ms;
+      user-select: none;
+
+      &:hover {
+        color: $botc_brandY;
+      }
+
+      &.active {
+        background: linear-gradient( to right, $botc_brandY 0%, rgba(0, 0, 0, 0.5) 20%, rgba(0, 0, 0, 0.5) 80%, $botc_brandP 100% );
+      }
+    }
+  }
 
 .custom {
   text-align: center;
@@ -279,27 +276,29 @@ input[type="file"] {
   display: none;
 }
 
-.scripts {
-  margin-block: 1em;
-  list-style-type: disc;
-  font-size: 120%;
-  cursor: pointer;
-  // display: grid;
-  // grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  display: flex;
-  gap: 0.75em 1em;
-  justify-content: flex-start;
-  li {
-    text-align: left;
-    list-style-type: none;
-    border: 1px solid white;
-    border-radius: 100vmax;
-    padding: 0.15em 1.5em;
-    background: linear-gradient(#4e4e4e, #040404);
-    user-select: none;
-    &:hover {
-      color: red;
+  .scripts {
+    margin-block: 1em;
+    list-style-type: disc;
+    font-size: 120%;
+    cursor: pointer;
+    // display: grid;
+    // grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    display: flex;
+    gap: 0.75em 1em;
+    justify-content: flex-start;
+
+    li {
+      text-align: left;
+      list-style-type: none;
+      border: 1px solid white;
+      border-radius: 100vmax;
+      padding: 0.15em 1.5em;
+      background: linear-gradient(#4e4e4e, #040404);
+      user-select: none;
+
+      &:hover {
+        color: $botc_brandY;
+      }
     }
   }
-}
 </style>

@@ -16,114 +16,99 @@
       {{ edition.name || locale.modal.nightOrder.custom }}
     </h3>
     <div class="night">
-      <ul class="first">
-        <li class="headline">{{ locale.modal.nightOrder.firstNight }}</li>
-        <li
-          v-for="role in rolesFirstNight"
-          :key="role.name"
-          :class="[role.team]"
-        >
-          <span class="name">
-            {{ role.name }}
-            <span class="player" v-if="role.players.length">
-              <br />
-              <small
-                v-for="(player, index) in role.players"
-                :class="{ dead: player.isDead }"
-                :key="index"
-                >{{
-                  player.name + (role.players.length > index + 1 ? "," : "")
-                }}</small
-              >
-            </span>
-            <span
-              class="player"
-              v-if="
-                (role.id == 'dawn' || role.team == 'fabled') &&
-                !session.isSpectator &&
-                players.length &&
-                players[0].role.id
-              "
-            >
-              <br />
-              <small> </small>
-            </span>
+      <ul>
+        <li class="tabs" :class="tab">
+          <span class="tab"
+                icon="broadcast-tower"
+                @click="tab = 'first_night'"
+                :class="{ active: tab == 'first_night' }">
+            {{ locale.modal.nightOrder.firstNight }}
           </span>
-          <span
-            class="icon"
-            v-if="role.id"
-            :style="{
-              backgroundImage: `url(${
-                role.image && grimoire.isImageOptIn
-                  ? role.image
-                  : require(
-                      '../../assets/icons/' +
-                        (role.imageAlt || role.id) +
-                        '.png',
-                    )
-              })`,
-            }"
-          ></span>
-          <span class="reminder" v-if="role.firstNightReminder">
-            {{ role.firstNightReminder }}
-          </span>
+          <span class="tab"
+                icon="broadcast-tower"
+                @click="tab = 'otherNight'"
+                :class="{ active: tab == 'otherNight' }">{{ locale.modal.nightOrder.otherNights }}</span>
         </li>
+        <template v-if="tab == 'first_night'">
+          <ul class="first">
+            <li v-for="role in rolesFirstNight"
+                :key="role.name"
+                :class="[role.team]">
+              <span class="icon"
+                    v-if="role.id"
+                    :style="{
+                  backgroundImage: `url(${
+                    role.image && grimoire.isImageOptIn
+                      ? role.image
+                      : require(
+                          '../../assets/icons/Icon_' +
+                            (role.imageAlt || role.id) +
+                            '.png',
+                        )
+                  })`,
+                }"></span>
+              <span class="role">
+                {{ role.name }}
+                <span class="player" v-if="role.players.length">
+                  <br />
+                  <small class="reference"
+                         v-for="(player, index) in role.players"
+                         :class="{ dead: player.isDead }"
+                         :key="index">
+                    {{
+                      player.name + (role.players.length > index + 1 ? "," : "")
+                    }}
+                  </small>
+                </span>
+              </span>
+              <span class="reference" style="width: 75%">
+                {{ role.firstNightReminder }}
+              </span>
+            </li>
+          </ul>
+        </template>
+        <template v-if="tab == 'otherNight'">
+          <ul class="other">
+            <li v-for="role in rolesOtherNight"
+                :key="role.name"
+                :class="[role.team]">
+              <span class="icon"
+                    v-if="role.id"
+                    :style="{
+                  backgroundImage: `url(${
+                    role.image && grimoire.isImageOptIn
+                      ? role.image
+                      : require(
+                          '../../assets/icons/Icon_' +
+                            (role.imageAlt || role.id) +
+                            '.png',
+                        )
+                  })`,
+                }"></span>
+              <span class="role">
+                {{ role.name }}
+                <span class="player" v-if="role.players.length">
+                  <br />
+                  <small class="reference"
+                         v-for="(player, index) in role.players"
+                         :class="{ dead: player.isDead }"
+                         :key="index">
+                    {{
+                      player.name + (role.players.length > index + 1 ? "," : "")
+                    }}
+                  </small>
+                </span>
+              </span>
+              <span class="reference" style="width: 75%">
+                {{ role.otherNightReminder }}
+              </span>
+            </li>
+          </ul>
+        </template>
+        
+
       </ul>
-      <ul class="other">
-        <li class="headline">{{ locale.modal.nightOrder.otherNights }}</li>
-        <li
-          v-for="role in rolesOtherNight"
-          :key="role.name"
-          :class="[role.team]"
-        >
-          <span
-            class="icon"
-            v-if="role.id"
-            :style="{
-              backgroundImage: `url(${
-                role.image && grimoire.isImageOptIn
-                  ? role.image
-                  : require(
-                      '../../assets/icons/' +
-                        (role.imageAlt || role.id) +
-                        '.png',
-                    )
-              })`,
-            }"
-          ></span>
-          <span class="name">
-            {{ role.name }}
-            <span class="player" v-if="role.players.length">
-              <br />
-              <small
-                v-for="(player, index) in role.players"
-                :class="{ dead: player.isDead }"
-                :key="index"
-                >{{
-                  player.name + (role.players.length > index + 1 ? "," : "")
-                }}</small
-              >
-            </span>
-            <span
-              class="player"
-              v-if="
-                (role.id == 'dawn' ||
-                  role.id == 'dusk' ||
-                  role.team == 'fabled') &&
-                !session.isSpectator &&
-                players.length &&
-                players[0].role.id
-              "
-            >
-              <br />
-              <small> </small>
-            </span>
-          </span>
-          <span class="reminder" v-if="role.otherNightReminder">
-            {{ role.otherNightReminder }}
-          </span>
-        </li>
-      </ul>
+      
     </div>
   </Modal>
 </template>
@@ -135,12 +120,26 @@ import { mapMutations, mapState } from "vuex";
 export default {
   components: {
     Modal,
-  },
+    },
+    data: function () {
+      return {
+        tab: "first_night",
+      };
+    },
   computed: {
     rolesFirstNight: function () {
       const rolesFirstNight = [];
-      // Ajouter le matin à l'ordre nocturne
-      rolesFirstNight.push({
+      // Add Dawn to Night Order
+      rolesFirstNight.push(
+        {
+          id: "dusk",
+          name: this.locale.modal.nightOrder.dusk,
+          team: "default",
+          firstNight: 1,
+          players: [],
+          firstNightReminder: this.locale.modal.nightOrder.duskDescription_first,
+        },
+        {
         id: "dawn",
         name: this.locale.modal.nightOrder.dawn,
         firstNight: 1000,
@@ -149,7 +148,7 @@ export default {
         firstNightReminder: this.locale.modal.nightOrder.dawnDescription1,
       });
       var toymaker = false;
-      // Ajout des fabuleux
+      // Added Fabled
       this.fabled.forEach((fabled) => {
         if (fabled.firstNight) {
           rolesFirstNight.push(Object.assign({ players: [] }, fabled));
@@ -163,7 +162,7 @@ export default {
           rolesFirstNight.push(Object.assign({ players }, role));
         }
       });
-      // Ajout des Voyageurs, en n'ajoutant qu'une fois ceux en double
+      // Added Travelers, adding duplicate ones only once
       const seenTravelers = [];
       var nbTravelers = 0;
       this.players.forEach((player) => {
@@ -180,7 +179,7 @@ export default {
           }
         }
       });
-      // Ajouter minion / demon infos à l'ordre nocturne
+      // Add minion/ demon info to night order sheet
       if (this.players.length - nbTravelers > 6 || toymaker) {
         rolesFirstNight.push(
           {
@@ -310,7 +309,39 @@ h4 {
     margin-left: 15px;
   }
 }
+  .tabs {
+    display: flex;
+    padding: 0;
+    justify-content: flex-start;
+    width: 100%;
+    gap: 0.25rem;
+    border-bottom: 3px solid white;
 
+    .tab {
+      text-align: center;
+      flex-grow: 1;
+      flex-shrink: 0;
+      height: 35px;
+      border: 1px solid grey;
+      border-radius: 5px 5px 0 0;
+      padding: 0.15em 1em;
+      cursor: pointer;
+      transition: color 250ms;
+      user-select: none;
+
+      &:hover {
+        color: $botc_brandY;
+      }
+
+      &.active {
+        background: linear-gradient( to right, $botc_brandY 0%, rgba(0, 0, 0, 0.5) 20%, rgba(0, 0, 0, 0.5) 80%, $botc_brandP 100% );
+      }
+    }
+  }
+
+  .role {
+    width: 25%;
+  }
 .fabled {
   .name {
     background: linear-gradient(90deg, $fabled, transparent 35%);
@@ -367,79 +398,121 @@ h4 {
     }
   }
 }
-ul {
-  li {
-    display: flex;
-    width: 100%;
-    margin-bottom: 3px;
-    .icon {
-      width: 5vh;
-      background-size: 100% auto;
-      background-position: center center;
-      background-repeat: no-repeat;
-      flex-grow: 0;
-      flex-shrink: 0;
-      text-align: center;
-      margin: 0 2px;
-      &:after {
-        content: " ";
-        display: block;
-        padding-top: 66%;
-      }
-    }
-    .name {
-      flex-grow: 0;
-      flex-shrink: 0;
-      width: 5%;
-      text-align: right;
-      font-size: 110%;
-      padding: 5px;
-      border-left: 1px solid rgba(255, 255, 255, 0.4);
-      border-right: 1px solid rgba(255, 255, 255, 0.4);
-      small {
-        color: #888;
-        margin-right: 5px;
-        &.dead {
-          text-decoration: line-through;
+  ul {
+    li {
+      display: flex;
+      width: 100%;
+      margin-bottom: 3px;
+
+      .icon {
+        width: 5vh;
+        background-size: 100% auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+        flex-grow: 0;
+        flex-shrink: 0;
+        text-align: center;
+        margin: 0 2px;
+
+        &:after {
+          content: " ";
+          display: block;
+          padding-top: 66%;
         }
       }
+
+      .townsfolk {
+        .name {
+          color: $townsfolk;
+        }
+      }
+
+      .outsider {
+        .name {
+          color: $outsider;
+        }
+      }
+
+      .minion {
+        .name {
+          color: $minion;
+        }
+      }
+
+      .demon {
+        .name {
+          color: $demon;
+        }
+      }
+
+      .name {
+        flex-grow: 0;
+        flex-shrink: 0;
+        width: 5%;
+        text-align: right;
+        font-size: 110%;
+        padding: 5px;
+        border-left: 1px solid rgba(255, 255, 255, 0.4);
+        border-right: 1px solid rgba(255, 255, 255, 0.4);
+
+        small {
+          color: #888;
+          margin-right: 5px;
+
+          &.dead {
+            text-decoration: line-through;
+          }
+        }
+      }
+
+      .reminder {
+        position: fixed;
+        padding: 5px 10px;
+        left: 50%;
+        bottom: 10%;
+        width: 500px;
+        z-index: 25;
+        background: rgba(0, 0, 0, 0.75);
+        border-radius: 10px;
+        border: 3px solid black;
+        filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.5));
+        text-align: left;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 200ms ease-in-out;
+        margin-left: -250px;
+      }
+
+      &:hover .reminder {
+        opacity: 1;
+      }
+
+      .reference {
+        font-family: "Franklin Gothic";
+        font-weight: 200;
+      }
+      .player{
+          color:rgba(255, 255, 255, 0.4)
+      }
     }
-    .reminder {
-      position: fixed;
-      padding: 5px 10px;
-      left: 50%;
-      bottom: 10%;
-      width: 500px;
-      z-index: 25;
-      background: rgba(0, 0, 0, 0.75);
-      border-radius: 10px;
-      border: 3px solid black;
-      filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.5));
-      text-align: left;
-      pointer-events: none;
-      opacity: 0;
-      transition: opacity 200ms ease-in-out;
-      margin-left: -250px;
-    }
-    &:hover .reminder {
-      opacity: 1;
+
+    &.legend {
+      font-weight: bold;
+      height: 20px;
+      margin-top: 10px;
+
+      li span {
+        background: none;
+        height: auto;
+        font-family: inherit;
+        font-size: inherit;
+      }
+
+      .icon:after {
+        padding-top: 0;
+      }
     }
   }
-  &.legend {
-    font-weight: bold;
-    height: 20px;
-    margin-top: 10px;
-    li span {
-      background: none;
-      height: auto;
-      font-family: inherit;
-      font-size: inherit;
-    }
-    .icon:after {
-      padding-top: 0;
-    }
-  }
-}
 
 .night {
   display: flex;

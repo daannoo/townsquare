@@ -1,56 +1,68 @@
 <template>
-  <div :data-text="timerName" :style="style" class="countdown"></div>
+  <countdown :time="timerDuration*1000" :transform="transform">
+    <template slot-scope="props" >
+      <div class="timerBox">
+        <div>{{timerName}}</div>
+        <div class="label">
+          <span >
+            {{ props.minutes }}
+          </span>
+          <span>
+            {{ props.seconds }}
+          </span>
+        </div>
+        
+      </div>
+    </template>
+  </countdown>
 </template>
 
 <script>
-export default {
-  props: {
-    timerName: String,
-    timerDuration: Number,
-  },
-  computed: {
-    style() {
-      return `--timer: ${this.timerDuration}`;
+  
+  export default {
+    props: {
+      timerName: String,
+      timerDuration: Number,
     },
-  },
-};
+    computed: {
+      style() {
+        return `:time= ${this.timerDuration}`;
+      },
+    },
+    methods: {
+      transform(props) {
+        Object.entries(props).forEach(([key, value]) => {
+          // Adds leading zero
+          const digits = value < 10 ? `${value}` : value;
+
+          // uses singular form when the value is less than 2
+          const word = value < 2 ? key.replace(/s$/, '') : key;
+
+          props[key] = `${digits} ${word}`;
+        });
+
+        return props;
+      },
+    },
+  };
 </script>
 
 <style lang="scss" scoped>
-div {
-  width: 100%;
-  height: 1.6em;
-  border: 2px solid black;
-  background: rgba(0, 0, 0, 0.4);
-  position: relative;
-  z-index: 0;
-  margin-top: 0.3em;
-}
+  @import "../vars.scss";
+  .label{
+      color:$botc_brandY;
+  }
+  .timerBox {
+    width: 100%;
+    border-radius:5px;
+    color:$botc_brandP;
+    padding:.5em;
+    background:black;
+    position: relative;
+    z-index: 0;
+    
+  }
 
-div::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(255, 0, 0, 0.6);
-  z-index: 1;
-  animation: forwards countdown calc(var(--timer) * 1s) linear;
-}
-
-div::after {
-  position: absolute;
-  inset: 0;
-  text-align: center;
-  content: attr(data-text);
-  z-index: 2;
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0) 5%,
-    rgba(255, 255, 255, 0.5) 15%,
-    rgba(255, 255, 255, 0) 35%,
-    rgba(0, 0, 0, 0) 60%,
-    rgba(0, 0, 0, 0.7) 100%
-  );
-}
 
 @keyframes countdown {
   0% {

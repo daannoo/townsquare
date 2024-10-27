@@ -1,24 +1,20 @@
 <template>
-  <div
-    id="app"
-    @keyup="keyup"
-    tabindex="-1"
-    :class="{
+  <div id="app"
+       @keyup="keyup"
+       tabindex="-1"
+       :class="{
       night: grimoire.isNight,
       static: grimoire.isStatic,
     }"
-    :style="{
+       :style="{
       backgroundImage: `url('${background}')`,
       backgroundColor: `${backgroundColor}`,
-    }"
-  >
-    <video
-      id="background"
-      v-if="background && background.match(/\.(mp4|webm)$/i)"
-      :src="background"
-      autoplay
-      loop
-    ></video>
+    }">
+    <video id="background"
+           v-if="background && background.match(/\.(mp4|webm)$/i)"
+           :src="background"
+           autoplay
+           loop></video>
     <div class="backdrop"></div>
     <transition name="blur">
       <Intro v-if="!players.length"></Intro>
@@ -27,6 +23,7 @@
     </transition>
     <TownSquare></TownSquare>
     <Menu ref="menu"></Menu>
+    <BackgroundModal />
     <EditionModal />
     <FabledModal />
     <RolesModal />
@@ -34,6 +31,7 @@
     <NightOrderModal />
     <VoteHistoryModal />
     <GameStateModal />
+
     <Gradients />
     <span id="version">v{{ version }}</span>
   </div>
@@ -44,7 +42,8 @@ import { mapState } from "vuex";
 import { version } from "../package.json";
 import TownSquare from "./components/TownSquare";
 import TownInfo from "./components/TownInfo";
-import Menu from "./components/Menu";
+  import Menu from "./components/Menu";
+  
 import RolesModal from "./components/modals/RolesModal";
 import EditionModal from "./components/modals/EditionModal";
 import Intro from "./components/Intro";
@@ -54,7 +53,8 @@ import Gradients from "./components/Gradients";
 import NightOrderModal from "./components/modals/NightOrderModal";
 import FabledModal from "@/components/modals/FabledModal";
 import VoteHistoryModal from "@/components/modals/VoteHistoryModal";
-import GameStateModal from "@/components/modals/GameStateModal";
+  import GameStateModal from "@/components/modals/GameStateModal";
+  import BackgroundModal from "@/components/modals/BackgroundModal";
 
 export default {
   components: {
@@ -71,6 +71,7 @@ export default {
     EditionModal,
     RolesModal,
     Gradients,
+    BackgroundModal,
   },
   computed: {
     ...mapState(["grimoire", "session", "edition"]),
@@ -161,22 +162,27 @@ export default {
   src: url("assets/fonts/piratesbay.ttf");
   font-display: swap;
 }
+  @font-face {
+    font-family: Franklin;
+    src: url("assets/fonts/framd.ttf");
+    font-display: swap;
+  }
 
-html,
-body {
-  font-size: 1.2em;
-  line-height: 1.4;
-  background: url("assets/background.jpg") center center;
-  background-size: cover;
-  color: white;
-  height: 100%;
-  font-family: "Roboto Condensed", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  padding: 0;
-  margin: 0;
-  overflow: hidden;
-}
+  html,
+  body {
+    font-size: 1.2em;
+    line-height: 1.4;
+    background: url("assets/background.png") center center;
+    background-size: cover;
+    color: white;
+    height: 100%;
+    font-family: PiratesBay, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+  }
 
 @import "media";
 
@@ -288,7 +294,7 @@ ul {
   transition: all 200ms;
   white-space: nowrap;
   &:hover {
-    color: red;
+    color: $botc_brandY;
   }
   &.disabled {
     color: gray;
@@ -316,7 +322,7 @@ ul {
       inset 0 1px 1px #002c9c,
       0 0 10px #000;
     &:hover:not(.disabled) {
-      color: #008cf7;
+      color: $botc_brandY;
     }
   }
   &.demon {

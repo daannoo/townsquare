@@ -1,105 +1,87 @@
 <template>
-  <ul class="info">
-    <li
-      class="edition"
-      :class="['edition-' + edition.id]"
-      :style="{
-        backgroundImage: `url(${
-          edition.logo && grimoire.isImageOptIn
-            ? edition.logo
-            : require('../assets/editions/' + edition.id + '.png')
-        })`,
-      }"
-    ></li>
-    <li v-if="players.length - teams.traveler < 5">
-      {{ locale.towninfo.addPlayers }}
-    </li>
-    <li>
-      <span class="meta" v-if="!edition.isOfficial">
-        {{ edition.name }}
-        {{ edition.author ? " ©" + edition.author : "" }}
-      </span>
-      <span>
-        {{ players.length }} <font-awesome-icon class="players" icon="users" />
-      </span>
-      <span>
-        {{ teams.alive }}
-        <font-awesome-icon class="alive" icon="heartbeat" />
-      </span>
-      <span v-if="teams.traveler > 0">
-        {{ teams.aliveNT }}
-        <font-awesome-icon class="alive" icon="house-user" />
-      </span>
-      <span>
-        {{ teams.votes }} <font-awesome-icon class="votes" icon="vote-yea" />
-      </span>
-    </li>
-    <li v-if="players.length - teams.traveler >= 5">
-      <span>
-        {{ teams.townsfolk }}
-        <font-awesome-icon class="townsfolk" icon="user-friends" />
-      </span>
-      <span>
-        {{ teams.outsider }}
-        <font-awesome-icon
-          class="outsider"
-          :icon="teams.outsider > 1 ? 'user-friends' : 'user'"
-        />
-      </span>
-      <span>
-        {{ teams.minion }}
-        <font-awesome-icon
-          class="minion"
-          :icon="teams.minion > 1 ? 'user-friends' : 'user'"
-        />
-      </span>
-      <span>
-        {{ teams.demon }}
-        <font-awesome-icon
-          class="demon"
-          :icon="teams.demon > 1 ? 'user-friends' : 'user'"
-        />
-      </span>
-      <span v-if="teams.traveler">
-        {{ teams.traveler }}
-        <font-awesome-icon
-          class="traveler"
-          :icon="teams.traveler > 1 ? 'user-friends' : 'user'"
-        />
-      </span>
-    </li>
-    <li v-if="grimoire.isNight">
-      <font-awesome-icon :icon="['fas', 'cloud-moon']" />
-      {{ locale.towninfo.nightPhase }}
-    </li>
-    <li v-if="grimoire.isRinging">
-      <audio
-        :autoplay="!grimoire.isMuted"
-        src="../assets/sounds/countdown.mp3"
-        :muted="grimoire.isMuted"
-      ></audio>
-      <font-awesome-icon :icon="['fas', 'music']" />
-      <font-awesome-icon :icon="['fas', 'bell']" />
-      <font-awesome-icon :icon="['fas', 'music']" />
-    </li>
-    <li>
-      <Countdown
-        v-if="grimoire.timer.duration"
-        :timerName="grimoire.timer.name"
-        :timerDuration="grimoire.timer.duration"
-      />
-    </li>
-  </ul>
+  <div style="position: absolute;">
+    <audio :muted="grimoire.isMuted"
+           ref="timer"
+           src="../assets/sounds/timer.mp3"
+           preload="auto">
+    </audio>
+    <audio :muted="grimoire.isMuted"
+           ref="gong"
+           src="../assets/sounds/gong.mp3"
+           preload="auto">
+    </audio>
+    <div class="box">
+
+      <table>
+        <caption>
+          <img class="edition_logo"
+               style="width: 400px"
+               :src="`${
+            edition.logo && grimoire.isImageOptIn
+              ? edition.logo
+              : require('../assets/editions/' + edition.id + '.png')
+          }`" />
+        </caption>
+        <tr>
+          <td colspan="4"></td>
+        </tr>
+        <tr>
+          <td>Players</td>
+          <td>{{ players.length - teams.traveler }}<span v-if="teams.traveler>0" class="traveler"> + {{ teams.traveler }}</span></td>
+          <td>Alive</td>
+          <td>{{ teams.aliveNT }}<span v-if="teams.alive - teams.aliveNT >0" class="traveler"> + {{ teams.alive - teams.aliveNT }}</span></td>
+        </tr>
+        <tr>
+          <td class="townsfolk">Townsfolk</td>
+          <td class="townsfolk">{{ teams.townsfolk }}</td>
+          <td class="minion">Minions</td>
+          <td class="minion">{{ teams.minion }}</td>
+        </tr>
+        <tr>
+          <td class="outsider">Outsiders</td>
+          <td class="outsider">{{ teams.outsider }}</td>
+          <td class="demon">Demons</td>
+          <td class="demon">{{ teams.demon }}</td>
+        </tr>
+
+      </table>
+    </div>
+
+    <ul class="info">
+      <li v-if="grimoire.isNight">
+        <font-awesome-icon :icon="['fas', 'cloud-moon']" />
+        {{ locale.towninfo.nightPhase }}
+      </li>
+      <li v-if="grimoire.isRinging">
+        <audio :autoplay="!grimoire.isMuted"
+               src="../assets/sounds/assemble.mp3"
+               :muted="grimoire.isMuted"></audio>
+        <font-awesome-icon :icon="['fas', 'music']" />
+        <font-awesome-icon :icon="['fas', 'bell']" />
+        <font-awesome-icon :icon="['fas', 'music']" />
+      </li>
+      <li>
+        <Countdown v-if="grimoire.timer.duration"
+                   :timerName="grimoire.timer.name"
+                   :timerDuration="grimoire.timer.duration" />
+      </li>
+
+    </ul>
+
+  </div>
+  
 </template>
 
 <script>
 import gameJSON from "./../game";
 import { mapState } from "vuex";
-import Countdown from "./Countdown";
+  import Countdown from "./Countdown";
+  
 
 export default {
   components: {
     Countdown,
+    
   },
   computed: {
     teams: function () {
@@ -126,25 +108,103 @@ export default {
     },
     ...mapState(["edition", "grimoire", "locale"]),
     ...mapState("players", ["players"]),
-  },
+    },
+    watch: {
+      'grimoire.isNight': function (newVal, oldVal) {
+        if (newVal !== oldVal) {
+          this.playGong();
+        }
+      },
+      'grimoire.timer.duration': function (newVal, oldVal) {
+        if (newVal !== oldVal) {
+          this.playTimer();
+        }
+      },
+    },
+    methods: {
+      playGong() {
+        const audio = this.$refs.gong;
+        if (audio) {
+          audio.currentTime = 0; 
+          audio.play();
+        }
+      },
+      playTimer() {
+        const audio = this.$refs.timer;
+        if (audio) {
+          audio.currentTime = 0;
+          audio.play();
+        }
+      },
+    },
 };
 </script>
 
 <style lang="scss" scoped>
 @import "../vars.scss";
 
+  .box {
+    
+    border: 10px solid;
+    -o-border-image: url("../assets/towninfo.122e2c26.webp") 40 fill/20px stretch;
+    border-image: url("../assets/towninfo.122e2c26.webp") 40 fill/20px stretch;
+    padding: 1vh calc(1vh + 10px) 1vh 1vh;
+    font-size: 80%;
+    color: #000;
+    font-weight: 500;
+    line-height: 1.1;
+    display: flex;
+    align-items: center;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5) tr {
+      white-space: nowrap;
+    }
+
+    tr td:nth-child(odd) {
+      text-align: center;
+      padding: 0 10px;
+    }
+
+    tr td:nth-child(2n) {
+      text-align: center;
+      font-size: 120%;
+      font-weight: 500;
+      border-left: 1px dotted #806151;
+      border-right: 1px dotted #806151;
+      padding: 0 10px;
+    }
+  }
+  .townsfolk {
+    color: $townsfolk;
+  }
+
+  .outsider {
+    color: $townsfolk;
+  }
+
+  .minion {
+    color: $demon;
+  }
+
+  .demon {
+    color: $demon;
+  }
+
+  .traveler {
+    color: $traveler;
+  }
+
 .info {
-  position: absolute;
+  
   display: flex;
-  width: 20%;
+  width: 100%;
   height: 20%;
-  padding: 50px 0 0;
-  align-items: center;
+  
+  
   align-content: center;
-  justify-content: center;
+  
   flex-wrap: wrap;
-  background: url("../assets/demon-head.png") center center no-repeat;
-  background-size: auto 100%;
+
 
   li {
     font-weight: bold;
@@ -161,6 +221,7 @@ export default {
 
     span {
       white-space: nowrap;
+      text-align:center;
     }
 
     .meta {

@@ -167,6 +167,8 @@
       </ul>
     </div>
 
+    <ReturnToTownsquare v-if="!grimoire.timer.duration"></ReturnToTownsquare>
+
     <ReminderModal :player-index="selectedPlayer"></ReminderModal>
     <RoleModal :player-index="selectedPlayer"></RoleModal>
   </div>
@@ -177,7 +179,9 @@ import { mapGetters, mapState } from "vuex";
 import Player from "./Player";
 import Token from "./Token";
 import ReminderModal from "./modals/ReminderModal";
-import RoleModal from "./modals/RoleModal";
+  import RoleModal from "./modals/RoleModal";
+  import ReturnToTownsquare from "./ReturnToTownsquare";
+  
 
 export default {
   components: {
@@ -185,11 +189,32 @@ export default {
     Token,
     RoleModal,
     ReminderModal,
+    ReturnToTownsquare,
+    
   },
-  computed: {
-    ...mapGetters({ nightOrder: "players/nightOrder" }),
-    ...mapState(["grimoire", "roles", "session", "locale"]),
-    ...mapState("players", ["players", "bluffs", "fabled"]),
+    computed: {
+      /**
+       * Return a list of jinxes in the form of role IDs and a reason
+       * @returns {*[]} [{first, second, reason}]
+       */
+    
+
+   
+    rolesGrouped: function () {
+      const rolesGrouped = {};
+      this.roles.forEach((role) => {
+        if (!rolesGrouped[role.team]) {
+          rolesGrouped[role.team] = [];
+        }
+        rolesGrouped[role.team].push(role);
+      });
+      delete rolesGrouped["traveler"];
+      return rolesGrouped;
+      },
+
+      ...mapGetters({ nightOrder: "players/nightOrder" }),
+      ...mapState(["grimoire", "roles", "edition", "session", "jinxes", "locale"]),
+      ...mapState("players", ["players", "bluffs", "fabled"]),
     firstMessage() {
       return JSON.stringify(this.locale.modal.nightOrder.firstNight);
     },
@@ -204,6 +229,7 @@ export default {
       swap: -1,
       move: -1,
       nominate: -1,
+      isCharacterSheetOpen:true,
       isBluffsOpen: true,
       isFabledOpen: true,
       isTimeControlsOpen: false,
@@ -220,6 +246,9 @@ export default {
     toggleFabled() {
       this.isFabledOpen = !this.isFabledOpen;
     },
+    toggleCharacters() {
+      this.isCharacterSheetOpen = !this.isCharacterSheetOpen;
+    },
     toggleTimeControls() {
       this.isTimeControlsOpen = !this.isTimeControlsOpen;
     },
@@ -234,8 +263,9 @@ export default {
       }
     },
     toggleRinging() {
+
       this.$store.commit("toggleRinging", true);
-      setTimeout(this.$store.commit, 4000, "toggleRinging", false);
+      setTimeout(this.$store.commit, 25000, "toggleRinging", false);
     },
     handleTrigger(playerIndex, [method, params]) {
       if (typeof this[method] === "function") {
@@ -438,6 +468,7 @@ export default {
 @use "sass:math";
 @import "../vars.scss";
 
+
 #townsquare {
   width: 100%;
   height: 100%;
@@ -575,118 +606,157 @@ export default {
 }
 
 /***** Demon bluffs / Fabled *******/
-#townsquare > .bluffs,
-#townsquare > .fabled,
-#townsquare > .storytelling {
-  position: absolute;
-  left: 10px;
-  &.bluffs {
-    bottom: 10px;
-  }
-  &.fabled {
-    top: 10px;
-  }
-  &.storytelling {
-    bottom: 10px;
-    left: auto;
-    right: 10px;
-    width: min-content;
-  }
-  background: rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
-  border: 3px solid black;
-  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.5));
-  transform-origin: bottom left;
-  transform: scale(1);
-  opacity: 1;
-  transition: all 250ms ease-in-out;
-  z-index: 50;
-
-  > svg {
+  #townsquare > .bluffs,
+  #townsquare > .fabled,
+  #townsquare > .storytelling,
+  #townsquare > .characters {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-    &:hover {
-      color: red;
+    left: 10px;
+
+    &.bluffs {
+      bottom: 10px;
     }
-  }
-  h3 {
-    margin: 5px 1vh 0;
-    display: flex;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-    span {
-      flex-grow: 1;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
+
+    &.fabled {
+      top: 10px;
     }
-    svg {
+
+    &.storytelling {
+      bottom: 10px;
+      left: auto;
+      right: 10px;
+      width: min-content;
+    }
+
+
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    border: 3px solid black;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.5));
+    transform-origin: bottom left;
+    transform: scale(1);
+    opacity: 1;
+    transition: all 250ms ease-in-out;
+    z-index: 50;
+
+
+
+    > svg {
+      position: absolute;
+      top: 10px;
+      right: 10px;
       cursor: pointer;
-      flex-grow: 0;
-      &.fa-times-circle {
-        margin-left: 1vh;
+
+      &:hover {
+        color: $botc_brandY;
       }
-      &.fa-plus-circle {
-        margin-left: 1vh;
+    }
+
+
+
+    h3 {
+      margin: 5px 1vh 0;
+      display: flex;
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+
+      &:hover {
+        color: $botc_brandY;
+      }
+
+      span {
+        flex-grow: 1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      svg {
+        cursor: pointer;
+        flex-grow: 0;
+
+        &.fa-times-circle {
+          margin-left: 1vh;
+        }
+
+        &.fa-plus-circle {
+          margin-left: 1vh;
+          display: none;
+        }
+
+        &:hover path {
+          fill: url(#demon);
+          stroke-width: 30px;
+          stroke: white;
+        }
+      }
+    }
+
+    ul {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      li {
+        width: 14vmin;
+        height: 14vmin;
+        margin: 0 0.5%;
+        display: inline-block;
+        transition: all 250ms;
+        max-width: 100%;
+
+      }
+    }
+
+    .button-group {
+      transition: all 250ms;
+
+      input {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.1em;
+      }
+    }
+
+    &.closed {
+      .charcter_content {
+        scale: 0;
+        width: 0;
+        height: 0;
+      }
+
+      svg.fa-times-circle {
         display: none;
       }
-      &:hover path {
-        fill: url(#demon);
-        stroke-width: 30px;
-        stroke: white;
+
+      svg.fa-plus-circle {
+        display: block;
+      }
+
+      ul li {
+        scale: 0;
+        width: 0;
+        height: 0;
+
+        .night-order {
+          opacity: 0;
+        }
+
+        .token {
+          border-width: 0;
+        }
+      }
+
+      .button-group,
+      .button-group * {
+        width: 0px;
+        height: 0px;
+        scale: 0;
       }
     }
   }
-  ul {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    li {
-      width: 14vmin;
-      height: 14vmin;
-      margin: 0 0.5%;
-      display: inline-block;
-      transition: all 250ms;
-    }
-  }
-  .button-group {
-    transition: all 250ms;
-    input {
-      background: none;
-      border: none;
-      color: white;
-      font-size: 1.1em;
-    }
-  }
-  &.closed {
-    svg.fa-times-circle {
-      display: none;
-    }
-    svg.fa-plus-circle {
-      display: block;
-    }
-    ul li {
-      scale: 0;
-      width: 0;
-      height: 0;
-      .night-order {
-        opacity: 0;
-      }
-      .token {
-        border-width: 0;
-      }
-    }
-    .button-group,
-    .button-group * {
-      width: 0px;
-      height: 0px;
-      scale: 0;
-    }
-  }
-}
 
 #townsquare.public > .bluffs {
   opacity: 0;

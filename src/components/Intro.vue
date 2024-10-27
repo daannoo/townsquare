@@ -13,14 +13,6 @@
         {{ locale.intro.footerEnd }}
       </div>
     </div>
-    <a
-      class="redirect"
-      v-if="language === 'zh-CN'"
-      href="https://clocktower.gstonegames.com"
-    >
-      <img src="../assets/gstone.png" class="gstone" alt="" />
-      你想使用中文版魔典吗？
-    </a>
   </div>
 </template>
 
@@ -86,9 +78,7 @@ export default {
     width: 25vh;
     margin-bottom: 2vh;
     max-width: 192px;
-    border-radius: 50%;
-    box-shadow: 0 0 10px black;
-    border: 3px solid black;
+
   }
   .footer {
     font-size: 60%;

@@ -1,34 +1,44 @@
 <template>
-  <Modal
-    class="characters"
-    @close="toggleModal('reference')"
-    v-if="modals.reference && roles.size"
-  >
-    <font-awesome-icon
-      @click="toggleModal('nightOrder')"
-      icon="cloud-moon"
-      class="toggle"
-      :title="locale.modal.reference.nightOrder"
-    />
+  <Modal class="characters"
+         @close="toggleModal('reference')"
+         v-if="modals.reference && roles.size">
+    <font-awesome-icon @click="toggleModal('nightOrder')"
+                       icon="cloud-moon"
+                       class="toggle"
+                       :title="locale.modal.reference.nightOrder"
+                       v-if="!session.isSpectator" />
     <h3>
       {{ locale.modal.reference.title }}
-      <font-awesome-icon icon="address-card" />
-      {{ edition.name || "Custom Script" }}
     </h3>
-    <div
-      v-for="(teamRoles, team) in rolesGrouped"
-      :key="team"
-      :class="['team', team]"
-    >
-      <aside>
-        <h4>{{ locale.modal.reference.teamNames[team] }}</h4>
-      </aside>
-      <ul>
-        <li v-for="role in teamRoles" :class="[team]" :key="role.id">
-          <span
-            class="icon"
-            v-if="role.id"
-            :style="{
+    
+    <h3 v-if="!edition.isOfficial">
+      {{ "Custom Script" }}
+    </h3>
+    <div :style="{
+              backgroundImage: `url(${require(
+                '../../assets/m1ama2ef.png',
+              )})`,
+            }">
+      <div class="edition-header"
+           :class="['edition-' + edition.id]"
+           :style="{
+              backgroundImage: `url(${require(
+                '../../assets/editions/' + edition.id + '.png',
+              )})`,
+            }">
+        <img />
+      </div>
+      <div v-for="(teamRoles, team) in rolesGrouped"
+           :key="team"
+           :class="['team', team]">
+        <aside>
+          <h4>{{ locale.modal.reference.teamNames[team] }}</h4>
+        </aside>
+        <ul>
+          <li v-for="role in teamRoles" :class="[team]" :key="role.id">
+            <span class="icon"
+                  v-if="role.id"
+                  :style="{
               backgroundImage: `url(${
                 role.image && grimoire.isImageOptIn
                   ? role.image
@@ -38,55 +48,52 @@
                         '.png',
                     )
               })`,
-            }"
-          ></span>
-          <div class="role">
-            <span class="player" v-if="Object.keys(playersByRole).length">{{
+            }"></span>
+            <div class="role">
+              <span class="player" v-if="Object.keys(playersByRole).length">
+                {{
               playersByRole[role.id] ? playersByRole[role.id].join(", ") : ""
-            }}</span>
-            <span class="name">{{ role.name }}</span>
-            <span class="ability">{{ role.ability }}</span>
-          </div>
-        </li>
-        <li :class="[team]"></li>
-        <li :class="[team]"></li>
-      </ul>
-    </div>
+                }}
+              </span>
+              <span class="name">{{ role.name }}</span>
+              <span class="ability">{{ role.ability }}</span>
+            </div>
+          </li>
+          
+        </ul>
+      </div>
 
-    <div class="team jinxed" v-if="jinxed.length">
-      <aside>
-        <h4>{{ locale.modal.reference.jinxed }}</h4>
-      </aside>
-      <ul>
-        <li v-for="(jinx, index) in jinxed" :key="index">
-          <span
-            class="icon"
-            :style="{
+      <div class="team jinxed" v-if="jinxed.length">
+        <aside>
+          <h4>{{ locale.modal.reference.jinxed }}</h4>
+        </aside>
+        <ul>
+          <li v-for="(jinx, index) in jinxed" :key="index">
+            <span class="icon"
+                  :style="{
               backgroundImage: `url(${require(
                 '../../assets/icons/' + jinx.first.id + '.png',
               )})`,
-            }"
-          ></span>
-          <span
-            class="icon"
-            :style="{
+            }"></span>
+            <span class="icon"
+                  :style="{
               backgroundImage: `url(${require(
                 '../../assets/icons/' + jinx.second.id + '.png',
               )})`,
-            }"
-          ></span>
-          <div class="role">
-            <span class="name"
-              >{{ jinx.first.name }} & {{ jinx.second.name }}</span
-            >
-            <span class="ability">{{ jinx.reason }}</span>
-          </div>
-        </li>
-        <li></li>
-        <li></li>
-      </ul>
+            }"></span>
+            <div class="role">
+              <span class="name">{{ jinx.first.name }} & {{ jinx.second.name }}</span>
+              <span class="ability">{{ jinx.reason }}</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="asterisk">
+        {{ locale.modal.reference.notfirstnight }}
+      </div>
     </div>
-    <div class="asterisk">{{ locale.modal.reference.notfirstnight }}</div>
+    
   </Modal>
 </template>
 
@@ -143,7 +150,7 @@ export default {
       });
       return players;
     },
-    ...mapState(["roles", "modals", "edition", "grimoire", "jinxes", "locale"]),
+    ...mapState(["roles", "modals", "edition", "grimoire","session", "jinxes", "locale"]),
     ...mapState("players", ["players"]),
   },
   methods: {
@@ -176,136 +183,151 @@ h3 {
   .name {
     color: $townsfolk;
   }
-  aside {
-    background: linear-gradient(-90deg, $townsfolk, transparent);
-  }
+  
 }
 .outsider {
   .name {
     color: $outsider;
   }
-  aside {
-    background: linear-gradient(-90deg, $outsider, transparent);
-  }
+  
 }
 .minion {
   .name {
     color: $minion;
   }
-  aside {
-    background: linear-gradient(-90deg, $minion, transparent);
-  }
+  
 }
 .demon {
   .name {
     color: $demon;
   }
-  aside {
-    background: linear-gradient(-90deg, $demon, transparent);
-  }
+  
 }
 
 .jinxed {
   .name {
     color: $fabled;
   }
-  aside {
-    background: linear-gradient(-90deg, $fabled, transparent);
-  }
+  
 }
 
 .asterisk {
-  font-size: 60%;
+  font-size: 80%;
   text-align: right;
-  padding-top: 20px;
+  color:rgba(0,0,0,0.8);
 }
 
-.team {
-  display: flex;
-  align-items: stretch;
-  &:not(:last-child):after {
-    content: " ";
-    display: block;
-    width: 25%;
-    height: 1px;
-    background: linear-gradient(90deg, #ffffffaa, transparent);
-    position: absolute;
-    left: 0;
-    bottom: 0;
-  }
-  aside {
-    width: 30px;
+  .team {
     display: flex;
-    flex-grow: 0;
-    flex-shrink: 0;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-    overflow: hidden;
-    text-shadow: 0 0 4px black;
-  }
+    align-items: stretch;
 
-  h4 {
-    text-transform: uppercase;
-    text-align: center;
-    transform: rotate(90deg);
-    transform-origin: center;
-    font-size: 80%;
-  }
-
-  &.jinxed {
-    .icon {
-      margin: 0 -5px;
+    &:not(:last-child):after {
+      content: " ";
+      display: block;
+      width: 85%;
+      height: 1px;
+      background: linear-gradient(90deg, $botc_brandY, transparent);
+      position: absolute;
+      left: 0;
+      bottom: 0;
     }
-  }
-}
 
-ul {
-  flex-grow: 1;
-  display: grid;
-  width: calc(100% - 35px);
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  padding: 15px 5px;
-
-  li {
-    display: flex;
-    align-items: center;
-    max-width: 100%;
-    text-align: justify;
-    .icon {
-      width: 12vmin;
-      background-size: contain;
-      background-position: center right;
-      background-repeat: no-repeat;
-      flex-shrink: 0;
+    aside {
+      width: 30px;
+      display: flex;
       flex-grow: 0;
-      position: relative;
-      top: 0.5em;
-      &:after {
-        content: " ";
-        display: block;
-        padding-top: 75%;
+      flex-shrink: 0;
+      align-items: center;
+      justify-content: center;
+      align-content: center;
+      overflow: hidden;
+      text-shadow: 0 0 4px white;
+      color: black;
+    }
+
+    h4 {
+      text-transform: uppercase;
+      text-align: center;
+      transform: rotate(90deg);
+      transform-origin: center;
+      font-size: 80%;
+    }
+
+    &.jinxed {
+      .icon {
+        margin: 0 -5px;
       }
     }
-    .role {
-      line-height: 80%;
-      flex-grow: 1;
-    }
-    .name {
-      font-weight: bold;
-      font-size: 75%;
-      display: block;
-    }
-    .player {
-      color: #888;
-      float: right;
-      font-size: 60%;
-    }
-    .ability {
-      font-size: 70%;
+  }
+  .edition-header {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .reminder {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height:8vh;
+    color:black;
+  }
+
+  ul {
+    flex-grow: 1;
+    display: grid;
+    width: calc(100% - 35px);
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    padding: 15px 5px;
+
+    li {
+      display: flex;
+      align-items: center;
+      max-width: 100%;
+      
+
+      .icon {
+        width: 12vmin;
+        background-size: contain;
+        background-position: center right;
+        background-repeat: no-repeat;
+        flex-shrink: 0;
+        flex-grow: 0;
+        position: relative;
+        top: 0.5em;
+
+        &:after {
+          content: " ";
+          display: block;
+          padding-top: 75%;
+        }
+      }
+
+      .role {
+        line-height: 80%;
+        flex-grow: 1;
+      }
+
+      .name {
+        font-weight: 500;
+        font-size: 80%;
+        display: block;
+      }
+
+      .player {
+        color: #888;
+        float: right;
+        font-size: 60%;
+        font-family: Franklin;
+      }
+
+      .ability {
+        font-size: 55%;
+        font-family: Franklin;
+        font-weight: 300;
+        color:black;
+      }
     }
   }
-}
 
 /** break into 1 column below 600px **/
 @media screen and (max-width: 600px) {

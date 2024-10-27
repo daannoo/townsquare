@@ -14,7 +14,7 @@
       "animations": "Disable Animations",
       "mute": "Mute Sounds",
       "ringBell": "Ring Bell",
-      "organGrinder ": "Organ Grinder Vote"
+      "organGrinder": "Organ Grinder Vote"
     },
     "session": {
       "title": {
@@ -208,6 +208,7 @@
       "dawnDescription2": "Wake all players, then announce who died this night.",
       "dusk": "Dusk",
       "duskDescription": "End the day, and put all players to sleep.",
+      "duskDescription_first": "Put all players to sleep.",
       "reference": "Show Character Reference"
     },
     "reference": {
@@ -215,7 +216,7 @@
       "jinxed": "Jinxed",
       "notfirstnight": "*Not the first night",
       "teamNames": {
-        "townsfolk": "townfolk",
+        "townsfolk": "townsfolk",
         "outsider": "outsiders",
         "minion": "minions",
         "demon": "demons"

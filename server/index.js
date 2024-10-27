@@ -10,7 +10,7 @@ register.setDefaultLabels({
   app: "clocktower-online"
 });
 
-const PING_INTERVAL = 30000; // 30 seconds
+const PING_INTERVAL = 1000; // 30 seconds
 
 const options = {};
 

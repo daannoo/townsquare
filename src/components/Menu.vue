@@ -45,100 +45,96 @@
           <!-- Grimoire -->
           <li class="headline">{{ locale.menu.grimoire.title }}</li>
           <li @click="toggleGrimoire" v-if="players.length">
-            <template v-if="!grimoire.isPublic">{{
+            <template v-if="!grimoire.isPublic">
+              {{
               locale.menu.grimoire.hide
-            }}</template>
-            <template v-if="grimoire.isPublic">{{
+              }}
+            </template>
+            <template v-if="grimoire.isPublic">
+              {{
               locale.menu.grimoire.show
-            }}</template>
+              }}
+            </template>
             <em>[G]</em>
           </li>
           <li @click="toggleNight" v-if="!session.isSpectator">
-            <template v-if="!grimoire.isNight">{{
+            <template v-if="!grimoire.isNight">
+              {{
               locale.menu.grimoire.nightSwitch
-            }}</template>
-            <template v-if="grimoire.isNight">{{
+              }}
+            </template>
+            <template v-if="grimoire.isNight">
+              {{
               locale.menu.grimoire.daySwitch
-            }}</template>
+              }}
+            </template>
             <em>[S]</em>
           </li>
           <li @click="toggleRinging" v-if="!session.isSpectator">
-            <template>{{ locale.menu.grimoire.ringBell }}</template>
+            <template>
+              {{ locale.menu.grimoire.ringBell }}
+            </template>
             <em>[B]</em>
           </li>
-          <li @click="toggleOrganVoteMode" v-if="!session.isSpectator">
+
+          <li @click="toggleOrganVoteMode">
+
             {{ locale.menu.grimoire.organGrinder }}
             <em>
-              <font-awesome-icon
-                :icon="[
+              <font-awesome-icon :icon="[
                   'fas',
                   grimoire.isOrganVoteMode ? 'check-square' : 'square',
-                ]"
-              />
+                ]" />
             </em>
           </li>
           <li @click="toggleNightOrder" v-if="session.isSpectator">
             {{ locale.menu.grimoire.order }}
             <em>
-              <font-awesome-icon
-                :icon="[
+              <font-awesome-icon :icon="[
                   'fas',
                   grimoire.isNightOrder ? 'check-square' : 'square',
-                ]"
-              />
+                ]" />
             </em>
           </li>
           <li v-if="players.length">
             {{ locale.menu.grimoire.zoom }}
             <em>
-              <font-awesome-icon
-                @click="setZoom(grimoire.zoom - 1)"
-                icon="search-minus"
-              />
+              <font-awesome-icon @click="setZoom(grimoire.zoom - 1)"
+                                 icon="search-minus" />
               {{ Math.round(100 + grimoire.zoom * 10) }}%
-              <font-awesome-icon
-                @click="setZoom(grimoire.zoom + 1)"
-                icon="search-plus"
-              />
+              <font-awesome-icon @click="setZoom(grimoire.zoom + 1)"
+                                 icon="search-plus" />
             </em>
           </li>
           <li @click="setBackground">
             {{ locale.menu.grimoire.background }}
             <em><font-awesome-icon icon="image" /></em>
           </li>
-          <li v-if="!edition.isOfficial" @click="imageOptIn">
+          <li @click="toggleModal('background')">
+            Background Picker
+            <em><font-awesome-icon icon="image" /></em>
+          </li>
+          <li @click="imageOptIn">
             <small>{{ locale.menu.grimoire.customImages }}</small>
-            <em
-              ><font-awesome-icon
-                :icon="[
+            <em>
+              <font-awesome-icon :icon="[
                   'fas',
                   grimoire.isImageOptIn ? 'check-square' : 'square',
-                ]"
-            /></em>
+                ]" />
+            </em>
           </li>
-          <li @click="streamerMode">
-            <small>{{ locale.menu.grimoire.streamerMode }}</small>
-            <em
-              ><font-awesome-icon
-                :icon="[
-                  'fas',
-                  grimoire.isStreamerMode ? 'check-square' : 'square',
-                ]"
-            /></em>
-          </li>
+
           <li @click="toggleStatic">
             {{ locale.menu.grimoire.animations }}
-            <em
-              ><font-awesome-icon
-                :icon="['fas', grimoire.isStatic ? 'check-square' : 'square']"
-            /></em>
+            <em>
+              <font-awesome-icon :icon="['fas', grimoire.isStatic ? 'check-square' : 'square']" />
+            </em>
           </li>
           <li @click="toggleMuted">
             {{ locale.menu.grimoire.mute }}
-            <em
-              ><font-awesome-icon
-                :icon="['fas', grimoire.isMuted ? 'volume-mute' : 'volume-up']"
-            /></em>
+            <em>
+              <font-awesome-icon :icon="['fas', grimoire.isMuted ? 'volume-mute' : 'volume-up']" />
+            </em>
           </li>
         </template>
 
@@ -240,34 +236,15 @@
             {{ locale.menu.help.reference }}
             <em>[R]</em>
           </li>
-          <li @click="toggleModal('nightOrder')">
+          <li @click="toggleModal('nightOrder')" v-if="!session.isSpectator">
             {{ locale.menu.help.nightOrder }}
             <em>[N]</em>
           </li>
           <li @click="toggleModal('gameState')">
-            {{ locale.menu.help.gameState }}
+            Game State JSON
             <em><font-awesome-icon icon="file-code" /></em>
           </li>
-          <li>
-            <a href="https://discord.gg/gD3AB8qCrw" target="_blank">
-              {{ locale.menu.help.discord }}
-            </a>
-            <em>
-              <a href="https://discord.gg/gD3AB8qCrw" target="_blank">
-                <font-awesome-icon :icon="['fab', 'discord']" />
-              </a>
-            </em>
-          </li>
-          <li>
-            <a href="https://github.com/Pingumask/townsquare" target="_blank">
-              {{ locale.menu.help.source }}
-            </a>
-            <em>
-              <a href="https://github.com/Pingumask/townsquare" target="_blank">
-                <font-awesome-icon :icon="['fab', 'github']" />
-              </a>
-            </em>
-          </li>
+
         </template>
       </ul>
     </div>
@@ -393,8 +370,9 @@ export default {
       this.$store.commit("toggleOrganVoteMode");
     },
     toggleRinging() {
+
       this.$store.commit("toggleRinging", true);
-      setTimeout(this.$store.commit, 4000, "toggleRinging", false);
+      setTimeout(this.$store.commit, 25000, "toggleRinging", false);
     },
     ...mapMutations([
       "toggleGrimoire",
@@ -471,120 +449,115 @@ export default {
   }
 }
 
-.menu {
-  width: 220px;
-  transform-origin: 200px 22px;
-  transition: transform 500ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
-  transform: rotate(-90deg);
-  position: absolute;
-  right: 0;
-  top: 0;
-  user-select: none;
+  .menu {
+    width: 220px;
+    transform-origin: 200px 22px;
+    transition: transform 500ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    transform: rotate(-90deg);
+    position: absolute;
+    right: 0;
+    top: 0;
+    user-select: none;
 
-  &.open {
-    transform: rotate(0deg);
-  }
-
-  > svg {
-    cursor: pointer;
-    background: rgba(0, 0, 0, 0.5);
-    border: 3px solid black;
-    width: 40px;
-    height: 50px;
-    margin-bottom: -8px;
-    border-bottom: 0;
-    border-radius: 10px 10px 0 0;
-    padding: 5px 5px 15px;
-  }
-
-  a {
-    color: white;
-    text-decoration: none;
-    &:hover {
-      color: red;
+    &.open {
+      transform: rotate(0deg);
     }
-  }
 
-  ul {
-    display: flex;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    flex-direction: column;
-    overflow: hidden;
-    box-shadow: 0 0 10px black;
-    border: 3px solid black;
-    border-radius: 10px 0 10px 10px;
+    > svg {
+      cursor: pointer;
+      background: rgba(0, 0, 0, 0.5);
+      border: 3px solid black;
+      width: 40px;
+      height: 50px;
+      margin-bottom: -8px;
+      border-bottom: 0;
+      border-radius: 10px 10px 0 0;
+      padding: 5px 5px 15px;
+    }
 
-    li {
-      padding: 2px 5px;
+    a {
       color: white;
-      text-align: left;
-      background: rgba(0, 0, 0, 0.7);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      min-height: 30px;
+      text-decoration: none;
 
-      &.tabs {
-        display: flex;
-        padding: 0;
-        svg {
-          flex-grow: 1;
-          flex-shrink: 0;
-          height: 35px;
-          border-bottom: 3px solid black;
-          border-right: 3px solid black;
-          padding: 5px 0;
-          cursor: pointer;
-          transition: color 250ms;
-          &:hover {
-            color: red;
-          }
-          &:last-child {
-            border-right: 0;
-          }
-        }
-        &.grimoire .fa-book-open,
-        &.players .fa-users,
-        &.characters .fa-theater-masks,
-        &.session .fa-broadcast-tower,
-        &.help .fa-question {
-          background: linear-gradient(
-            to bottom,
-            $townsfolk 0%,
-            rgba(0, 0, 0, 0.5) 100%
-          );
-        }
-      }
-
-      &:not(.headline):not(.tabs):hover {
-        cursor: pointer;
+      &:hover {
         color: red;
       }
+    }
 
-      em {
-        flex-grow: 0;
-        font-style: normal;
-        margin-left: 10px;
-        font-size: 80%;
+    ul {
+      display: flex;
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 0 10px black;
+      border: 3px solid black;
+      border-radius: 10px 0 10px 10px;
+
+      li {
+        padding: 2px 5px;
+        color: white;
+        text-align: left;
+        background: rgba(0, 0, 0, 0.7);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 30px;
+
+        &.tabs {
+          display: flex;
+          padding: 0;
+
+          svg {
+            flex-grow: 1;
+            flex-shrink: 0;
+            height: 35px;
+            border-bottom: 3px solid black;
+            border-right: 3px solid black;
+            padding: 5px 0;
+            cursor: pointer;
+            transition: color 250ms;
+
+            &:hover {
+              color: $botc_brandY;
+            }
+
+            &:last-child {
+              border-right: 0;
+            }
+          }
+
+          &.grimoire .fa-book-open,
+          &.players .fa-users,
+          &.characters .fa-theater-masks,
+          &.session .fa-broadcast-tower,
+          &.help .fa-question {
+            background: linear-gradient( to bottom, $townsfolk 0%, rgba(0, 0, 0, 0.5) 100% );
+          }
+        }
+
+        &:not(.headline):not(.tabs):hover {
+          cursor: pointer;
+          color: $botc_brandY;
+        }
+
+        em {
+          flex-grow: 0;
+          font-style: normal;
+          margin-left: 10px;
+          font-size: 80%;
+        }
+      }
+
+      .headline {
+        font-family: PiratesBay, sans-serif;
+        letter-spacing: 1px;
+        padding: 0 10px;
+        text-align: center;
+        justify-content: center;
+        background: linear-gradient( to right, $botc_brandY 0%, rgba(0, 0, 0, 0.5) 20%, rgba(0, 0, 0, 0.5) 80%, $botc_brandP 100% );
       }
     }
-
-    .headline {
-      font-family: PiratesBay, sans-serif;
-      letter-spacing: 1px;
-      padding: 0 10px;
-      text-align: center;
-      justify-content: center;
-      background: linear-gradient(
-        to right,
-        $townsfolk 0%,
-        rgba(0, 0, 0, 0.5) 20%,
-        rgba(0, 0, 0, 0.5) 80%,
-        $demon 100%
-      );
-    }
   }
-}
 </style>

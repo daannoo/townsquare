@@ -6,23 +6,21 @@
     </div>
     <div class="overlay">
       <audio src="../assets/sounds/countdown.mp3" preload="auto"></audio>
+      <audio :muted="grimoire.isMuted" ref="nomineeMoveSound" src="../assets/sounds/tick.mp3" preload="auto"></audio>
       <em class="blue">{{ nominator.name }}</em>
       {{
         nominee.role.team == "traveler"
           ? locale.vote.callexile
           : locale.vote.nominates
       }}
-      <em>{{ nominee.name }}</em
-      >{{ locale.vote.exclam }}
+      <em>{{ nominee.name }}</em>{{ locale.vote.exclam }}
       <br />
-      <em
-        class="blue"
-        v-if="
+      <em class="blue"
+          v-if="
           !grimoire.isOrganVoteMode ||
           nominee.role.team == 'traveler' ||
           !session.isSpectator
-        "
-      >
+        ">
         {{ voters.length }} {{ locale.vote.votes }}
       </em>
       <em class="blue" v-else> ? {{ locale.vote.votes }} </em>
@@ -37,33 +35,25 @@
       <template v-if="!session.isSpectator">
         <div v-if="!session.isVoteInProgress && session.lockedVote < 1">
           {{ locale.vote.timePerPlayer }}
-          <font-awesome-icon
-            @mousedown.prevent="setVotingSpeed(-500)"
-            icon="minus-circle"
-          />
+          <font-awesome-icon @mousedown.prevent="setVotingSpeed(-500)"
+                             icon="minus-circle" />
           {{ session.votingSpeed / 1000 }}s
-          <font-awesome-icon
-            @mousedown.prevent="setVotingSpeed(500)"
-            icon="plus-circle"
-          />
+          <font-awesome-icon @mousedown.prevent="setVotingSpeed(500)"
+                             icon="plus-circle" />
         </div>
         <div class="button-group">
-          <div
-            class="button townsfolk"
-            v-if="!session.isVoteInProgress"
-            @click="countdown"
-          >
+          <div class="button townsfolk"
+               v-if="!session.isVoteInProgress"
+               @click="countdown">
             {{ locale.vote.countdown }}
           </div>
           <div class="button" v-if="!session.isVoteInProgress" @click="start">
             {{ session.lockedVote ? locale.vote.restart : locale.vote.start }}
           </div>
           <template v-else>
-            <div
-              class="button townsfolk"
-              :class="{ disabled: !session.lockedVote }"
-              @click="pause"
-            >
+            <div class="button townsfolk"
+                 :class="{ disabled: !session.lockedVote }"
+                 @click="pause">
               {{ voteTimer ? locale.vote.pause : locale.vote.resume }}
             </div>
             <div class="button" @click="stop">{{ locale.vote.reset }}</div>
@@ -73,13 +63,11 @@
           </div>
         </div>
         <div class="button-group mark" v-if="nominee.role.team !== 'traveler'">
-          <div
-            class="button"
-            :class="{
+          <div class="button"
+               :class="{
               disabled: session.nomination[1] === session.markedPlayer,
             }"
-            @click="setMarked"
-          >
+               @click="setMarked">
             {{ locale.vote.setMarked }}
           </div>
           <div class="button" @click="removeMarked">
@@ -92,18 +80,14 @@
           {{ session.votingSpeed / 1000 }} {{ locale.vote.secondsBetweenVotes }}
         </div>
         <div class="button-group">
-          <div
-            class="button townsfolk"
-            @click="vote(false)"
-            :class="{ disabled: !currentVote }"
-          >
+          <div class="button townsfolk"
+               @click="vote(false)"
+               :class="{ disabled: !currentVote }">
             {{ locale.vote.handDown }}
           </div>
-          <div
-            class="button demon"
-            @click="vote(true)"
-            :class="{ disabled: currentVote }"
-          >
+          <div class="button demon"
+               @click="vote(true)"
+               :class="{ disabled: currentVote }">
             {{ locale.vote.handUp }}
           </div>
         </div>
@@ -111,26 +95,22 @@
       <div v-else-if="!player">
         {{ locale.vote.seatToVote }}
       </div>
-      <Countdown
-        v-if="grimoire.timer.duration"
-        :timerName="grimoire.timer.name"
-        :timerDuration="grimoire.timer.duration"
-      />
+      <Countdown v-if="grimoire.timer.duration"
+                 :timerName="grimoire.timer.name"
+                 :timerDuration="grimoire.timer.duration" />
     </div>
     <transition name="blur">
-      <div
-        class="countdown"
-        v-if="session.isVoteInProgress && !session.lockedVote"
-      >
+      <div class="countdown"
+           v-if="session.isVoteInProgress && !session.lockedVote">
         <span>3</span>
         <span>2</span>
         <span>1</span>
         <span>{{ locale.vote.doVote }}</span>
-        <audio
-          :autoplay="!grimoire.isMuted"
-          src="../assets/sounds/countdown.mp3"
-          :muted="grimoire.isMuted"
-        ></audio>
+        <audio :autoplay="!grimoire.isMuted"
+               src="../assets/sounds/countdown.mp3"
+               :muted="grimoire.isMuted"></audio>
+        
+
       </div>
     </transition>
   </div>
@@ -214,8 +194,26 @@ export default {
     return {
       voteTimer: null,
     };
-  },
-  methods: {
+    },
+    watch: {
+      nomineeStyle: {
+        handler(newStyle, oldStyle) {
+          // Check if the transform value changed
+          if (newStyle.transform !== oldStyle.transform) {
+            // Play the audio when the nominee moves
+            this.playNomineeMoveSound();
+          }
+        },
+        deep: true,
+      },
+    },
+    methods: {
+      playNomineeMoveSound() {
+        const audio = this.$refs.nomineeMoveSound;
+        if (audio) {
+          audio.play();
+        }
+      },
     countdown() {
       this.$store.commit("session/lockVote", 0);
       this.$store.commit("session/setVoteInProgress", true);
@@ -317,11 +315,11 @@ export default {
   }
 
   em {
-    color: $demon;
+    color: $botc_brandP;
     font-style: normal;
     font-weight: bold;
     &.blue {
-      color: $townsfolk;
+      color: $botc_brandY;
     }
   }
 
@@ -404,7 +402,7 @@ export default {
     filter: blur(0);
   }
   90% {
-    color: $townsfolk;
+    color: $botc_brandP;
     opacity: 1;
   }
   100% {
@@ -426,7 +424,7 @@ export default {
     filter: blur(0);
   }
   90% {
-    color: $demon;
+    color: $botc_brandY;
     opacity: 1;
   }
   100% {

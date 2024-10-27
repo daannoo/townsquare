@@ -6,6 +6,7 @@ import players from "./modules/players";
 import session from "./modules/session";
 import editionJSON from "../editions.json";
 
+
 import { locale, rolesJSON, jinxesJSON, fabledJSON } from "./modules/locale";
 
 Vue.use(Vuex);
@@ -32,6 +33,7 @@ const getTravelersNotInEdition = (edition = editionJSON.official[0]) => {
       .map((role) => [role.id, role]),
   );
 };
+
 
 const set =
   (key) =>
@@ -104,6 +106,10 @@ export default new Vuex.Store({
       isNight: false,
       isNightOrder: false,
       isRinging: false,
+      isGongRinging: false,
+      isTimerStarted: false,
+      isTimerDone: false,
+      isAssemble:false,
       isPublic: true,
       isMenuOpen: false,
       isStatic: false,
@@ -128,6 +134,7 @@ export default new Vuex.Store({
       role: false,
       roles: false,
       voteHistory: false,
+      background:false,
     },
     edition: editionJSONbyId.get("tb"),
     editions: editionJSON,
@@ -136,6 +143,7 @@ export default new Vuex.Store({
     fabled,
     jinxes,
     locale,
+    
   },
   getters: {
     /**

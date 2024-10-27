@@ -151,7 +151,7 @@ ul.reminders .reminder {
   }
 
   .text {
-    color: black;
+    color: white;
     font-size: 65%;
     font-weight: bold;
     text-align: center;
